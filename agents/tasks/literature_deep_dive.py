@@ -1,0 +1,187 @@
+"""Stage 3: Literature deep-dive for high-priority targets."""
+
+import asyncio
+import json
+import logging
+from datetime import date, datetime
+from pathlib import Path
+
+from agents.config import (
+    TARGETS_CONFIG,
+    KB_TARGETS_HIGH,
+    KB_RESEARCH_LIT,
+    KB_RESEARCH_HOMOLOGS,
+    KB_RESEARCH_MECHANISMS,
+)
+from agents.gemini_client import GeminiClient
+from agents.prompts.literature_search import (
+    SYSTEM_INSTRUCTION,
+    homolog_search_prompt,
+    literature_deep_dive_prompt,
+    exrna_biology_prompt,
+)
+from agents.writers.index_writer import update_research_index
+
+logger = logging.getLogger(__name__)
+
+
+def load_high_priority_targets() -> list[dict]:
+    """Load only high-priority targets from config."""
+    with open(TARGETS_CONFIG) as f:
+        data = json.load(f)
+    return [t for t in data["targets"] if t["priority"] == "high"]
+
+
+def load_existing_analysis(gene_id: str) -> str:
+    """Load existing analysis for a gene to provide context for deep dive."""
+    for f in KB_TARGETS_HIGH.glob(f"{gene_id.replace('.', '_')}*.md"):
+        try:
+            return f.read_text()[:2000]  # First 2000 chars
+        except Exception:
+            pass
+    return "(No prior analysis available)"
+
+
+async def homolog_research(client: GeminiClient, gene: dict) -> dict:
+    """Research homologs for a single gene."""
+    prompt = homolog_search_prompt(gene["gene_id"], gene["annotation"])
+
+    try:
+        result = await client.query_bulk(
+            prompt=prompt,
+            system_instruction=SYSTEM_INSTRUCTION,
+            max_output_tokens=4096,
+        )
+
+        filepath = KB_RESEARCH_HOMOLOGS / f"{gene['gene_id'].replace('.', '_')}_homologs.md"
+        filepath.parent.mkdir(parents=True, exist_ok=True)
+
+        content = f"""# Homolog Research: {gene['gene_id']} - {gene['annotation']}
+> TL;DR: Homolog analysis for {gene['annotation']}
+> Last Updated: {date.today().isoformat()}
+
+{result}
+"""
+        filepath.write_text(content)
+
+        return {"gene_id": gene["gene_id"], "status": "success", "type": "homolog"}
+
+    except Exception as e:
+        logger.error(f"Homolog research failed for {gene['gene_id']}: {e}")
+        return {"gene_id": gene["gene_id"], "status": "error", "error": str(e)}
+
+
+async def deep_literature_research(client: GeminiClient, gene: dict) -> dict:
+    """Deep literature dive for a single gene."""
+    existing_analysis = load_existing_analysis(gene["gene_id"])
+    prompt = literature_deep_dive_prompt(
+        gene["gene_id"], gene["annotation"], existing_analysis
+    )
+
+    try:
+        result = await client.query_reasoning(
+            prompt=prompt,
+            system_instruction=SYSTEM_INSTRUCTION,
+            max_output_tokens=8192,
+        )
+
+        filepath = KB_RESEARCH_MECHANISMS / f"{gene['gene_id'].replace('.', '_')}_deep_dive.md"
+        filepath.parent.mkdir(parents=True, exist_ok=True)
+
+        content = f"""# Deep Literature Dive: {gene['gene_id']} - {gene['annotation']}
+> TL;DR: Comprehensive literature review for {gene['annotation']}
+> Priority: High
+> Last Updated: {date.today().isoformat()}
+
+{result}
+"""
+        filepath.write_text(content)
+
+        return {"gene_id": gene["gene_id"], "status": "success", "type": "deep_dive"}
+
+    except Exception as e:
+        logger.error(f"Deep dive failed for {gene['gene_id']}: {e}")
+        return {"gene_id": gene["gene_id"], "status": "error", "error": str(e)}
+
+
+async def exrna_background_research(client: GeminiClient) -> dict:
+    """Research cross-kingdom exRNA biology fundamentals."""
+    prompt = exrna_biology_prompt()
+
+    try:
+        result = await client.query_reasoning(
+            prompt=prompt,
+            system_instruction=SYSTEM_INSTRUCTION,
+            max_output_tokens=8192,
+        )
+
+        filepath = KB_RESEARCH_LIT / "exrna_biology_background.md"
+        filepath.parent.mkdir(parents=True, exist_ok=True)
+
+        content = f"""# Cross-Kingdom Extracellular RNA Biology
+> TL;DR: Background review of exRNA biology relevant to plant-bacteria interactions and seed treatment.
+> Last Updated: {date.today().isoformat()}
+
+{result}
+"""
+        filepath.write_text(content)
+
+        return {"status": "success", "type": "exrna_background"}
+
+    except Exception as e:
+        logger.error(f"exRNA background research failed: {e}")
+        return {"status": "error", "error": str(e)}
+
+
+async def run(client: GeminiClient) -> dict:
+    """Execute Stage 3: Literature Deep-Dive.
+
+    Returns:
+        Summary dict with results.
+    """
+    logger.info("=" * 60)
+    logger.info("STAGE 3: LITERATURE DEEP-DIVE")
+    logger.info("=" * 60)
+
+    high_targets = load_high_priority_targets()
+    logger.info(f"Found {len(high_targets)} high-priority targets for deep dive")
+
+    start_time = datetime.now()
+
+    # Phase 1: Homolog research for all high-priority targets
+    logger.info("Phase 1: Homolog research...")
+    homolog_tasks = [homolog_research(client, gene) for gene in high_targets]
+
+    # Phase 2: Deep literature dive for all high-priority targets
+    logger.info("Phase 2: Deep literature dives...")
+    deep_tasks = [deep_literature_research(client, gene) for gene in high_targets]
+
+    # Phase 3: exRNA background (single query)
+    logger.info("Phase 3: exRNA biology background...")
+
+    # Run all phases in parallel
+    all_tasks = homolog_tasks + deep_tasks + [exrna_background_research(client)]
+    all_results = await asyncio.gather(*all_tasks)
+
+    homolog_results = all_results[:len(high_targets)]
+    deep_results = all_results[len(high_targets):2 * len(high_targets)]
+    exrna_result = all_results[-1]
+
+    duration = (datetime.now() - start_time).total_seconds()
+
+    homolog_successes = sum(1 for r in homolog_results if r["status"] == "success")
+    deep_successes = sum(1 for r in deep_results if r["status"] == "success")
+
+    stats = client.get_stats()
+    logger.info(f"Stage 3 complete in {duration:.0f}s")
+    logger.info(f"Homologs: {homolog_successes}/{len(high_targets)}, Deep dives: {deep_successes}/{len(high_targets)}")
+
+    return {
+        "stage": "literature_dive",
+        "high_priority_targets": len(high_targets),
+        "homolog_successes": homolog_successes,
+        "deep_dive_successes": deep_successes,
+        "exrna_background": exrna_result["status"],
+        "duration_seconds": duration,
+        "api_stats": stats,
+    }

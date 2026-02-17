@@ -1,0 +1,773 @@
+{
+  "metadata": {
+    "organism": "Spinacia oleracea",
+    "treatment": "M-9 bacterial EPS solution",
+    "total_targets": 109,
+    "description": "Predicted spinach transcripts targeted by bacterial extracellular small RNAs"
+  },
+  "targets": [
+    {
+      "gene_id": "SOV1g000910.1",
+      "annotation": "Chaperone DnaJ domain protein",
+      "pathway": "protein_turnover",
+      "priority": "low",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV0g001060.1",
+      "annotation": "Regulator of rDNA transcription protein 15",
+      "pathway": "epigenetic_regulation",
+      "priority": "low",
+      "chromosome": "chr0"
+    },
+    {
+      "gene_id": "SOV0g001750.1",
+      "annotation": "Protein TAR1-like",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "chr0"
+    },
+    {
+      "gene_id": "SOV1g043000.1",
+      "annotation": "RING-type E3 ubiquitin transferase",
+      "pathway": "protein_turnover",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV3g021510.1",
+      "annotation": "Unknown protein",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV3g040200.1",
+      "annotation": "Glutathione S-transferase L3-like",
+      "pathway": "ros_redox",
+      "priority": "high",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV4g000770.1",
+      "annotation": "Protein adenylylyltransferase SelO",
+      "pathway": "signaling",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g000330.1",
+      "annotation": "Phytoene synthase",
+      "pathway": "metabolic",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g002060.1",
+      "annotation": "Sacchrp_dh_NADP domain-containing protein",
+      "pathway": "metabolic",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g010600.1",
+      "annotation": "Glycosyltransferase",
+      "pathway": "cell_wall_remodeling",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV6g036290.1",
+      "annotation": "Protein HIRA",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV1g002960.1",
+      "annotation": "F-box protein",
+      "pathway": "protein_turnover",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV1g034720.1",
+      "annotation": "Mitochondrial distribution/morphology family 35 / apoptosis-related",
+      "pathway": "organelle_biogenesis",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV2g006320.1",
+      "annotation": "Unknown protein",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV4g018960.1",
+      "annotation": "ULP_PROTEASE domain-containing protein",
+      "pathway": "protein_turnover",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV6g037220.1",
+      "annotation": "Pentatricopeptide repeat-containing protein",
+      "pathway": "rna_processing",
+      "priority": "medium",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV1g021960.1",
+      "annotation": "Cation-chloride cotransporter 1-like",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV2g025380.1",
+      "annotation": "Cation-chloride cotransporter 1-like",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV5g013920.1",
+      "annotation": "CRM-domain factor CFM3, chloroplastic/mitochondrial",
+      "pathway": "organelle_biogenesis",
+      "priority": "medium",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV1g019270.1",
+      "annotation": "DNA topoisomerase 2",
+      "pathway": "dna_repair_replication",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV2g000800.1",
+      "annotation": "TPT domain-containing protein",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "low",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV2g025780.1",
+      "annotation": "TIM50-like mitochondrial import inner membrane translocase subunit",
+      "pathway": "organelle_biogenesis",
+      "priority": "medium",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV3g043450.1",
+      "annotation": "ENHANCED DISEASE RESISTANCE 2 (EDR2)",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV4g035080.1",
+      "annotation": "tRNA (G37)-N1-methyltransferase",
+      "pathway": "rna_processing",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV6g048760.1",
+      "annotation": "ENHANCED DISEASE RESISTANCE 2 (EDR2)",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV1g027650.1",
+      "annotation": "Receptor-like kinase (RLK)",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV4g000910.1",
+      "annotation": "Albumin-2 like",
+      "pathway": "metabolic",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV1g032780.1",
+      "annotation": "ABC transporter-like protein",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV1g033340.1",
+      "annotation": "DNA (cytosine-5)-methyltransferase",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV1g004930.1",
+      "annotation": "GDSL esterase/lipase",
+      "pathway": "metabolic",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV1g011940.1",
+      "annotation": "DUF1336 domain-containing protein",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV1g021670.1",
+      "annotation": "Putative disease resistance protein",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV1g048270.1",
+      "annotation": "Aspartokinase",
+      "pathway": "metabolic",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV2g038560.1",
+      "annotation": "Protein DETOXIFICATION",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV3g007450.1",
+      "annotation": "P-loop NTPase hydrolase",
+      "pathway": "metabolic",
+      "priority": "low",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV3g031450.1",
+      "annotation": "Tetratricopeptide repeat domain protein",
+      "pathway": "protein_turnover",
+      "priority": "low",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV4g000010.1",
+      "annotation": "Lysine--tRNA ligase",
+      "pathway": "rna_processing",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g008190.1",
+      "annotation": "GDSL esterase/lipase",
+      "pathway": "metabolic",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g015450.1",
+      "annotation": "Histone-lysine N-methyltransferase SUVR5 (putative)",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g032870.1",
+      "annotation": "Histidine-containing phosphotransfer protein 1 (AHP-like)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g040550.1",
+      "annotation": "RNase H domain-containing protein",
+      "pathway": "dna_repair_replication",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g049080.1",
+      "annotation": "Phox domain / sorting nexin (putative)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV5g001320.1",
+      "annotation": "CTP synthase",
+      "pathway": "metabolic",
+      "priority": "medium",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV5g000510.1",
+      "annotation": "ATP-dependent RNA helicase / pre-mRNA splicing factor",
+      "pathway": "rna_processing",
+      "priority": "medium",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV5g008400.1",
+      "annotation": "Cation/H(+) antiporter-like",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV5g005530.1",
+      "annotation": "Modifier of SNC1 1 (MOS1-like / immune regulator)",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV6g019330.1",
+      "annotation": "CCHC-type domain-containing protein",
+      "pathway": "rna_processing",
+      "priority": "low",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV6g035270.1",
+      "annotation": "Pentatricopeptide repeat-containing protein",
+      "pathway": "rna_processing",
+      "priority": "medium",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV1g033840.1",
+      "annotation": "Glyco_transf_64 domain-containing protein",
+      "pathway": "cell_wall_remodeling",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV1g048290.1",
+      "annotation": "Glutamate receptor",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV2g004250.1",
+      "annotation": "Reverse transcriptase domain-containing protein",
+      "pathway": "transposon_related",
+      "priority": "low",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV4g035420.1",
+      "annotation": "Putative transmembrane protein",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV6g037890.1",
+      "annotation": "Patellin-6",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV3g008230.1",
+      "annotation": "NAD(P)-binding domain-containing protein",
+      "pathway": "metabolic",
+      "priority": "low",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV3g021300.1",
+      "annotation": "Stress response protein NST1",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV3g038840.1",
+      "annotation": "Peroxidase",
+      "pathway": "ros_redox",
+      "priority": "high",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV4g023530.1",
+      "annotation": "LUC7 N-terminus domain-containing protein (splicing-related)",
+      "pathway": "rna_processing",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g011580.1",
+      "annotation": "DNA polymerase",
+      "pathway": "dna_repair_replication",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g022520.1",
+      "annotation": "Peptide-N4-(N-acetyl-beta-glucosaminyl)asparagine amidase (PNGase-like)",
+      "pathway": "protein_turnover",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g041000.1",
+      "annotation": "ABC transporter-like",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g055450.1",
+      "annotation": "Sec1 family domain-containing protein MIP3 (putative)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g055600.1",
+      "annotation": "Cytochrome P450",
+      "pathway": "metabolic",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV5g006110.1",
+      "annotation": "F-box protein-like",
+      "pathway": "protein_turnover",
+      "priority": "medium",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV5g013040.1",
+      "annotation": "Snurportin-1",
+      "pathway": "rna_processing",
+      "priority": "low",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV5g030510.1",
+      "annotation": "Protein kinase family protein",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV5g034290.1",
+      "annotation": "Cytochrome c biogenesis FN",
+      "pathway": "organelle_biogenesis",
+      "priority": "medium",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV6g029280.1",
+      "annotation": "6-phosphogluconate dehydrogenase (PPP / NADPH)",
+      "pathway": "metabolic",
+      "priority": "high",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV2g021870.1",
+      "annotation": "RING-type domain-containing protein",
+      "pathway": "protein_turnover",
+      "priority": "medium",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV2g039720.1",
+      "annotation": "Calcium-binding protein",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV3g020770.1",
+      "annotation": "TIC214 (chloroplast import complex component)",
+      "pathway": "organelle_biogenesis",
+      "priority": "medium",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV1g020340.1",
+      "annotation": "MYB transcription factor",
+      "pathway": "signaling",
+      "priority": "high",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV4g005210.1",
+      "annotation": "Pentatricopeptide repeat-containing (predicted)",
+      "pathway": "rna_processing",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV1g018480.1",
+      "annotation": "Cyclic nucleotide-gated channel (CNGC)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV1g044260.1",
+      "annotation": "Vacuolar protein sorting-associated protein",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "low",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV2g001140.1",
+      "annotation": "Conserved oligomeric Golgi complex subunit 8",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "low",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV2g014810.1",
+      "annotation": "NAC domain-containing protein",
+      "pathway": "signaling",
+      "priority": "high",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV3g003500.1",
+      "annotation": "DNA-directed primase/polymerase",
+      "pathway": "dna_repair_replication",
+      "priority": "low",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV3g048330.1",
+      "annotation": "D-aminoacyl-tRNA deacylase",
+      "pathway": "rna_processing",
+      "priority": "low",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV5g032210.1",
+      "annotation": "NRT1/PTR family transporter 5.5-like",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV6g042250.1",
+      "annotation": "GDSL esterase/lipase",
+      "pathway": "metabolic",
+      "priority": "medium",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV3g033920.1",
+      "annotation": "PP2A regulatory subunit A (65 kDa)",
+      "pathway": "signaling",
+      "priority": "high",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV4g038060.1",
+      "annotation": "Zinc finger protein GIS2",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g054740.1",
+      "annotation": "RETICULATA (chloroplastic)",
+      "pathway": "organelle_biogenesis",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV2g009230.1",
+      "annotation": "Trehalose-phosphate synthase (TPS)",
+      "pathway": "metabolic",
+      "priority": "high",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV3g035520.1",
+      "annotation": "Lipoxygenase (LOX)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV3g000150.1",
+      "annotation": "Ethylene receptor",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV4g051070.1",
+      "annotation": "Beta-galactosidase",
+      "pathway": "cell_wall_remodeling",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g051610.1",
+      "annotation": "Ser/Thr kinase ATR (DNA damage response)",
+      "pathway": "dna_repair_replication",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV2g028550.1",
+      "annotation": "E3 ubiquitin-protein ligase RNF25",
+      "pathway": "protein_turnover",
+      "priority": "medium",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV2g038280.1",
+      "annotation": "F-box protein",
+      "pathway": "protein_turnover",
+      "priority": "medium",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV6g027850.1",
+      "annotation": "Nardilysin-like",
+      "pathway": "protein_turnover",
+      "priority": "low",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV4g000660.1",
+      "annotation": "Receptor-like serine/threonine-protein kinase",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g006140.1",
+      "annotation": "Choline/ethanolaminephosphotransferase 1",
+      "pathway": "metabolic",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g030590.1",
+      "annotation": "PHD-type domain-containing protein",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV4g008130.1",
+      "annotation": "Vesicle transport protein",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV5g004280.1",
+      "annotation": "Sec61 subunit alpha (protein translocation)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "low",
+      "chromosome": "chr5"
+    },
+    {
+      "gene_id": "SOV4g046320.1",
+      "annotation": "Ser/Thr-protein kinase",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV6g014710.1",
+      "annotation": "Plant cadmium resistance-like protein",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV6g042110.1",
+      "annotation": "Glyoxylate/hydroxypyruvate reductase",
+      "pathway": "metabolic",
+      "priority": "medium",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV6g048110.1",
+      "annotation": "Rhodanese domain-containing protein",
+      "pathway": "ros_redox",
+      "priority": "low",
+      "chromosome": "chr6"
+    },
+    {
+      "gene_id": "SOV3g000640.1",
+      "annotation": "Glycerol-3-phosphate transporter",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV2g013310.1",
+      "annotation": "Folate-biopterin transporter",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV4g025520.1",
+      "annotation": "Reverse transcriptase domain-containing protein",
+      "pathway": "transposon_related",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV3g022260.1",
+      "annotation": "DNA-directed DNA polymerase",
+      "pathway": "dna_repair_replication",
+      "priority": "low",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV3g033520.1",
+      "annotation": "Reverse transcriptase domain-containing protein",
+      "pathway": "transposon_related",
+      "priority": "low",
+      "chromosome": "chr3"
+    },
+    {
+      "gene_id": "SOV1g003910.1",
+      "annotation": "Retrotrans_gag domain-containing protein",
+      "pathway": "transposon_related",
+      "priority": "low",
+      "chromosome": "chr1"
+    },
+    {
+      "gene_id": "SOV4g035390.1",
+      "annotation": "Reverse transcriptase domain-containing protein",
+      "pathway": "transposon_related",
+      "priority": "low",
+      "chromosome": "chr4"
+    },
+    {
+      "gene_id": "SOV2g038830.1",
+      "annotation": "Pesticidal crystal cry8Ba protein (check for contamination/misannotation)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "chr2"
+    },
+    {
+      "gene_id": "SOV4g049990.1",
+      "annotation": "Unknown protein",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "chr4"
+    }
+  ]
+}

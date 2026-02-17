@@ -1,0 +1,216 @@
+================================================================================
+SOYBEAN (Glycine max) exRNA SEED TREATMENT TARGET ANNOTATION REPORT
+================================================================================
+Date: 2026-02-17
+Annotation sources: NCBI Protein, SoyBase (Wm82.a2.v1 / Glyma 4.0),
+                     Ensembl Plants, TAIR (Arabidopsis homologs)
+================================================================================
+
+SECTION 1: DUPLICATE CONSOLIDATION
+================================================================================
+
+Original list contained 23 entries with the following duplicates noted:
+  - GLYMA_01G215100 (repeated)
+  - GLYMA_02G220600 (repeated)
+  - GLYMA_09G051100 (repeated)
+  - GLYMA_09G063900 (repeated)
+  - KRH37200 (repeated)
+
+After deduplication: 18 UNIQUE TARGETS
+  - 13 unique GLYMA loci (including resolved KRH mappings)
+  - 5 additional KRH accessions that map to GLYMA loci not otherwise in list
+
+Total unique GLYMA gene loci after all KRH-to-GLYMA resolution: 18
+
+
+SECTION 2: KRH PROTEIN ACCESSION RESOLUTION
+================================================================================
+
+All KRH accessions are from the Glycine max Wm82.a4.v1 genome annotation
+deposited in GenBank. Several records have been removed from NCBI but the
+GLYMA gene locus mapping was preserved in the removal notice.
+
+KRH47986 --> GLYMA_07G060700
+  Status: NCBI record REMOVED
+  SoyBase annotation: Thylakoid membrane protein (CURT1-like)
+  Arabidopsis homolog: AT4G01150 (CURT1A)
+  NOTE: Original list described this as "cation transport regulator-like
+  protein 2-like". SoyBase annotation says thylakoid/CURT1. The discrepancy
+  may reflect different annotation pipeline versions or the original label
+  may come from a different source. FLAGGED AS UNCERTAIN.
+
+KRH55503 --> GLYMA_06G259700
+  Status: Active (KRH55503.2)
+  SoyBase annotation: Disease resistance protein, TIR-NBS-LRR class
+  Arabidopsis homolog: AT5G45250
+  NOTE: Original list labeled "hypothetical protein" and appended "v4" to
+  gene ID. SoyBase clearly annotates as TIR-NBS-LRR disease resistance.
+
+KRH37200 --> GLYMA_09G051100
+  Status: Active (KRH37200.1)
+  SoyBase annotation: Cellulose synthase A4
+  Arabidopsis homolog: AT5G44030
+  NOTE: This KRH is a duplicate -- GLYMA_09G051100 already in list.
+
+KRH57561 --> GLYMA_05G068700
+  Status: Active (KRH57561.1)
+  SoyBase annotation: Plant invertase/pectin methylesterase inhibitor
+                      superfamily protein
+  Arabidopsis homolog: AT5G46940
+  NOTE: Consistent with original label "putative invertase inhibitor"
+
+KRH33075 --> GLYMA_10G097500
+  Status: NCBI record REMOVED
+  SoyBase annotation: Hypothetical protein (uncharacterized)
+  Arabidopsis homolog: AT3G57440 (also uncharacterized)
+
+KRH35424 --> GLYMA_10G242300
+  Status: Active (KRH35424.1)
+  SoyBase annotation: Leucine-rich repeat receptor-like protein kinase
+                      (ERECTA-like)
+  Arabidopsis homologs: AT5G07180 (ERL2), AT5G62230 (ERL1)
+
+KRH35861 --> GLYMA_10G268800
+  Status: Active (KRH35861.1)
+  SoyBase annotation: Hypothetical protein; very short (61-64 aa)
+  No clear Arabidopsis homolog or domain assignment.
+
+KRH5227 --> LIKELY GLYMA_06G057500
+  Status: TRUNCATED ACCESSION -- likely KRH52271 or KRH52270
+  Both KRH52271.1 and KRH52270.2 map to GLYMA_06G057500
+  SoyBase annotation: Protein of unknown function (DUF1677)
+  Arabidopsis homolog: AT1G72510
+  FLAGGED: Original accession appears incomplete (5 digits vs normal 5 digits,
+  but could be KRH52270 or KRH52271 -- both match same gene).
+
+KRH25272 --> GLYMA_12G091900
+  Status: NCBI record REMOVED
+  SoyBase annotation: Hypothetical membrane protein
+  Arabidopsis homolog: AT5G22340 (poorly characterized)
+
+
+SECTION 3: GLYMA_09G19270 FORMAT ISSUE
+================================================================================
+
+FLAG: The ID "GLYMA_09G19270" has an incorrect number of digits.
+
+Standard GLYMA format: GLYMA_[Chr]G[6-digit number]
+  - GLYMA_09G192700 = 6 digits (VALID format)
+  - GLYMA_09G019270 = 6 digits (VALID format)
+
+Resolution: GLYMA_09G192700 is the CORRECT ID.
+
+Evidence:
+  1. SoyBase returns a valid gene for Glyma.09G192700 on chromosome 9
+     (positions 41,734,808-41,738,603)
+  2. SoyBase query for Glyma.09G019270 returned errors / no data
+  3. GLYMA_09G192700 encodes a well-characterized ROP GTPase (RHO-related
+     protein from plants 9), homologous to AT4G28950
+  4. Ensembl Plants confirms GLYMA_09G192700 with 153 orthologues
+
+RECOMMENDED CORRECTION: GLYMA_09G19270 --> GLYMA_09G192700
+
+
+SECTION 4: COMPLETE ANNOTATED TARGET TABLE
+================================================================================
+
+#  | Gene_ID           | KRH Acc.  | Best Annotation                          | At Homolog  | Key Domains                        | Pathway Category
+---|-------------------|-----------|------------------------------------------|-------------|------------------------------------|------------------
+1  | GLYMA_01G215100   | -         | Phospholipase D beta 1                   | AT2G42010   | C2; PLD active site; PLD C-term    | ABA/GA (lipid signaling)
+2  | GLYMA_09G261100   | -         | Exosome subunit Rrp46-like               | AT3G46210   | 3' exoribonuclease; RNase PH       | Unknown (RNA processing)
+3  | GLYMA_01G009900   | -         | LrgB-like membrane protein               | AT1G32080   | LrgB domain (PF04172)              | Defense / cell death
+4  | GLYMA_06G259700   | KRH55503  | TIR-NBS-LRR disease resistance protein   | AT5G45250   | TIR; NBS; LRR                      | Defense
+5  | GLYMA_01G091700   | -         | hAT transposon superfamily protein       | AT4G15020   | DUF659 (PF04937)                   | Unknown (TE-related)
+6  | GLYMA_02G220600   | -         | UFM1-specific peptidase (Peptidase C78)  | AT5G24680   | Peptidase C78 (PF07910)            | Unknown (protein QC)
+7  | GLYMA_09G051100   | KRH37200  | Cellulose synthase A4 (CesA4)            | AT5G44030   | Cellulose synthase (PF03552)       | Cell wall
+8  | GLYMA_03G196400   | -         | Glutaredoxin family protein              | AT5G03870   | Glutaredoxin (PF00462)             | ROS/redox
+9  | GLYMA_08G231200   | -         | Urb2/Npa2 ribosome biogenesis factor     | AT4G30150   | Urb2/Npa2 domain                   | Unknown (ribosome biogenesis)
+10 | GLYMA_09G192700   | -         | ROP GTPase (RHO-related from plants 9)   | AT4G28950   | Ras GTPase domain                  | ABA/GA (signal transduction)
+11 | GLYMA_09G063900   | -         | Cytokinin oxidase 3 (CKX3)              | AT5G56970   | FAD binding; CKX dehydrogenase     | ABA/GA (hormone metabolism)
+12 | GLYMA_10G097500   | KRH33075  | Hypothetical protein (uncharacterized)   | AT3G57440   | Unknown                            | Unknown
+13 | GLYMA_10G242300   | KRH35424  | LRR receptor-like kinase (ERECTA-like)   | AT5G07180   | Protein kinase; LRR; LRR N-term    | Defense / ABA/GA (RLK signaling)
+14 | GLYMA_10G268800   | KRH35861  | Hypothetical protein (very short, 61 aa) | Unassigned  | Unknown                            | Unknown
+15 | GLYMA_07G060700   | KRH47986  | CURT1-like thylakoid membrane protein    | AT4G01150   | Transmembrane domains              | Unknown (photosynthesis)
+16 | GLYMA_05G068700   | KRH57561  | Invertase/PME inhibitor superfamily      | AT5G46940   | Inv/PME inhibitor (PF04043)        | Sugar sensing / cell wall
+17 | GLYMA_06G057500   | KRH5227*  | DUF1677 protein                          | AT1G72510   | DUF1677                            | Unknown
+18 | GLYMA_12G091900   | KRH25272  | Hypothetical integral membrane protein   | AT5G22340   | Transmembrane domains              | Unknown (membrane)
+
+
+SECTION 5: PATHWAY CATEGORY SUMMARY
+================================================================================
+
+ABA/GA / Hormone signaling (4 targets):
+  - GLYMA_01G215100: Phospholipase D beta 1 (phosphatidic acid signaling)
+  - GLYMA_09G192700: ROP GTPase (ABA signal transduction)
+  - GLYMA_09G063900: Cytokinin oxidase 3 (hormone degradation)
+  - GLYMA_10G242300: ERECTA-like LRR-RLK (partially; developmental signaling)
+
+Sugar sensing (1 target):
+  - GLYMA_05G068700: Invertase/PME inhibitor (regulates extracellular
+    invertase activity controlling sugar partitioning in seeds)
+
+ROS/redox (1 target):
+  - GLYMA_03G196400: Glutaredoxin (thiol-disulfide redox homeostasis)
+
+Cell wall (2 targets):
+  - GLYMA_09G051100: Cellulose synthase A4 (primary cell wall biogenesis)
+  - GLYMA_05G068700: Invertase/PME inhibitor (also cell wall remodeling via
+    pectin methylesterase inhibition)
+
+Defense (3 targets):
+  - GLYMA_06G259700: TIR-NBS-LRR disease resistance protein
+  - GLYMA_01G009900: LrgB-like anti-cell-death membrane protein
+  - GLYMA_10G242300: ERECTA-like RLK (partially; pathogen defense)
+
+Unknown / uncharacterized (7 targets):
+  - GLYMA_09G261100: RNA processing (exosome subunit)
+  - GLYMA_01G091700: Transposon-related
+  - GLYMA_02G220600: UFM1 peptidase (protein quality control)
+  - GLYMA_08G231200: Ribosome biogenesis (Urb2/Npa2)
+  - GLYMA_10G097500: Completely uncharacterized
+  - GLYMA_10G268800: Completely uncharacterized (very short protein)
+  - GLYMA_06G057500: DUF1677 (unknown function domain)
+  - GLYMA_12G091900: Unknown membrane protein
+  - GLYMA_07G060700: Thylakoid membrane / CURT1-like
+
+Ion transport (0 confirmed targets):
+  NOTE: KRH47986 was originally labeled "cation transport regulator-like
+  protein 2-like" but SoyBase annotation for GLYMA_07G060700 indicates
+  CURT1/thylakoid. This discrepancy needs experimental confirmation.
+
+
+SECTION 6: FLAGS AND CAVEATS
+================================================================================
+
+1. GLYMA_09G19270: Truncated gene ID. Corrected to GLYMA_09G192700 based on
+   SoyBase validation. GLYMA_09G019270 does not appear to be a valid gene.
+
+2. KRH5227: Truncated protein accession. Likely KRH52271 or KRH52270; both
+   map to GLYMA_06G057500. Recommend verifying original source data.
+
+3. KRH47986 annotation conflict: Original list says "cation transport
+   regulator-like protein 2-like" but SoyBase/NCBI maps to GLYMA_07G060700
+   annotated as a CURT1-like thylakoid membrane protein (AT4G01150 homolog).
+   CURT1 proteins are NOT cation transporters. Possible explanations:
+   a) Annotation may have been updated between genome versions
+   b) The KRH47986 record was removed from NCBI, so the original annotation
+      may have differed from the current SoyBase entry
+   c) The original label may come from automated BLAST annotation against a
+      different database
+
+4. GLYMA_06G259700v4: The "v4" suffix in the original list is an annotation
+   version marker (Wm82.a4.v1), not part of the canonical gene ID. The
+   correct gene ID is GLYMA_06G259700.
+
+5. Three NCBI protein records have been removed (KRH47986, KRH33075,
+   KRH25272), indicating these gene models may have been revised in newer
+   genome assemblies.
+
+6. Multiple targets (GLYMA_10G097500, GLYMA_10G268800, GLYMA_06G057500,
+   GLYMA_12G091900) remain poorly characterized with no experimentally
+   validated function. These would benefit from domain prediction via
+   InterProScan or AlphaFold structure analysis.
+
+================================================================================
+END OF REPORT
+================================================================================

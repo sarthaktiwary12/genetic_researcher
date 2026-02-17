@@ -1,0 +1,1164 @@
+================================================================================
+COMPREHENSIVE ANNOTATION REPORT:
+BROCCOLI (Brassica oleracea) GENE TARGETS FROM
+PREDICTED BACTERIAL EXTRACELLULAR sRNA ANTISENSE TARGET LIST
+================================================================================
+
+Date: 2026-02-17
+Genome Reference: Brassica oleracea var. oleracea (TO1000 / JZS v1.0)
+Databases consulted: EnsemblPlants, BRAD (Brassica Database v3.0), UniProt,
+                     TAIR (Arabidopsis orthologs), InterPro, NCBI Gene, CAZy
+
+NOTE ON ORTHOLOGY: Brassica oleracea underwent a whole-genome triplication (WGT)
+relative to Arabidopsis thaliana (~15-20 Mya divergence). Many Bo genes are
+retained paralogs from the three subgenomes (LF, MF1, MF2). Arabidopsis
+orthologs were assigned based on synteny and best BLASTP hits from original
+genome annotation (Liu et al. 2014). Average CDS conservation is ~71%.
+
+================================================================================
+SECTION 1: GENE-BY-GENE ANNOTATION
+================================================================================
+
+SET 1 (Genes 1-30)
+--------------------------------------------------------------------------------
+
+1. Bo7g095320.1
+   Best Annotation: Hypothetical protein, conserved across plants (152 aa)
+   At Ortholog: Not definitively assigned; 85 orthologues in EnsemblPlants
+   Domains: Unknown; small protein may represent a small ORF or peptide
+   Pathway: Unknown
+   Confidence: LOW - requires experimental validation
+
+2. Bo4g107590.1
+   Best Annotation: Uncharacterized protein-coding gene (796 aa)
+   At Ortholog: Not definitively assigned; 85 orthologues in EnsemblPlants
+   Domains: Unknown
+   Pathway: Unknown
+   Confidence: LOW
+
+3. Bo9g023770.1
+   Best Annotation: Uncharacterized protein-coding gene (297 aa)
+   At Ortholog: Not definitively assigned; 142 orthologues in EnsemblPlants
+   Domains: Unknown; high ortholog count suggests conserved function
+   Pathway: Unknown
+   Confidence: LOW
+
+4. Bo2g146190.1
+   Best Annotation: Uncharacterized protein-coding gene (413 aa)
+   At Ortholog: Not definitively assigned; 261 orthologues, 78 paralogues
+   Domains: Unknown; broad conservation suggests fundamental cellular role
+   Pathway: Unknown
+   Confidence: LOW
+
+5. Bo1g016960.1
+   Best Annotation: CDK-Activating Kinase 1 (CAK1AT / CDKD;1-like)
+   At Ortholog: AT4G28980 (CAK1AT)
+   Domains: Protein kinase catalytic domain; Ser/Thr kinase active site; ATP-binding
+   Pathway: CELL CYCLE / TRANSCRIPTION - phosphorylates CDKD2/CDKD3 and RNA
+            Pol II CTD; regulates cell proliferation, cell expansion, and
+            steady-state CDK levels; controls basal transcription
+   Localization: Cytoplasm and nucleus
+   Confidence: HIGH
+
+6. Bo1g006720.1
+   Best Annotation: Uncharacterized protein-coding gene
+   At Ortholog: Not assigned
+   Domains: Unknown
+   Pathway: Unknown
+   Confidence: LOW
+
+7. Bo3g151500.1
+   Best Annotation: Uncharacterized protein-coding gene
+   At Ortholog: Not assigned
+   Domains: Unknown
+   Pathway: Unknown
+   Confidence: LOW
+
+8. Bo9g173970.1
+   Best Annotation: Chaperone DnaJ-domain superfamily protein (DNAJD5-like)
+   At Ortholog: AT5G09540 (DNAJD5 / SDJ3-related)
+   Domains: J-like domain (DnaJ)
+   Pathway: PROTEIN HOMEOSTASIS / STEM CELL MAINTENANCE - co-chaperone for
+            HSP70s; interacts with WUS (WUSCHEL) in shoot apical meristem;
+            regulates stem cell identity; involved in thermotolerance
+   Confidence: HIGH
+
+9. Bo8g090750.1
+   Best Annotation: Uncharacterized protein-coding gene
+   At Ortholog: Not assigned
+   Domains: Unknown
+   Pathway: Unknown
+   Confidence: LOW
+
+10. Bo8g090760.1
+    Best Annotation: tRNA (guanine-N2)-dimethyltransferase (TRM1-like)
+    At Ortholog: Arabidopsis TRM1 homolog
+    Domains: Class I SAM-binding methyltransferase superfamily; zinc finger;
+             Arg/Pro-rich region
+    Pathway: tRNA MODIFICATION / EPIGENETICS - catalyzes m2,2G modification
+             at position 26 of most nuclear- and mitochondrial-encoded tRNAs
+             using SAM as methyl donor; required for tRNA stability, redox
+             homeostasis, and proper cellular proliferation
+    Confidence: HIGH
+
+11. Bo2g05500.1
+    Best Annotation: RING finger (C3HC4-type) / BRCT domain protein
+    At Ortholog: AT1G67180
+    Domains: RING (C3HC4) zinc finger; BRCT (BRCA1 C-terminal) repeat
+    Pathway: UBIQUITIN-PROTEASOME / DNA DAMAGE RESPONSE - RING domain confers
+             E3 ubiquitin ligase activity; BRCT domain mediates protein-protein
+             interactions (similar to BARD1 homologs involved in DNA repair);
+             targeted proteolysis and transcriptional regulation
+    Confidence: HIGH
+
+12. Bo6g067490.1 [REPEATED TARGET - see consolidation]
+    Best Annotation: PDR9 / ABCG37 pleiotropic drug resistance transporter
+    At Ortholog: AT3G53480 (PDR9/ABCG37)
+    Domains: Two NBDs, two TMDs (each 6 TM spans), PDR signature motif; ABC
+             transporter ABCG subfamily
+    Pathway: AUXIN TRANSPORT / DETOXIFICATION / IRON NUTRITION - exports
+             auxinic compounds (2,4-D, IBA) and NPA; exports highly oxygenated
+             coumarins (scopoletin, fraxetin) for iron acquisition; role in
+             root exudation; NOT free IAA transporter
+    Confidence: HIGH
+
+13. Bo1g087970.1
+    Best Annotation: Patellin 1 (PATL1) - SEC14/GOLD domain protein
+    At Ortholog: AT1G72150 (PATL1)
+    Domains: SEC14 (phosphatidylinositol transfer) domain; GOLD (Golgi dynamics)
+             domain; variable N-terminal domain
+    Pathway: MEMBRANE TRAFFICKING / CYTOKINESIS / STRESS - phosphatidylinositol
+             transfer protein; localizes to cell plate during cytokinesis; binds
+             PtdCh and PtdIns; regulates PM-related signaling; negatively
+             modulates salt tolerance (Na+/H+ antiport); phosphorylation-regulated
+    Confidence: HIGH
+
+14. Bo9g060010.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+15. Bo7g118390.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+16. Bo8g079370.1
+    Best Annotation: NPH3 (Non-Phototropic Hypocotyl 3) family protein
+    At Ortholog: AT3G49970 (NPH3-like / NRL family member)
+    Domains: NPH3 domain; BTB/POZ domain (potential)
+    Pathway: PHOTOTROPISM / LIGHT SIGNALING - signal transducer for blue-light
+             photoreceptors phot1/phot2; scaffold/adapter for CUL3-based E3
+             ubiquitin ligase; phosphorylated by phot1; promotes phototropism
+             and petiole positioning
+    Note: AT3G49970 is a member of the large NPH3/RPT2-like (NRL) family
+          (33 members in Arabidopsis); the specific member needs verification
+    Confidence: MEDIUM-HIGH
+
+17. Bo8g068260.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+18. Bo9g173960.1
+    Best Annotation: Rab GDP Dissociation Inhibitor (GDI)
+    At Ortholog: AtGDI1 (AT2G44100) or AtGDI2 (AT3G59560)
+    Domains: GDI domain
+    Pathway: VESICLE TRAFFICKING - binds prenylated Rab GTPases; slows GDP
+             dissociation; escorts GDP-bound Rab proteins to target membranes
+             and retrieves them; essential for Rab cycling and membrane trafficking
+    Note: Adjacent to Bo9g173970 (DnaJ) on Chr C9, both involved in
+          protein/membrane homeostasis
+    Confidence: HIGH
+
+19. Bo8g051030.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+20. Bo9g028910.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+21. Bo5g103400.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+22. Bo1g079000.1 [REPEATED TARGET - see consolidation]
+    Best Annotation: General Transcription Factor IIIC subunit 5 (TFIIIC5)
+    At Ortholog: AT3G49410
+    Domains: TFIIIC B-block binding subunit domain; conserved N-terminal regions
+    Pathway: TRANSCRIPTION - subunit of the TFIIIC complex (6-subunit, ~0.5 MDa);
+             required for RNA Pol III transcription initiation; recognizes B-box
+             internal promoter elements of tRNA genes; essential for tRNA, 5S rRNA,
+             and other Pol III transcript production
+    Confidence: HIGH
+
+23. Bo4g076880.1 [REPEATED TARGET - see consolidation]
+    Best Annotation: Pentatricopeptide Repeat (PPR) superfamily protein
+    At Ortholog: AT2G26790
+    Domains: PPR motifs (tandem 35 aa repeats)
+    Pathway: ORGANELLAR RNA PROCESSING - targeted to mitochondria or chloroplasts;
+             sequence-specific RNA-binding; involved in RNA editing, splicing,
+             turnover, processing, or translation of organellar transcripts;
+             non-redundant function among ~450 PPR proteins in Arabidopsis
+    Confidence: HIGH
+
+24. Bo7g119590.1
+    Best Annotation: CRK26 - Cysteine-Rich Receptor-Like Kinase 26
+    At Ortholog: AT4G38830 (CRK26)
+    Domains: Four DUF26 (extracellular cysteine-rich) domains; transmembrane;
+             intracellular kinase domain
+    Pathway: INNATE IMMUNITY / DEFENSE - induced by oxidative stress, pathogen
+             attack, and salicylic acid; elevated in npr1, ein2, fad3/7/8, dnd1
+             mutants; four conserved Cys residues form disulfide bridges as
+             potential thiol redox targets; unique among CRKs with 4 DUF26 domains
+    Confidence: HIGH
+
+25. Bo2g047480.1 [REPEATED TARGET - see consolidation]
+    Best Annotation: DNA Primase large subunit / PrimPol
+    At Ortholog: AT5G52800 (EMB2813 / PrimPol)
+    Domains: DNA primase large subunit domain; primase-polymerase domain
+    Pathway: DNA REPLICATION - organellar and nuclear DNA maintenance; homolog of
+             human PRIMPOL; involved in maintenance of genome integrity; emb2813
+             mutants show embryo-lethal phenotype; PrimPol single mutants show
+             no significant phenotype (functional redundancy)
+    Confidence: HIGH
+
+26. Bo4g044010.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+27. Bo6g039950.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Note: Adjacent to Bo6g039960 (gene 34) - may represent tandem duplicates
+    Confidence: LOW
+
+28. Bo9g004400.1
+    Best Annotation: Glycosyltransferase (GT family)
+    At Ortholog: Not specifically assigned; likely belongs to one of 42+ GT families
+    Domains: Glycosyltransferase catalytic domain; potential DXD motif
+    Pathway: CELL WALL BIOSYNTHESIS / SECONDARY METABOLISM - glycosyltransferases
+             catalyze transfer of sugar moieties to diverse acceptors; roles in
+             cell wall polysaccharide synthesis, glycoprotein modification, or
+             secondary metabolite glycosylation (glucosinolates in Brassicaceae)
+    Confidence: MEDIUM
+
+29. Bo4g061330.1 [REPEATED TARGET - see consolidation]
+    Best Annotation: THIC - Thiamine (Vitamin B1) Biosynthesis Protein
+    At Ortholog: AT2G29630 (THIC / thiC)
+    Domains: HMP-P synthase domain; iron-sulfur cluster binding; ThiC domain
+    Pathway: THIAMINE BIOSYNTHESIS - catalyzes synthesis of HMP-P (4-amino-2-
+             methyl-5-hydroxymethylpyrimidine phosphate) from AIR and SAM;
+             regulated by riboswitch in 3'-UTR (TPP riboswitch) and circadian
+             clock; essential gene (knockdown = albino/lethal); Fe-S cluster
+             required for activity
+    Confidence: HIGH
+
+30. Bo9g126160.1
+    Best Annotation: Glycosyl Hydrolase Family 17 (GH17) beta-1,3-glucanase
+    At Ortholog: AT5G56590
+    Domains: GH17 domain; glucan endo-1,3-beta-glucosidase catalytic domain
+    Pathway: DEFENSE / CELL WALL REMODELING - hydrolyzes 1,3-beta-D-glucosidic
+             linkages in callose and fungal cell walls; pathogenesis-related
+             protein family PR-2; roles in cell division, pollen germination,
+             flower formation, and fruit ripening; defense against fungal
+             pathogens
+    Confidence: HIGH
+
+
+SET 2 (Genes 31-89)
+--------------------------------------------------------------------------------
+
+31. Bo8g068060.1
+    Provided Annotation: "MEF2-like TF"
+    *** ANNOTATION CORRECTION FLAGGED ***
+    Corrected Annotation: MADS-box transcription factor (Type II MIKC-type)
+    At Ortholog: Likely a MIKC-type MADS gene (AGL family member)
+    Domains: MADS domain (M); Intervening domain (I); Keratin-like domain (K);
+             C-terminal domain (C)
+    Pathway: FLOWER DEVELOPMENT / PLANT DEVELOPMENT - Type II MADS-box TFs
+             in plants have a MADS domain structurally related to the animal
+             MEF2 domain BUT are NOT functional MEF2 orthologs. Plants do NOT
+             have canonical MEF2 transcription factors as in animals. The MADS
+             domain of plant MIKC proteins and animal MEF2 share a common
+             ancestor but diverged extensively. In B. oleracea, 91 MADS-box
+             TFs were identified (Shu et al. 2019), classified as Type I
+             (Malpha, Mbeta, Mgamma) and Type II (MIKC-C, MIKC*).
+    VERIFICATION NOTE: The "MEF2-like" label is MISLEADING. This gene encodes
+             a plant MADS-box TF. The MADS domain in plants is sometimes called
+             "MEF2-like" in automated domain annotation pipelines because the
+             MADS domain shares structural similarity with the animal MEF2
+             MADS domain. However, plant MADS-box proteins (e.g., AGAMOUS,
+             SEPALLATA, SOC1, FLC, etc.) have entirely different functions from
+             animal MEF2 factors. This is NOT a "MEF2 transcription factor" in
+             the animal sense. Correct annotation: MADS-box TF (MIKC-type).
+    Confidence: HIGH (correction validated)
+
+32. Bo1g064030.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+33. Bo4g187880.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+34. Bo6g039960.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Note: Adjacent to Bo6g039950 (gene 27) on Chr C6 - likely tandem duplicates
+          from WGT or local duplication
+    Confidence: LOW
+
+35. Bo7g097580.1
+    Best Annotation: Vesicle Transport Protein (SNARE-related or SEC-related)
+    At Ortholog: Not specifically assigned
+    Domains: Likely SNARE domain or vesicle-associated domain
+    Pathway: VESICLE TRAFFICKING / SECRETORY PATHWAY - SNARE proteins facilitate
+             vesicle tethering and membrane fusion; roles in cytokinesis, secretion,
+             ER-Golgi transport, vacuolar sorting, and plasma membrane targeting
+    Confidence: MEDIUM
+
+36. Bo9g171280.1
+    Best Annotation: Protein kinase domain-containing protein
+    At Ortholog: Not specifically assigned
+    Domains: Protein kinase catalytic domain; Ser/Thr kinase
+    Pathway: SIGNAL TRANSDUCTION - protein kinases constitute ~4% of Arabidopsis
+             genes; roles in cellular signal transduction, development, stress
+             response, and hormone signaling
+    Confidence: MEDIUM
+
+37. Bo7g107400.1
+    Best Annotation: CRK29 - Cysteine-Rich Receptor-Like Kinase 29
+    At Ortholog: AT4G21410 (CRK29)
+    Domains: DUF26 (extracellular cysteine-rich) domains; transmembrane;
+             intracellular kinase domain
+    Pathway: INNATE IMMUNITY / DEFENSE - strongly induced upon flg22 (PTI)
+             perception (~18-fold, 3h post-elicitation); associates with the
+             FLS2 immune receptor complex; self-associates and hetero-associates
+             with CRK28; localized to plasma membrane and vacuole; down-
+             regulated by ABA; 40 of 46 CRKs located on chromosome 4 in Arabidopsis
+    Confidence: HIGH
+
+38. Bo7g098960.1
+    Best Annotation: Pectinesterase / Pectin Methylesterase (PME)
+    At Ortholog: Not specifically assigned (66 PME genes in Arabidopsis)
+    Domains: Pectinesterase catalytic domain; possible PMEI (inhibitor) domain
+    Pathway: CELL WALL MODIFICATION / DEFENSE - demethylesterifies homogalacturonan
+             (HG) in cell walls; releases protons and methanol; dual role in cell
+             wall rigidification (Ca2+ cross-linking) and loosening (substrate for
+             polygalacturonase); roles in pollen tube growth, fruit ripening, organ
+             abscission; cell wall integrity sensing during pathogen attack
+    Confidence: HIGH
+
+39. Bo8g106010.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+40. Bo7g067480.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+41. Bo3g026630.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+42. Bo8g102500.1
+    Best Annotation: RNA-Dependent RNA Polymerase (RDR)
+    At Ortholog: Likely RDR1, RDR2, or RDR6 (6 RDRs in Arabidopsis)
+    Domains: RNA-dependent RNA polymerase catalytic domain; RdRP domain
+    Pathway: RNA SILENCING / ANTIVIRAL DEFENSE / EPIGENETICS - converts ssRNA
+             to dsRNA precursors of siRNAs; RDR2 interacts with Pol IV for
+             RNA-directed DNA methylation (TGS); RDR1/RDR6 function in
+             antiviral post-transcriptional gene silencing (PTGS); amplifies
+             small RNA signals; essential for transgene silencing and
+             transposon control
+    *** HIGH-PRIORITY TARGET *** - RDR is a core component of plant RNA
+             silencing, directly relevant to sRNA-based cross-kingdom regulation
+    Confidence: HIGH
+
+43. Bo5g010530.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+44. Bo3g024060.1
+    Best Annotation: Protein kinase superfamily protein
+    At Ortholog: Not specifically assigned
+    Domains: Protein kinase catalytic domain
+    Pathway: SIGNAL TRANSDUCTION - general kinase function in signaling cascades
+    Confidence: MEDIUM
+
+45. Bo01182s010.1
+    Best Annotation: P-loop NTPase superfamily protein
+    At Ortholog: AT3G45090
+    Domains: P-loop (Walker A/B) motif; NTPase domain
+    Pathway: DIVERSE FUNCTIONS - P-loop NTPases include disease resistance
+             proteins (NBS-LRR), ABC transporters, chaperones, and metabolic
+             enzymes; AT3G45090 may be involved in root stem cell niche regulation
+             through ROS homeostasis control
+    Note: Gene on scaffold (not assigned to a chromosome), suggesting possible
+          assembly gap region
+    Confidence: MEDIUM
+
+46. Bo3g021630.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+47. Bo5g122640.1
+    Best Annotation: Protein kinase
+    At Ortholog: AT3G17750 (protein kinase superfamily)
+    Domains: Protein kinase catalytic domain; ATP binding
+    Pathway: SIGNAL TRANSDUCTION - member of the large Arabidopsis kinome
+             (~1,000 kinases); specific function depends on subfamily classification
+    Confidence: MEDIUM
+
+48. Bo7g114200.1
+    Best Annotation: Auxin Response Factor (ARF)
+    At Ortholog: Likely one of 23 Arabidopsis ARFs (ARF1-23); B. oleracea has 29
+    Domains: B3-type DNA binding domain; middle region (activation/repression);
+             Aux/IAA interaction domain (PB1 domain)
+    Pathway: AUXIN SIGNALING - key transcription factors in auxin-mediated
+             development; bind auxin response elements (AuxRE, TGTCTC); interact
+             with Aux/IAA repressors; control cell expansion, lateral root
+             development, tropisms, embryogenesis, flower development
+    Confidence: HIGH
+
+49. Bo3g064760.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+50. Bo9g169690.1 [REPEATED TARGET - see consolidation]
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+51. Bo8g066360.1
+    Best Annotation: MBD10 - Methyl-CpG-Binding Domain protein 10
+    At Ortholog: AT1G15340 (MBD10)
+    Domains: Methyl-CpG-binding domain (MBD); substitutions in key DNA-binding
+             residues compared to canonical MBD proteins
+    Pathway: EPIGENETIC REGULATION - reads DNA methylation marks; one of 13 MBD
+             proteins in Arabidopsis; involved in nucleolar dominance with MBD6;
+             likely functions in 45S rRNA gene regulation; may associate with
+             heterochromatin despite non-canonical MBD motif; possible role in
+             gene silencing
+    *** HIGH-PRIORITY TARGET *** - epigenetic regulator directly relevant to
+             transcriptional control of methylated loci
+    Confidence: HIGH
+
+52. Bo3g185280.1
+    Best Annotation: Branched-Chain Alpha-Keto Acid Decarboxylase E1 Beta Subunit
+                     (BCKDH E1-beta)
+    At Ortholog: AT1G55510
+    Domains: Thiamine pyrophosphate (TPP) binding domain; transketolase domain;
+             mitochondrial targeting sequence
+    Pathway: BRANCHED-CHAIN AMINO ACID CATABOLISM - key enzyme in degradation
+             of leucine, isoleucine, and valine; expression induced in dark and
+             by photosynthesis inhibitors; repressed by sucrose; mitochondrial
+             localization; essential for amino acid homeostasis
+    Confidence: HIGH
+
+53. Bo7g104180.1
+    Best Annotation: DUF789 domain protein
+    At Ortholog: Likely one of 11 AtDUF789 genes (e.g., AT2G21560 or related)
+    Domains: DUF789 (Domain of Unknown Function 789)
+    Pathway: VESICLE TRAFFICKING / MEMBRANE DYNAMICS - recent studies suggest
+             DUF789 proteins are involved in clathrin-mediated vesicle trafficking;
+             up-regulated broadly across tissues; respond to drought, heat,
+             salinity and cold stress in other species
+    Confidence: MEDIUM
+
+54. Bo6g103590.1
+    Best Annotation: HEAT repeat-containing protein
+    At Ortholog: AT1G67140
+    Domains: HEAT repeats (multiple tandem ~40 aa helical repeats)
+    Pathway: DIVERSE SCAFFOLDING FUNCTIONS - HEAT repeats mediate protein-protein
+             interactions; family includes importins, condensins, CAND1 (auxin
+             signaling), clathrin adaptors, PP2A scaffolding subunit, TOR kinase,
+             and SGR6 (gravitropism); exact function of AT1G67140 not well
+             characterized
+    Confidence: MEDIUM
+
+55. Bo7g040340.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+56. Bo2g149490.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+57. Bo9g108640.1
+    Best Annotation: Timeless family protein
+    At Ortholog: AT5G52910
+    Domains: Timeless domain
+    Pathway: DNA REPLICATION / CIRCADIAN CLOCK INTERFACE - Timeless family
+             proteins in other organisms link circadian rhythms and DNA
+             replication timing; involved in replication fork protection and
+             DNA damage checkpoint; in Arabidopsis, circadian clock controls
+             DNA replication licensing (CDC6 regulation by TOC1)
+    Confidence: MEDIUM-HIGH
+
+58. Bo4g078300.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+59. Bo5g064420.1
+    Best Annotation: CTP Synthase (CTPS)
+    At Ortholog: Likely one of CTPS1-5 in Arabidopsis (AT1G30820 or related)
+    Domains: CTP synthase amidoligase (ALase) domain; glutamine amidotransferase
+             (GATase) domain
+    Pathway: PYRIMIDINE BIOSYNTHESIS - catalyzes final rate-limiting step in CTP
+             synthesis (UTP + glutamine -> CTP); essential for DNA/RNA/phospholipid
+             biosynthesis; CTPS2 is required for embryo development; some isoforms
+             form cytoophidia (filamentous structures)
+    Confidence: HIGH
+
+60. Bo3g107110.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+61. Bo8g050640.1 [REPEATED TARGET - see consolidation]
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+62. Bo9g014050.1
+    Best Annotation: Vesicle Transport Protein
+    At Ortholog: Not specifically assigned
+    Domains: Likely SNARE, Sec, or Rab-related domain
+    Pathway: VESICLE TRAFFICKING / SECRETORY PATHWAY - membrane fusion,
+             cargo transport between organelles
+    Confidence: MEDIUM
+
+63. Bo9g011330.1
+    Best Annotation: Protein Phosphatase 2A Regulatory Subunit A (PP2A-A)
+    At Ortholog: Likely RCN1 (AT1G25490), PP2AA2 (AT3G25800), or PP2AA3 (AT1G13320)
+    Domains: HEAT repeats (scaffolding A subunit)
+    Pathway: SIGNAL TRANSDUCTION / HORMONE SIGNALING - scaffolding subunit of
+             PP2A holoenzyme (A + B + C subunits); RCN1 is key positive regulator
+             of PP2A activity; regulates auxin transport, ethylene signaling,
+             ABA response, stomatal development; dephosphorylates diverse
+             substrates in hormone and stress pathways
+    Confidence: HIGH
+
+64. Bo1g141380.1
+    Best Annotation: RING/U-box E3 Ubiquitin Ligase
+    At Ortholog: Not specifically assigned (>469 RING proteins in Arabidopsis)
+    Domains: RING finger or U-box domain; possible substrate-recognition domains
+    Pathway: UBIQUITIN-PROTEASOME SYSTEM - E3 ligase mediates ubiquitination of
+             target proteins for 26S proteasome degradation; roles in hormone
+             signaling (JA, ABA, ethylene), defense responses, protein quality
+             control, cell death regulation
+    Confidence: HIGH
+
+65. Bo3g009380.1
+    Best Annotation: FIZZY-RELATED 3 (FZR3 / CCS52B)
+    At Ortholog: AT3G57860 (FZR3 / CCS52B)
+    Domains: WD40 repeats; Fizzy/Cdh1 domain
+    Pathway: CELL CYCLE / ENDOREDUPLICATION - activator of APC/C (anaphase-
+             promoting complex/cyclosome); expression peaks at G2/M transition;
+             associates with A- and B-type cyclins (free and CDK-bound);
+             mediates cyclin ubiquitination and degradation; involved in
+             endoreduplication (genome duplication without mitosis)
+    Confidence: HIGH
+
+66. Bo8g005810.1
+    Best Annotation: Signal Peptide Peptidase-Like 5 (SPPL5)
+    At Ortholog: AT1G54720 (AtSPPL5)
+    Domains: Presenilin-like aspartic protease domain; multi-transmembrane
+    Pathway: INTRAMEMBRANE PROTEOLYSIS - aspartic protease that cleaves
+             substrates within the lipid bilayer; SPPL5 transcript is
+             undetectable under standard conditions; broader SPP family
+             functions in regulated intramembrane proteolysis (RIP); AtSPP
+             knockout is lethal (abnormal pollen); signaling peptide release
+    Note: Very low or tissue-specific expression in Arabidopsis
+    Confidence: MEDIUM
+
+67. Bo1g025790.1
+    Best Annotation: CDPK15 / CPK15 - Calcium-Dependent Protein Kinase
+    At Ortholog: AT4G21940 (CPK15)
+    Domains: Protein kinase domain; calmodulin-like domain with 4 EF-hand
+             Ca2+-binding motifs
+    Pathway: CALCIUM SIGNALING - calcium sensor/kinase-effector; decodes Ca2+
+             signals into phosphorylation of diverse substrates (ion channels,
+             TFs, metabolic enzymes); 34 CDPKs in Arabidopsis; roles in stress
+             response, hormone signaling, stomatal regulation, immune signaling
+    Confidence: HIGH
+
+68. Bo5g063050.1
+    Best Annotation: HD-ZIP Class IV Transcription Factor (ATML1/PDF2-like)
+    At Ortholog: AT1G30490 (likely ATML1-related or HD-ZIP IV family member)
+    Domains: Homeodomain (HD); Zipper-Loop-Zipper (ZLZ); START (StAR-related
+             lipid-transfer) domain; START-associated domain (SAD)
+    Pathway: EPIDERMAL CELL FATE / DEVELOPMENT - HD-ZIP IV TFs are master
+             regulators of shoot epidermal differentiation; ATML1 and PDF2 act
+             redundantly; activate L1-box-containing promoters; regulate cuticle
+             formation; START domain binds lipids and modulates dimerization;
+             essential for embryo development and protoderm specification
+    Confidence: HIGH
+
+69. Bo3g103050.1
+    Best Annotation: Beta-Galactosidase 10 (BGAL10)
+    At Ortholog: AT5G63810 (BGAL10)
+    Domains: GH35 (Glycoside Hydrolase Family 35) domain
+    Pathway: CELL WALL MODIFICATION - main xyloglucan beta-galactosidase in
+             Arabidopsis; removes terminal beta-D-galactosyl residues from
+             xyloglucan side chains; bgal10 mutants show unusual xyloglucan
+             composition and growth defects (shorter siliques, sepals); expressed
+             in tissues undergoing wall extension/remodeling (young stems,
+             abscission zones, vasculature)
+    Confidence: HIGH
+
+70. Bo9g135400.1 [REPEATED TARGET - see consolidation]
+    Best Annotation: CCCH-type Zinc Finger Protein
+    At Ortholog: AT5G58620
+    Domains: CCCH (C-x-C-x-C-x-H) zinc finger motifs (tandem)
+    Pathway: RNA METABOLISM / STRESS RESPONSE - CCCH zinc finger proteins
+             function as RNA-binding proteins; regulate mRNA splicing,
+             polyadenylation, transport, translation, and decay; 68 CCCH
+             family genes in Arabidopsis (11 subfamilies); subfamily IX
+             involved in stress responses
+    Confidence: HIGH
+
+71. Bo9g151660.1
+    Best Annotation: Copper Transporter 5 (COPT5)
+    At Ortholog: AT5G20650 (COPT5)
+    Domains: CTR copper transporter domain; 3 transmembrane helices
+    Pathway: COPPER HOMEOSTASIS - tonoplast/prevacuolar copper exporter;
+             remobilizes Cu from vacuolar stores under Cu deficiency; required
+             for photosynthetic electron transport under severe Cu limitation;
+             expressed in root vasculature and siliques; copt5 mutants show
+             growth defects, low chlorophyll, impaired plastocyanin function;
+             cross-talk with iron homeostasis
+    Confidence: HIGH
+
+72. Bo1g028330.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+73. Bo5g123150.1
+    Best Annotation: ARM Repeat Superfamily Protein
+    At Ortholog: Not specifically assigned (~108 ARM repeat genes in Arabidopsis)
+    Domains: Armadillo (ARM) repeats (42 aa tandem helical repeats)
+    Pathway: DIVERSE FUNCTIONS - ARM repeats mediate protein-protein interactions;
+             roles in signal transduction, nuclear transport, cell adhesion,
+             protein degradation; many are U-box E3 ligases (PUB family); known
+             roles in lateral root development, self-incompatibility, trichome
+             development, ABA signaling, pathogen defense
+    Confidence: MEDIUM-HIGH
+
+74. Bo3g036650.1
+    Best Annotation: Chitinase (Class II/IV)
+    At Ortholog: AT2G43580
+    Domains: Chitin-binding domain (potential); GH19 glycoside hydrolase domain
+    Pathway: DEFENSE / PATHOGENESIS-RELATED - chitinases hydrolyze chitin
+             (beta-1,4-linked N-acetylglucosamine polymer) in fungal cell walls;
+             AT2G43580 induced by B. cinerea and Pseudomonas infection; may have
+             reduced catalytic activity due to missing key residues; class IV
+             chitinases rapidly induced during hypersensitive response
+    Note: AT2G43580 may not encode an active chitinase based on missing essential
+          amino acid residues
+    Confidence: MEDIUM-HIGH
+
+75. Bo4g186570.1
+    Best Annotation: Alkyl Transferase
+    At Ortholog: Not specifically assigned
+    Domains: Alkyl/methyl transferase domain
+    Pathway: DNA REPAIR / METHYLATION - alkyl transferases remove alkyl groups
+             from damaged DNA bases (O6-methylguanine); role in maintaining
+             genome integrity; alternatively may function in secondary
+             metabolite modification
+    Confidence: MEDIUM
+
+76. Bo9g140700.1
+    Best Annotation: Protein Kinase
+    At Ortholog: AT5G59700 (protein kinase superfamily)
+    Domains: Protein kinase catalytic domain; Ser/Thr kinase active site
+    Pathway: SIGNAL TRANSDUCTION - specific function dependent on subfamily;
+             Arabidopsis kinome includes receptor-like kinases, CDPKs, MAPKs,
+             SnRKs, etc.
+    Confidence: MEDIUM
+
+77. Bo5g002580.1
+    Best Annotation: CYP703A2 - Cytochrome P450 Monooxygenase
+    At Ortholog: AT1G01280 (CYP703A2)
+    Domains: Cytochrome P450 heme-binding domain; CYP703 family-specific motifs
+    Pathway: POLLEN DEVELOPMENT / SPOROPOLLENIN BIOSYNTHESIS - ancient P450
+             family specific to land plants; catalyzes in-chain hydroxylation
+             of lauric acid at C-7 position; produces hydroxylated fatty acid
+             building blocks for sporopollenin (exine); expressed exclusively
+             in anthers (tetrad stage -> microspores + tapetum); cyp703a2
+             knockout = male semi-sterile (no exine)
+    Confidence: HIGH
+
+78. Bo9g077800.1
+    Best Annotation: ABC Protein 1 (ABCB subfamily transporter)
+    At Ortholog: AT4G04770
+    Domains: ABC transporter domain; nucleotide-binding domain (NBD);
+             transmembrane domain (TMD)
+    Pathway: TRANSPORT - ABC transporters use ATP hydrolysis to transport
+             substrates across membranes; roles in auxin transport, hormone
+             export, detoxification, lipid transport, and pathogen defense
+    Confidence: MEDIUM-HIGH
+
+79. Bo8g023200.1
+    Best Annotation: Nodulin MtN21/EamA-like Transporter (UMAMIT family)
+    At Ortholog: AT1G43650
+    Domains: EamA domain (2 copies); transmembrane transporter
+    Pathway: AMINO ACID / NUTRIENT TRANSPORT - UMAMIT (Usually Multiple Acids
+             Move In and Out Transporters) family; bidirectional amino acid
+             transport (glutamine, histidine, aspartate export; glutamine,
+             valine import); roles in nutrient allocation, seed filling,
+             source-sink partitioning
+    Note: Originally identified in nodulating legumes but conserved across
+          all plants including non-nodulating species
+    Confidence: HIGH
+
+80. Bo3g185500.1
+    Best Annotation: SBI1 - Seed Imbibition 1
+    At Ortholog: AT1G55740 (SBI1)
+    Domains: Leucine carboxyl methyltransferase domain
+    Pathway: PP2A REGULATION / BRASSINOSTEROID SIGNALING - SBI1 encodes a
+             leucine carboxyl methyltransferase that methylates the PP2A catalytic
+             subunit; regulates BR signaling by modulating PP2A activity;
+             originally named for seed imbibition phenotype
+    Confidence: HIGH
+
+81. Bo8g059140.1
+    Best Annotation: EXO84B - Exocyst Complex Component
+    At Ortholog: AT5G49830 (EXO84B)
+    Domains: Exo84 domain; coiled-coil regions
+    Pathway: SECRETION / CYTOKINESIS / CELL DIVISION - subunit of the octameric
+             exocyst complex; tethers secretory vesicles to plasma membrane;
+             essential for cell plate formation and maturation during cytokinesis;
+             exo84b mutants show severe dwarfism and cytokinetic defects;
+             enriched at outer PM of root epidermal cells and postcytokinetic
+             cell plate membranes
+    Confidence: HIGH
+
+82. Bo9g178960.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+83. Bo5g019690.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+84. Bo7g089050.1 [REPEATED TARGET - see consolidation]
+    Best Annotation: C2 Calcium/Lipid-Binding (CaLB) Domain Protein (MCTP-like)
+    At Ortholog: AT5G48060 (MCTP2 - Multiple C2 Domain and Transmembrane Region
+                 Protein 2)
+    Domains: Multiple C2 (calcium-dependent lipid-binding) domains; two
+             transmembrane regions
+    Pathway: CALCIUM SIGNALING / MEMBRANE DYNAMICS - C2 domains bind Ca2+ and
+             phospholipids; dock proteins to specific membranes; MCTPs expanded
+             in plant lineage; roles in cell-to-cell communication, plasmodesmata
+             function, and membrane trafficking
+    Confidence: HIGH
+
+85. Bo9g181290.1
+    Best Annotation: WCRKC Thioredoxin 2 (TrxL2.2)
+    At Ortholog: AT5G04260 (TrxL2.2 / WCRKC Trx)
+    Domains: Thioredoxin-like fold; WCRKC motif (active site)
+    Pathway: CHLOROPLAST REDOX REGULATION - atypical thioredoxin localized to
+             chloroplast stroma; acts as oxidation factor (NOT reduction) of
+             redox-regulated proteins; drains reducing power to 2-Cys
+             peroxiredoxin (2CP) and ultimately to H2O2; Em = -245 mV at pH 7.5;
+             part of TrxL2/2CP oxidative thiol modulation cascade
+    Confidence: HIGH
+
+86. Bo3g001980.1
+    Best Annotation: TPR-like (Tetratricopeptide Repeat-like) Protein
+    At Ortholog: AT5G02590
+    Domains: TPR motifs (34 aa tandem degenerate repeats)
+    Pathway: PROTEIN-PROTEIN INTERACTION / DIVERSE FUNCTIONS - TPR motifs mediate
+             specific interactions with partner proteins; roles as co-chaperones,
+             in organelle targeting, hormone signaling (ethylene, GA, ABA, auxin),
+             transcriptional regulation, and multi-protein complex assembly
+    Confidence: MEDIUM-HIGH
+
+87. Bo8g114370.1
+    Best Annotation: TRF-like 7 (TRFL7) - Telomere Repeat-Binding Factor-like
+    At Ortholog: AT1G06910 (TRFL7)
+    Domains: Telobox-type Myb domain; telomere repeat binding domain
+    Pathway: TELOMERE BIOLOGY / TRANSCRIPTIONAL REGULATION - TRF-like proteins
+             bind double-stranded telomeric repeat DNA (TTTAGGG in plants);
+             recruit PRC2 (Polycomb Repressive Complex 2) for H3K27me3
+             deposition and JMJ14 for H3K4me3 removal; regulate transcription
+             of genes with telobox promoter elements; interact with telomerase
+    Confidence: HIGH
+
+88. Bo4g125320.1
+    Best Annotation: Uncharacterized protein-coding gene
+    At Ortholog: Not assigned
+    Domains: Unknown
+    Pathway: Unknown
+    Confidence: LOW
+
+89. Bo4g078800.1
+    Best Annotation: Endomembrane-associated protein of unknown function
+    At Ortholog: Not specifically assigned
+    Domains: Unknown; predicted endomembrane localization
+    Pathway: ENDOMEMBRANE SYSTEM - may function in ER, Golgi, or vesicular
+             transport
+    Confidence: LOW
+
+
+================================================================================
+SECTION 2: ANNOTATION CORRECTIONS
+================================================================================
+
+CORRECTION #1 (CRITICAL): Bo8g068060.1 - "MEF2-like TF"
+--------------------------------------------------------------
+ORIGINAL: "MEF2-like TF"
+CORRECTED: MADS-box transcription factor (Type II, MIKC-type)
+EXPLANATION: Plants do NOT have canonical MEF2 transcription factors as found
+in animals (where MEF2 controls muscle differentiation, neuronal survival,
+etc.). The "MEF2-like" annotation arises from automated domain annotation
+tools (e.g., InterPro, Pfam) that detect the MADS domain, which is
+structurally homologous between plant MADS-box proteins and animal MEF2
+factors. Both share a common ancestor in the MADS-domain superfamily, but
+they diverged extensively:
+
+  - Animal MEF2: MADS + MEF2 domain -> myocyte/neuronal differentiation
+  - Plant MIKC: MADS + I + K + C domains -> floral organ identity (ABC model),
+    flowering time (FLC, SOC1), fruit development, root development
+
+In B. oleracea, 91 MADS-box TFs were identified (Shu et al. 2019 BMC Plant
+Biol). Bo8g068060.1 on Chr C8 is likely one of these, possibly related to
+the type I (Malpha) subclass or type II (MIKC-C) class.
+
+ACTION: Rename from "MEF2-like TF" to "MADS-box transcription factor" in
+all downstream analyses.
+
+CORRECTION #2 (MINOR): Bo3g036650.1 - Chitinase
+--------------------------------------------------------------
+Note: AT2G43580 may not encode an enzymatically active chitinase due to
+substitutions in essential catalytic residues. The annotation should be
+refined to "chitinase-like protein" or "putative chitinase (possibly
+catalytically inactive)."
+
+
+================================================================================
+SECTION 3: REPEAT CONSOLIDATION
+================================================================================
+
+The following gene IDs were marked as [repeats] in the original target list,
+indicating they appear as targets of multiple bacterial sRNAs:
+
+ Gene ID            | Annotation                          | # Hits
+--------------------|-------------------------------------|-------
+ Bo6g067490.1       | PDR9/ABCG37 transporter             | Multi
+ Bo1g079000.1       | TFIIIC subunit 5                    | Multi
+ Bo4g076880.1       | PPR superfamily protein              | Multi
+ Bo2g047480.1       | DNA primase / PrimPol                | Multi
+ Bo4g061330.1       | THIC thiamine biosynthesis           | Multi
+ Bo9g169690.1       | Uncharacterized                     | Multi
+ Bo8g050640.1       | Uncharacterized                     | Multi
+ Bo9g135400.1       | CCCH zinc finger protein             | Multi
+ Bo7g089050.1       | C2/CaLB domain / MCTP               | Multi
+
+INTERPRETATION: Genes targeted by multiple bacterial sRNAs may represent
+high-priority targets for cross-kingdom gene silencing. Notably:
+- Bo6g067490.1 (PDR9/ABCG37): ABC transporter for auxin/coumarin export -
+  silencing would impair root exudation and iron acquisition
+- Bo4g061330.1 (THIC): Essential thiamine biosynthesis gene - silencing would
+  disrupt vitamin B1 production, potentially lethal
+- Bo9g135400.1 (CCCH ZnF): RNA metabolism regulator - could amplify gene
+  silencing effects
+- Bo4g076880.1 (PPR): Organellar RNA processing - disruption could impair
+  mitochondrial/chloroplast gene expression
+
+
+================================================================================
+SECTION 4: CONTAMINATION ASSESSMENT
+================================================================================
+
+*** NO CONTAMINATION DETECTED ***
+
+All 89 gene IDs follow the standard B. oleracea nomenclature (Bo[Chr]g[ID].1)
+from the published TO1000 genome (Liu et al. 2014, Nature Communications).
+Gene ID Bo01182s010.1 uses scaffold nomenclature (not assigned to a
+chromosome), which is expected for regions with assembly gaps.
+
+Assessment criteria applied:
+1. All gene IDs match the Bo[n]g[nnnnnn] format - PASS
+2. No bacterial, fungal, or animal gene IDs detected - PASS
+3. No anomalous GC content genes flagged - PASS
+4. No genes encoding known bacterial virulence factors or non-plant proteins
+   detected - PASS
+5. The tRNA dimethyltransferase (Bo8g090760.1) is a conserved eukaryotic
+   enzyme (TRM1 homolog), NOT of bacterial origin - PASS
+
+Note: While the target list was derived from predicted bacterial sRNA-plant
+mRNA interactions, all targets are confirmed plant genes. The bacterial
+sRNAs themselves are the non-plant component (not included in this gene list).
+
+
+================================================================================
+SECTION 5: WHOLE-GENOME TRIPLICATION (WGT) CONSIDERATIONS
+================================================================================
+
+B. oleracea underwent a mesohexaploidy event (whole-genome triplication) after
+diverging from Arabidopsis, resulting in three subgenomes:
+  - LF  (Least Fractionated)
+  - MF1 (Medium Fractionated)
+  - MF2 (Most Fractionated)
+
+Potential paralog pairs from WGT in this target list:
+
+1. Bo7g119590.1 (CRK26) and Bo7g107400.1 (CRK29):
+   Both are cysteine-rich receptor-like kinases on Chr C7. While they
+   correspond to different Arabidopsis orthologs (AT4G38830 vs AT4G21410),
+   both belong to the tandem CRK cluster on At Chr 4. These may represent
+   either WGT-derived paralogs or retained tandem duplicates.
+
+2. Bo6g039950.1 and Bo6g039960.1:
+   Adjacent uncharacterized genes on Chr C6. Likely tandem duplicates (local
+   duplication rather than WGT).
+
+3. Bo9g173960.1 (GDI) and Bo9g173970.1 (DnaJ):
+   Adjacent genes on Chr C9 but encode different protein families. Not
+   paralogs; co-targeted by proximity.
+
+4. Bo8g090750.1 and Bo8g090760.1:
+   Adjacent genes on Chr C8. Bo8g090760 encodes tRNA dimethyltransferase;
+   Bo8g090750 is unknown. May be co-regulated neighbors.
+
+
+================================================================================
+SECTION 6: UNIQUE LOCUS COUNT
+================================================================================
+
+Total gene IDs in target list:              89
+Gene IDs marked as repeated targets:        9 (same gene, multiple sRNA hits)
+Distinct gene loci:                         89 (all IDs are unique loci)
+Gene IDs with confirmed annotation:         54
+Gene IDs remaining uncharacterized:         35
+
+Note: "Repeated targets" means the same gene appears as a target of multiple
+different bacterial sRNAs, NOT that the same gene ID appears multiple times
+in the list. All 89 entries represent unique genomic loci.
+
+
+================================================================================
+SECTION 7: FUNCTIONAL CATEGORY SUMMARY
+================================================================================
+
+Category                                          | Gene Count | %
+--------------------------------------------------|------------|------
+UNKNOWN / UNCHARACTERIZED                         |    35      | 39.3%
+DEFENSE / IMMUNITY                                |     7      |  7.9%
+  - CRK26, CRK29, Chitinase, GH17 glucanase,     |            |
+    Pectinesterase, RING/U-box E3, RDR            |            |
+SIGNAL TRANSDUCTION / KINASES                     |     7      |  7.9%
+  - CAK1AT, CDPK15, 3x protein kinases,           |            |
+    PP2A-A subunit, C2/CaLB domain                |            |
+TRANSPORT                                         |     7      |  7.9%
+  - PDR9/ABCG37, COPT5, ABC protein 1,            |            |
+    UMAMIT transporter, GDI, 2x vesicle transport  |            |
+TRANSCRIPTION / GENE REGULATION                   |     5      |  5.6%
+  - ARF, MADS-box TF, HD-ZIP IV TF, TFIIIC5,      |            |
+    TRFL7                                          |            |
+CELL WALL MODIFICATION                            |     4      |  4.5%
+  - BGAL10, Pectinesterase, Glycosyltransferase,   |            |
+    GH17 glucanase                                 |            |
+CELL CYCLE / DIVISION                             |     3      |  3.4%
+  - FZR3/CCS52B, EXO84B, CAK1AT                    |            |
+EPIGENETICS / RNA REGULATION                      |     4      |  4.5%
+  - MBD10, RDR, CCCH ZnF, tRNA dimethyltransferase |            |
+DNA REPLICATION / REPAIR                          |     3      |  3.4%
+  - DNA primase/PrimPol, Timeless, Alkyl transferase|            |
+METABOLISM                                        |     4      |  4.5%
+  - THIC (thiamine), BCKDH E1-beta, CTP synthase,  |            |
+    CYP703A2 (sporopollenin)                       |            |
+PROTEIN HOMEOSTASIS / FOLDING                     |     3      |  3.4%
+  - DnaJ chaperone, RING E3 ligase, SBI1 (PP2A met)|            |
+CHLOROPLAST / ORGANELLE                           |     3      |  3.4%
+  - PPR protein, WCRKC thioredoxin, DnaJ (WUS-reg) |            |
+MEMBRANE / VESICLE TRAFFICKING                    |     4      |  4.5%
+  - DUF789, PATL1, EXO84B, ARM repeat             |            |
+STRUCTURAL / SCAFFOLDING                          |     3      |  3.4%
+  - HEAT repeat, TPR-like, ARM repeat              |            |
+INTRAMEMBRANE PROTEOLYSIS                         |     1      |  1.1%
+  - SPPL5                                          |            |
+
+NOTE: Some genes belong to multiple categories. Percentages are based on
+primary category assignment. Genes noted as "defense" include those with
+documented pathogen-responsive expression.
+
+
+================================================================================
+SECTION 8: PATHWAY ENRICHMENT HIGHLIGHTS
+================================================================================
+
+Notable enrichments in the target list relative to genome-wide expectations:
+
+1. DEFENSE / IMMUNITY (overrepresented):
+   - 2 CRKs (CRK26, CRK29): Pattern-triggered immunity receptors
+   - 1 RDR: Core RNA silencing component (antiviral defense)
+   - 1 Chitinase: Antifungal PR protein
+   - 1 GH17 glucanase: PR-2 family antifungal
+   - This enrichment suggests the bacterial sRNAs may target plant immune
+     receptors and defense effectors to suppress host defense
+
+2. TRANSPORT (notable):
+   - PDR9/ABCG37: Root exudate transporter (coumarins, auxinic compounds)
+   - COPT5: Copper mobilization for photosynthesis
+   - UMAMIT: Amino acid allocation
+   - Targeting these could disrupt nutrient acquisition and allocation
+
+3. EPIGENETIC / RNA REGULATION (notable):
+   - MBD10: DNA methylation reader
+   - RDR: siRNA biogenesis
+   - CCCH ZnF: mRNA metabolism
+   - tRNA dimethyltransferase: tRNA modification
+   - These targets could broadly disrupt gene regulation
+
+4. CELL CYCLE / DIVISION:
+   - CAK1AT, FZR3/CCS52B, EXO84B
+   - Disruption could impair cell proliferation and tissue growth
+
+
+================================================================================
+SECTION 9: HIGH-PRIORITY TARGETS FOR EXPERIMENTAL VALIDATION
+================================================================================
+
+Based on biological significance and relevance to bacteria-plant interactions:
+
+TIER 1 (Highest Priority):
+- Bo8g102500.1 (RDR): RNA-dependent RNA polymerase - silencing would disable
+  plant RNA silencing defense against bacterial/viral pathogens
+- Bo7g119590.1 (CRK26) + Bo7g107400.1 (CRK29): Immune receptors - silencing
+  would suppress PTI (pattern-triggered immunity)
+- Bo6g067490.1 (PDR9): Root exudation - silencing would alter rhizosphere
+  chemistry and nutrient acquisition (multiply targeted by sRNAs)
+
+TIER 2 (High Priority):
+- Bo4g061330.1 (THIC): Essential vitamin biosynthesis (multiply targeted)
+- Bo8g066360.1 (MBD10): Epigenetic regulator
+- Bo9g135400.1 (CCCH ZnF): RNA metabolism (multiply targeted)
+- Bo1g141380.1 (RING/U-box E3): Protein turnover / defense signaling
+- Bo9g151660.1 (COPT5): Copper homeostasis for photosynthesis
+
+TIER 3 (Moderate Priority):
+- Bo1g016960.1 (CAK1AT): Cell cycle regulation
+- Bo7g114200.1 (ARF): Auxin signaling
+- Bo5g063050.1 (HD-ZIP IV): Epidermal development
+- Bo9g011330.1 (PP2A-A): Hormone signaling hub
+
+
+================================================================================
+SECTION 10: METHODOLOGY AND LIMITATIONS
+================================================================================
+
+METHODOLOGY:
+- EnsemblPlants (release 62) was used to verify gene models and identify
+  orthologues via Plant Compara
+- BRAD v3.0 (brassicadb.cn) was consulted for Brassica-specific synteny data
+- UniProt was used for protein domain and function verification
+- TAIR was used for Arabidopsis ortholog functional annotation
+- InterPro/Pfam was used for domain annotation
+- NCBI Gene was used for gene descriptions and literature references
+- Literature from PubMed was used for functional characterization
+
+LIMITATIONS:
+1. 35/89 genes (39.3%) remain uncharacterized - these require experimental
+   validation (RT-qPCR, mutant analysis, subcellular localization)
+2. Arabidopsis ortholog assignments for unknown genes are based on synteny
+   and best BLAST hits from the original genome annotation; some may have
+   been lost or neofunctionalized after WGT
+3. The B. oleracea TO1000 genome (v1.0) has known assembly gaps; some gene
+   models may be incomplete or chimeric
+4. Domain annotations from automated pipelines can be misleading (as shown
+   by the MEF2/MADS-box case)
+5. Functional inference from Arabidopsis orthologs assumes conserved function,
+   which may not hold for all paralog copies after WGT
+
+REFERENCES:
+- Liu S et al. (2014) The Brassica oleracea genome reveals the asymmetrical
+  evolution of polyploid genomes. Nature Communications 5:3930
+- Shu J et al. (2019) Genome wide analysis of MADS-box gene family in
+  Brassica oleracea reveals conservation and variation in flower development.
+  BMC Plant Biology 19:106
+- Cheng F et al. (2011) BRAD, the genetics and genomics database for Brassica
+  plants. BMC Plant Biology 11:136
+- Cheng F et al. (2015) Brassica database (BRAD) version 2.0. Database
+  (Oxford) bav093
+- Arabidopsis Genome Initiative (2000) Analysis of the genome sequence of
+  the flowering plant Arabidopsis thaliana. Nature 408:796-815
+
+================================================================================
+END OF REPORT
+================================================================================

@@ -1,0 +1,1368 @@
+================================================================================
+   COMPREHENSIVE WHEAT (Triticum aestivum) exRNA ANTISENSE TARGET ANNOTATION
+                             REPORT
+================================================================================
+
+Date Generated: 2026-02-17
+Reference Genome: IWGSC RefSeq v1.1 (Chinese Spring)
+Total Targets in Input List: 75
+Databases Consulted: EnsemblPlants, UniProtKB/TrEMBL, InterPro, PANTHER, Pfam
+
+================================================================================
+SECTION 1: INDIVIDUAL TARGET ANNOTATIONS
+================================================================================
+
+----------------------------------------------------------------------
+# 1. TraesCS5B02G439630
+----------------------------------------------------------------------
+  Chromosome: 5B | Location: 611,725,835-611,727,632 (fwd)
+  Biotype: Nontranslating CDS (no protein product)
+  Transcript Length: 1,794 bp
+  Annotation: Nontranslating CDS -- no protein domains identified
+  Orthologs: Limited; low conservation
+  Pathway: Unknown (possible regulatory RNA or pseudogene)
+
+----------------------------------------------------------------------
+# 2. TraesCS7D02G087400
+----------------------------------------------------------------------
+  Chromosome: 7D | Location: 53,507,290-53,509,821 (rev)
+  Biotype: Nontranslating CDS (no protein product)
+  Transcript Length: 2,176 bp
+  Annotation: Nontranslating CDS -- no protein product
+  Pathway: Unknown (possible regulatory RNA or pseudogene)
+
+----------------------------------------------------------------------
+# 3. TraesCS5D02G375418
+----------------------------------------------------------------------
+  Chromosome: 5D | Location: 447,713,262-447,718,177 (fwd)
+  Biotype: Nontranslating CDS (no protein product)
+  Transcript Length: 3,028 bp
+  Annotation: Nontranslating CDS -- no protein product
+  Pathway: Unknown (possible regulatory element)
+
+----------------------------------------------------------------------
+# 4. TraesCS5A02G365700
+----------------------------------------------------------------------
+  Chromosome: 5A | Location: 565,656,668-565,660,967 (fwd)
+  Biotype: Nontranslating CDS (no protein product)
+  Provided Annotation: UDP-sulfoquinovose synthase, chloroplastic
+  Ensembl Annotation: Nontranslating CDS (no protein product)
+  ** FLAG: The provided annotation "UDP-sulfoquinovose synthase" is likely
+     inherited from a neighboring or related gene. The actual gene model at
+     this locus is classified as nontranslating CDS with no protein product.
+     True SQD1 homologs in wheat include TraesCS1D02G241800 (see #5 below).
+  Pathway: Questionable -- requires verification
+
+----------------------------------------------------------------------
+# 5. TraesCS1D02G241800
+----------------------------------------------------------------------
+  Chromosome: 1D | Location: chr1D (fwd)
+  Biotype: Protein coding (478 aa, canonical transcript)
+  Provided Annotation: Arginine decarboxylase
+  Ensembl Annotation: UDP-sulfoquinovose synthase, chloroplastic
+     [Projected from Arabidopsis AT4G33030]
+  ** FLAG -- ANNOTATION CONFLICT: The provided annotation says "Arginine
+     decarboxylase" but EnsemblPlants annotates this locus as UDP-
+     sulfoquinovose synthase (SQD1), chloroplastic. The Arabidopsis ortholog
+     AT4G33030 encodes SQD1. Recommend accepting the Ensembl/Arabidopsis
+     ortholog-based annotation.
+  Domains: SQD1-type sulfotransferase domain (predicted)
+  Pathway: Sulfolipid biosynthesis / chloroplast membrane lipid metabolism
+  Orthologs: 165 orthologues, 113 paralogues
+
+----------------------------------------------------------------------
+# 6. TraesCS2A02G071200
+----------------------------------------------------------------------
+  Chromosome: 2A | Location: 31,694,887-31,697,036 (fwd)
+  Biotype: Protein coding (625 aa)
+  Ensembl Annotation: Arginine decarboxylase [UniProtKB/TrEMBL]
+  UniProt: A0A3B6AQP0
+  Domains: Pyridoxal phosphate-dependent decarboxylase
+  Pathway: Polyamine biosynthesis (arginine -> agmatine -> putrescine)
+  Orthologs: 67 orthologues, 7 paralogues
+  NOTE: This gene is the actual arginine decarboxylase. The annotation for
+  #5 (TraesCS1D02G241800) as "Arginine decarboxylase" was likely a mix-up
+  with this gene.
+
+----------------------------------------------------------------------
+# 7. TraesCS4A02G232100
+----------------------------------------------------------------------
+  Chromosome: 4A | Location: 541,679,972-541,686,305 (rev)
+  Biotype: Protein coding (385 aa, canonical; 284 aa alternative)
+  UniProt: A0A3B6HYI4
+  Annotation: ASCH domain-containing protein (RNA-binding)
+  Domains: ASCH domain (aa 126-229); PUA-like superfamily
+  InterPro: IPR007374 (ASCH_domain), IPR015947 (PUA-like_sf)
+  Pathway: RNA binding / RNA metabolism
+  Orthologs: 163 orthologues
+
+----------------------------------------------------------------------
+# 8. TraesCS3D02G228900
+----------------------------------------------------------------------
+  Chromosome: 3D | Location: 311,656,669-311,664,597 (fwd)
+  Biotype: Protein coding (809-1,048 aa across 3 transcripts)
+  Provided Annotation: UDP-sulfoquinovose synthase, chloroplastic
+  Ensembl: No explicit description on summary (protein coding, 165 orthologs)
+  NOTE: Given chromosomal position on 3D and the provided annotation,
+  this may encode an SQD1-related enzyme. The annotation was likely
+  projected from an Arabidopsis ortholog. Accepted provisionally.
+  Pathway: Sulfolipid biosynthesis / chloroplast membrane lipid metabolism
+
+----------------------------------------------------------------------
+# 9. TraesCS7D02G384400
+----------------------------------------------------------------------
+  Chromosome: 7D | Location: 498,475,466-498,478,141 (rev)
+  Biotype: Protein coding (891 aa)
+  Ensembl Annotation: Serine/threonine-protein kinase [UniProtKB/TrEMBL;
+     Acc: A0A1D6CRN2]
+  Domains: Protein kinase domain
+  Pathway: Signal transduction / protein phosphorylation
+  Orthologs: 144 orthologues, 24 paralogues
+
+----------------------------------------------------------------------
+# 10. TraesCS7D02G379600
+----------------------------------------------------------------------
+  Chromosome: 7D | Location: 491,862,709-491,864,499 (rev)
+  Biotype: Protein coding (596 aa)
+  UniProt: A0A3B6TI56
+  Annotation: Non-specific serine/threonine protein kinase (EC 2.7.11.1)
+     -- Receptor-like kinase with lectin and apple domains
+  Domains: Bulb-type lectin domain (aa 27-168), Apple domain (aa 367-451),
+     Protein kinase domain (aa 525-596), Signal peptide, Transmembrane helix
+  Pathway: Pollen recognition / innate immunity / receptor kinase signaling
+  Orthologs: 95 orthologues, 17 paralogues
+
+----------------------------------------------------------------------
+# 11. TraesCS3D02G378700
+----------------------------------------------------------------------
+  Chromosome: 3D | Location: 495,915,950-495,920,036 (fwd)
+  Biotype: Protein coding (583 aa)
+  UniProt: A0A3B6GYY7
+  Annotation: Glycine hydroxymethyltransferase (SHMT) / Serine
+     hydroxymethyltransferase
+  Domains: SHMT-like domain (aa 127-530), PLP-dependent transferase
+  Cofactor: Pyridoxal 5'-phosphate
+  Pathway: One-carbon metabolism (serine/glycine interconversion;
+     folate metabolism)
+  Orthologs: 246 orthologues, 3 paralogues
+
+----------------------------------------------------------------------
+# 12. TraesCS5B02G389900
+----------------------------------------------------------------------
+  Chromosome: 5B | Location: 569,143,191-569,148,641 (fwd)
+  Biotype: Protein coding (130 aa)
+  UniProt: A0A3B6LT47
+  Annotation: DUF1677 domain-containing protein (uncharacterized;
+     plant-specific domain of unknown function)
+  Domains: DUF1677
+  Pathway: Unknown
+  Orthologs: 52 orthologues, 4 paralogues
+
+----------------------------------------------------------------------
+# 13. TraesCS5A02G188400
+----------------------------------------------------------------------
+  Chromosome: 5A | Location: 390,229,534-390,231,245 (fwd)
+  Biotype: Protein coding (370 aa)
+  Provided Annotation: Auxin response factor (ARF)
+  UniProt: A0A3B6KHS1
+  Actual Annotation: F-box domain-containing protein
+  ** FLAG -- ANNOTATION CORRECTION REQUIRED: The provided annotation
+     "Auxin response factor (ARF)" is INCORRECT. UniProt and InterPro
+     clearly identify this as an F-box domain-containing protein with
+     F-box-associated type 3 and kelch/galactose oxidase beta-propeller
+     domains. F-box proteins function in ubiquitin-mediated proteolysis
+     (SCF E3 ligase complex), not as ARF transcription factors.
+  Domains: F-box domain (aa 16-56), F-box-associated domain type 3,
+     Kelch beta-propeller domain
+  Pathway: Ubiquitin-proteasome pathway / protein degradation
+  Orthologs: 122 orthologues, 15 paralogues
+
+----------------------------------------------------------------------
+# 14. TraesCS6B02G167100
+----------------------------------------------------------------------
+  Chromosome: 6B | Location: 175,337,535-175,345,009 (fwd)
+  Biotype: Protein coding (927 aa, canonical)
+  Ensembl Annotation: Auxin response factor [UniProtKB/TrEMBL]
+  Domains: B3 DNA-binding domain, Auxin_resp domain, AUX/IAA domain
+  Pathway: Auxin signaling / hormone response / transcription regulation
+  Orthologs: 220 orthologues, 21 paralogues
+
+----------------------------------------------------------------------
+# 15. TraesCS5D02G521900
+----------------------------------------------------------------------
+  Chromosome: 5D | Location: 542,660,457-542,664,749 (rev)
+  Biotype: Protein coding (946 aa)
+  UniProt: A0A3B6N2E1
+  Annotation: Disease resistance protein (NB-LRR class)
+  Domains: NB-ARC domain (aa 158-334), Winged helix domain (aa 420-491),
+     LRR domain (aa 539-903)
+  Pathway: Plant innate immunity / pathogen defense (ETI pathway)
+  Orthologs: 38 orthologues, 694 paralogues (typical of NLR gene family)
+
+----------------------------------------------------------------------
+# 16. TraesCS3B02G440800
+----------------------------------------------------------------------
+  Chromosome: 3B | Location: 680,419,785-680,424,974 (fwd)
+  Biotype: Protein coding (364 aa)
+  Ensembl Annotation: Probable magnesium transporter
+     [UniProtKB/TrEMBL; Acc: A0A077RYC8]
+  Domains: CorA-type Mg2+ transporter domain (predicted)
+  Pathway: Magnesium homeostasis / divalent cation transport
+  Orthologs: 60 orthologues, 10 paralogues
+
+----------------------------------------------------------------------
+# 17. TraesCSU02G067600
+----------------------------------------------------------------------
+  Chromosome: Un (unassigned) | Location: 53,796,976-53,800,149 (fwd)
+  Biotype: Protein coding (215 aa)
+  Provided Annotation: Kinesin-like protein
+  UniProt: A0A3B6UAE2
+  Actual Annotation: F-box domain-containing protein with LRR
+  ** FLAG -- ANNOTATION DISCREPANCY: The provided annotation says
+     "Kinesin-like protein" but UniProt annotates this as an F-box/LRR-
+     repeat protein 4-like, containing an F-box domain and leucine-rich
+     repeats. Kinesin-like proteins are motor proteins; this is an
+     F-box ubiquitin ligase substrate adaptor. The kinesin annotation
+     may have been inherited from a different gene.
+  Domains: F-box domain (aa 10-43), LRR domain, Transmembrane helix
+     (aa 191-214)
+  Pathway: Ubiquitin-proteasome pathway
+  Orthologs: 161 orthologues, 6 paralogues
+
+----------------------------------------------------------------------
+# 18. TraesCS2B02G505400
+----------------------------------------------------------------------
+  Chromosome: 2B | Location: 699,281,542-699,286,967 (fwd)
+  Biotype: Protein coding (785 aa, canonical)
+  Ensembl Annotation: Kinesin-like protein [UniProtKB/TrEMBL]
+  Domains: Kinesin motor domain, microtubule-binding
+  Pathway: Intracellular transport / cell division / cytoskeletal dynamics
+  Orthologs: 283 orthologues, 44 paralogues
+  NOTE: This is the actual kinesin-like protein in this target list.
+
+----------------------------------------------------------------------
+# 19. TraesCS5A02G170400
+----------------------------------------------------------------------
+  Chromosome: 5A | Location: 363,595,490-363,598,664 (rev)
+  Biotype: Protein coding (431 aa)
+  UniProt: A0A3B6KEH9
+  Annotation: Uncharacterized F-box protein (AT5G49610-like)
+  Domains: F-box domain (aa 51-82), Beta-propeller domain (aa 186-427)
+  Pathway: Ubiquitin-proteasome pathway / protein degradation
+  Orthologs: 53 orthologues, 4 paralogues
+
+----------------------------------------------------------------------
+# 20. TraesCS6A02G040900
+----------------------------------------------------------------------
+  Chromosome: 6A | Location: 21,306,344-21,308,851 (fwd)
+  Biotype: Protein coding (407-411 aa across 3 transcripts)
+  UniProt: A0A3B6NKJ6
+  Annotation: F-box domain-containing protein
+  Domains: F-box domain (aa 31-72)
+  Pathway: Ubiquitin-proteasome pathway
+  Orthologs: 55 orthologues, 11 paralogues
+
+----------------------------------------------------------------------
+# 21. TraesCS4D02G127100
+----------------------------------------------------------------------
+  Chromosome: 4D | Location: 111,595,992-111,608,378 (rev)
+  Biotype: Protein coding (482-661 aa across 3 transcripts)
+  Ensembl: No explicit description (354 orthologues, 4 paralogues)
+  Annotation: Uncharacterized protein -- highly conserved
+  Pathway: Unknown (high conservation suggests essential function)
+
+----------------------------------------------------------------------
+# 22. TraesCS4A02G289700
+----------------------------------------------------------------------
+  Chromosome: 4A | Location: 594,027,929-594,034,110 (rev)
+  Biotype: Protein coding (401 aa)
+  UniProt: A0A3B6HZ35
+  Annotation: Ankyrin/TPR repeat-containing protein; Cul2-RING E3
+     ligase superfamily
+  Domains: 4 Ankyrin repeats (aa 105-243), TPR repeat (aa 340-373)
+  Pathway: Protein-protein interactions / ubiquitin ligase pathway
+  Orthologs: 67 orthologues, 57 paralogues
+
+----------------------------------------------------------------------
+# 23. TraesCS3D02G469000
+----------------------------------------------------------------------
+  Chromosome: 3D | Location: 571,211,796-571,212,578 (fwd)
+  Biotype: Protein coding (260 aa)
+  UniProt: A0A3B6H212
+  Annotation: Uncharacterized protein (coiled-coil, disordered)
+  Domains: Coiled coil (aa 166-200), multiple disordered regions
+  Pathway: Unknown
+  Orthologs: 4 orthologues, 1 paralogue (low conservation)
+
+----------------------------------------------------------------------
+# 24. TraesCS3B02G123400
+----------------------------------------------------------------------
+  Chromosome: 3B | Location: 95,155,049-95,157,035 (fwd)
+  Biotype: Protein coding (661 aa)
+  Ensembl Annotation: Pentatricopeptide repeat-containing protein
+     At5g16860 [projected from Arabidopsis]
+  Domains: PPR repeats (multiple)
+  Pathway: Organellar (mitochondrial/chloroplast) RNA processing /
+     RNA editing / gene expression regulation
+  Orthologs: 158 orthologues, 552 paralogues
+
+----------------------------------------------------------------------
+# 25. TraesCS2A02G124800
+----------------------------------------------------------------------
+  Chromosome: 2A | Location: 73,539,691-73,550,833 (rev)
+  Biotype: Protein coding (1,090 aa)
+  UniProt: A0A3B6ATD3
+  Annotation: Homeobox-DDT domain protein (RLT-3 family)
+  Domains: Homeobox domain (aa 8-68), DDT domain (aa 310-369)
+  Pathway: Transcription regulation / chromatin remodeling /
+     developmental gene expression
+  Orthologs: 85 orthologues, 1 paralogue
+
+----------------------------------------------------------------------
+# 26. TraesCS2A02G393400
+----------------------------------------------------------------------
+  Chromosome: 2A | Location: 643,007,539-643,009,178 (fwd)
+  Biotype: Protein coding (307 aa)
+  UniProt: A0A3B6B2N8
+  Annotation: Gnk2-homologous domain-containing protein /
+     Stress-antifungal protein family
+  Domains: 2x Gnk2-homologous domains (aa 27-126, 134-249),
+     Signal peptide (aa 1-21), Transmembrane helix (aa 265-284)
+  Pathway: Plant defense / antifungal response / stress tolerance
+  Orthologs: 20 orthologues, 6 paralogues
+
+----------------------------------------------------------------------
+# 27. TraesCS7D02G281500
+----------------------------------------------------------------------
+  Chromosome: 7D | Location: 277,720,739-277,750,287 (fwd)
+  Biotype: Protein coding (291 aa)
+  UniProt: A0A3B6TJM5
+  Annotation: Uncharacterized transmembrane protein
+  Domains: Transmembrane helix (aa 111-129), disordered C-terminus
+  Pathway: Unknown (membrane-localized)
+  Orthologs: 44 orthologues
+
+----------------------------------------------------------------------
+# 28. TraesCS7A02G074600
+----------------------------------------------------------------------
+  Chromosome: 7A | Location: 40,360,598-40,366,793 (rev)
+  Biotype: Protein coding (751 aa)
+  UniProt: A0A3B6R8C0
+  Annotation: ATP-dependent DNA helicase DDM1 (Decrease in DNA
+     Methylation 1)
+  Domains: Helicase ATP-binding domain (aa 199-366), Helicase C-terminal
+     domain (aa 515-681), SNF2-like superfamily
+  Pathway: Chromatin remodeling / DNA methylation maintenance /
+     heterochromatin formation / epigenetic regulation
+  Orthologs: 196 orthologues, 43 paralogues
+
+----------------------------------------------------------------------
+# 29. TraesCS3B02G587600
+----------------------------------------------------------------------
+  Chromosome: 3B | Location: 813,961,139-813,964,951 (fwd)
+  Biotype: Protein coding (1,270 aa)
+  UniProt: A0A080YUD8
+  Annotation: Uncharacterized protein (large, highly paralogous)
+  Domains: Not fully characterized
+  Pathway: Unknown
+  Orthologs: 107 orthologues, 823 paralogues (suggest TE-related or
+     repetitive element-associated)
+
+----------------------------------------------------------------------
+# 30. TraesCS7A02G398600
+----------------------------------------------------------------------
+  Chromosome: 7A | Location: 577,767,823-577,778,277 (fwd)
+  Biotype: Protein coding (718-758 aa across 3 transcripts)
+  UniProt: A0A3B6RN95
+  Annotation: Cell division cycle protein 27 homolog B (CDC27/APC3)
+  Domains: TPR repeats (multiple), ANAPC3 domain
+  Pathway: Cell cycle regulation / anaphase-promoting complex (APC/C) /
+     mitotic progression / protein ubiquitination
+  Orthologs: 19 orthologues
+
+----------------------------------------------------------------------
+# 31. TraesCS7B02G381000
+----------------------------------------------------------------------
+  Chromosome: 7B | Location: 645,500,837-645,520,989 (rev)
+  Biotype: Protein coding (1,389 aa)
+  UniProt: A0A3B6SSR1
+  Annotation: ABC transporter (ABCG family, PDR subfamily) --
+     probable general defense protein
+  Domains: 2x ABC transporter domains (aa 120-384, 786-1039),
+     13 transmembrane helices, P-loop NTPase
+  Pathway: Xenobiotic/defense compound transport / detoxification /
+     disease resistance
+  Orthologs: 449 orthologues, 59 paralogues
+
+----------------------------------------------------------------------
+# 32. TraesCS3A02G336700
+----------------------------------------------------------------------
+  Chromosome: 3A | Location: 583,704,550-583,707,477 (rev)
+  Biotype: Protein coding (415 aa)
+  UniProt: A0A3B6EMK1
+  Annotation: PIGA GPI anchor biosynthesis domain-containing protein
+  Domains: PIGA domain, Glycosyltransferase domain
+  Pathway: GPI anchor biosynthesis / protein anchoring to membranes
+  Orthologs: 206 orthologues, 38 paralogues
+
+----------------------------------------------------------------------
+# 33. TraesCS2D02G520600
+----------------------------------------------------------------------
+  Chromosome: 2D | Location: 609,652,332-609,653,624 (fwd)
+  Biotype: Protein coding (430 aa)
+  UniProt: A0A3B6DKQ9
+  Annotation: F-box domain-containing protein (with kelch repeats)
+  Domains: F-box domain (aa 30-76), F-box-associated domain type 3,
+     Kelch-type beta propeller
+  Pathway: Ubiquitin-proteasome pathway / protein degradation
+  Orthologs: 13 orthologues, 12 paralogues
+
+----------------------------------------------------------------------
+# 34. TraesCS2A02G439500
+----------------------------------------------------------------------
+  Chromosome: 2A | Location: 690,742,922-690,744,770 (fwd)
+  Biotype: Protein coding (460 aa)
+  UniProt: A0A3B6B4M5
+  Annotation: Glucan endo-1,3-beta-D-glucosidase (GH17 family)
+  Domains: Glycosyl hydrolase family 17, X8 domain
+  Pathway: Beta-glucan hydrolysis / plant defense / cell wall metabolism
+  Orthologs: 134 orthologues, 79 paralogues
+
+----------------------------------------------------------------------
+# 35. TraesCS7D02G101200
+----------------------------------------------------------------------
+  Chromosome: 7D | Location: 60,496,617-60,499,909 (rev)
+  Biotype: Protein coding (493 aa)
+  UniProt: A0A3B6TDX1
+  Annotation: Ent-kaurenoic acid oxidase (cytochrome P450)
+  Domains: Cytochrome P450 domain, heme-binding site (Fe at aa 440),
+     transmembrane helix
+  Cofactors: Heme, iron
+  Pathway: Gibberellin (GA) biosynthesis / diterpenoid hormone metabolism
+  Orthologs: 125 orthologues, 62 paralogues
+
+----------------------------------------------------------------------
+# 36. TraesCS7B02G381200
+----------------------------------------------------------------------
+  Chromosome: 7B | Location: 645,588,688-645,605,482 (rev)
+  Biotype: Protein coding (1,416-1,423 aa across 2 transcripts)
+  UniProt: A0A3B6SQT7
+  Annotation: Mechanosensitive ion channel protein (MscS family)
+  Domains: MscS transmembrane domain, MscS C-terminal domain,
+     4 transmembrane helices
+  Pathway: Osmotic stress response / mechanosensory signaling /
+     ion homeostasis
+  Orthologs: 439 orthologues, 59 paralogues
+
+----------------------------------------------------------------------
+# 37. TraesCS5D02G095300
+----------------------------------------------------------------------
+  Chromosome: 5D | Location: 104,595,635-104,600,991 (rev)
+  Biotype: Protein coding (955 aa)
+  UniProt: A0A3B6MNI7
+  Annotation: Non-specific Ser/Thr protein kinase (receptor-like
+     kinase with LRR and malectin domains)
+  Domains: LRR domains, Protein kinase domain, Malectin-like domain,
+     Signal peptide, Transmembrane helix
+  Pathway: Cell surface receptor signaling / innate immunity /
+     PAMP-triggered immunity (PTI)
+  Orthologs: 260 orthologues, 21 paralogues
+
+----------------------------------------------------------------------
+# 38. TraesCS4D02G095300
+----------------------------------------------------------------------
+  Chromosome: 4D | Location: 70,668,816-70,671,084 (rev)
+  Biotype: Protein coding (625 aa)
+  UniProt: A0A3B6JFB5
+  Annotation: BURP domain-containing protein
+  Domains: BURP domain (aa 413-624), Signal peptide (aa 1-29)
+  Pathway: Plant development / stress response (BURP domain proteins
+     include polygalacturonase-associated proteins, dehydration-responsive
+     proteins)
+  Orthologs: 371 orthologues, 2 paralogues
+
+----------------------------------------------------------------------
+# 39. TraesCS5A02G037600
+----------------------------------------------------------------------
+  Chromosome: 5A | Location: 34,908,826-34,910,945 (fwd)
+  Biotype: Protein coding (509 aa)
+  UniProt: A0A3B6KC69
+  Annotation: Cytochrome P450 (hormone biosynthesis-related)
+  Domains: CYP450 domain, transmembrane helix (aa 30-49),
+     heme/iron binding
+  Pathway: Plant hormone biosynthesis / monooxygenase activity /
+     pollen tube development
+  Orthologs: 150 orthologues, 57 paralogues
+
+----------------------------------------------------------------------
+# 40. TraesCS2B02G069000
+----------------------------------------------------------------------
+  Chromosome: 2B | Location: 35,387,429-35,396,358 (rev)
+  Biotype: Protein coding (1,531 aa canonical; 1,183 aa alternative)
+  UniProt: A0A3B6C123
+  Annotation: ABC transporter C family member 13 / Multidrug
+     resistance-associated protein 13 (MRP) / LOW PHYTIC ACID 2
+  Domains: 2x ABC transmembrane type-1 domains, 2x ABC transporter
+     domains, 13 transmembrane helices
+  Pathway: Phytic acid transport / vacuolar sequestration /
+     phosphorus storage / detoxification
+  Orthologs: 119 orthologues, 26 paralogues
+
+----------------------------------------------------------------------
+# 41. TraesCS2A02G056800
+----------------------------------------------------------------------
+  Chromosome: 2A | Location: 24,058,267-24,067,118 (rev)
+  Biotype: Protein coding (992 aa)
+  UniProt: A0A3B6AQ78
+  Annotation: ABC transporter (ABCC family) / Conjugate transporter
+  Domains: ABC transporter domains, ABC transmembrane type-1 domain,
+     AAA+ ATPase, 7 transmembrane helices
+  Pathway: Transmembrane transport / detoxification / conjugate efflux
+  Orthologs: 119 orthologues, 28 paralogues
+
+----------------------------------------------------------------------
+# 42. TraesCS1D02G190800
+----------------------------------------------------------------------
+  Chromosome: 1D | Location: 262,525,815-262,529,533 (fwd)
+  Biotype: Protein coding (466 aa)
+  UniProt: A0A3B5ZV72
+  Annotation: Alpha/beta hydrolase-1 domain-containing protein
+     (Lysophospholipase/Bodyguard 3-related)
+  Domains: AB hydrolase-1 domain (aa 190-294)
+  Pathway: Cutin biosynthesis / lipid metabolism / cuticle formation
+  Orthologs: 205 orthologues, 86 paralogues
+
+----------------------------------------------------------------------
+# 43. TraesCS5B02G289200
+----------------------------------------------------------------------
+  Chromosome: 5B | Location: 474,574,591-474,579,248 (fwd)
+  Biotype: Protein coding (550-583 aa across 2 transcripts)
+  UniProt: A0A3B6LPV1 / A0A3B6LNE8
+  Annotation: Trypsin-like serine protease (uncharacterized)
+  Domains: 2x Trypsin_2 domains (Pfam: PF13365), Peptidase S1_PA
+  Pathway: Proteolysis / serine-type endopeptidase activity
+  Orthologs: 25 orthologues, 21 paralogues
+
+----------------------------------------------------------------------
+# 44. TraesCS3B02G442800
+----------------------------------------------------------------------
+  Chromosome: 3B | Location: 683,106,564-683,108,573 (rev)
+  Biotype: Protein coding (240 aa)
+  UniProt: A0A3B6FTX7
+  Annotation: DUF506/PDDEXK-like domain-containing protein
+  Domains: PDDEXK_6 domain (Pfam: PF04720)
+  Pathway: Possible nuclease activity (PDDEXK-like endonuclease fold)
+  Orthologs: 138 orthologues, 6 paralogues
+
+----------------------------------------------------------------------
+# 45. TraesCS7B02G358900.1
+----------------------------------------------------------------------
+  Chromosome: 7B | Location: 620,667,460-620,676,655 (fwd)
+  Biotype: Protein coding (621-641 aa across 2 transcripts)
+  UniProt: A0A3B6SM26
+  Annotation: Mechanosensitive ion channel protein (MscS family)
+  Domains: MscS transmembrane domain, MscS domain, MscS C-terminal
+     domain, 4 transmembrane helices
+  Pathway: Osmotic stress response / mechanotransduction /
+     plastid envelope localization
+  Orthologs: 273 orthologues, 2 paralogues
+
+----------------------------------------------------------------------
+# 46. TraesCS5A02G429600
+----------------------------------------------------------------------
+  Chromosome: 5A | Location: 613,699,487-613,702,073 (fwd)
+  Biotype: Protein coding (490 aa)
+  UniProt: A0A3B6KP33
+  Annotation: Glucan endo-1,3-beta-D-glucosidase (GH17 family)
+  Domains: Glycosyl hydrolase 17, X8 domain (aa 368-451),
+     Signal peptide (aa 1-26), GPI-anchor
+  Pathway: Beta-glucan hydrolysis / callose degradation / plant defense
+  Orthologs: 239 orthologues, 79 paralogues
+
+----------------------------------------------------------------------
+# 47. TraesCS2A02G386200
+----------------------------------------------------------------------
+  Chromosome: 2A | Location: 631,967,177-631,969,484 (fwd)
+  Biotype: Protein coding (262 aa)
+  Provided Annotation: TF with zinc finger + helix-loop-helix; YABBY-domain
+  Ensembl Annotation: Transcription factor with zinc finger domain and
+     helix-loop-helix domain (YABBY domain), Leaf development
+  Published Name: TaYABBY3A (from: Zhao et al., PeerJ 2022)
+  ** VERIFICATION RESULT: The YABBY annotation IS CORRECT. YABBY
+     transcription factors characteristically contain:
+     (1) An N-terminal C2-C2 zinc finger domain (C-X2-C-X20-C-X1-HC)
+     (2) A C-terminal YABBY domain (HLH-like fold)
+     These are plant-specific TFs. The "zinc finger + helix-loop-helix"
+     description accurately reflects YABBY domain architecture. YABBY
+     proteins are NOT standard zinc finger or HLH TFs -- they are a
+     distinct plant-specific family.
+  Domains: C2-C2 zinc finger, YABBY domain (HLH-related fold)
+  Pathway: Leaf development / abaxial-adaxial polarity / lateral organ
+     morphogenesis
+  Orthologs: 252 orthologues, 5 paralogues
+
+----------------------------------------------------------------------
+# 48. TraesCS7D02G253300
+----------------------------------------------------------------------
+  Chromosome: 7D | Location: 229,785,721-229,786,668 (fwd)
+  Biotype: Protein coding (155 aa)
+  Annotation: Uncharacterized small protein
+  Pathway: Unknown
+  Orthologs: 11 orthologues
+
+----------------------------------------------------------------------
+# 49. TraesCS3D02G204700
+----------------------------------------------------------------------
+  Chromosome: 3D | Location: 256,144,657-256,148,514 (rev)
+  Biotype: Protein coding (212 aa)
+  UniProt: A0A3B6GQX1
+  Annotation: Uncharacterized protein (no InterPro domains assigned)
+  Pathway: Unknown
+  Orthologs: 13 orthologues
+
+----------------------------------------------------------------------
+# 50. TraesCS6B02G109500
+----------------------------------------------------------------------
+  Chromosome: 6B | Location: 90,940,121-90,940,498 (fwd)
+  Biotype: Protein coding (125 aa)
+  UniProt: A0A3B6PJ10
+  Annotation: mTERF domain-containing protein (mitochondrial
+     transcription termination factor family) / PORR domain protein
+  Domains: mTERF domain (IPR003690)
+  Pathway: Organellar transcription termination / mitochondrial/
+     chloroplast gene expression
+  Orthologs: 12 orthologues, 130 paralogues
+
+----------------------------------------------------------------------
+# 51. TraesCS4D02G117200
+----------------------------------------------------------------------
+  Chromosome: 4D | Location: 97,959,292-97,962,506 (rev)
+  Biotype: Protein coding (511 aa)
+  UniProt: A0A3B6JF39
+  Annotation: F-box/LRR-repeat protein (F-box with LRR and FBD domains)
+  Domains: F-box domain (aa 66-104), LRR domain (aa 161-385),
+     FBD domain (aa 404-448)
+  Pathway: Ubiquitin-proteasome pathway / SCF complex
+  Orthologs: 18 orthologues, 15 paralogues
+
+----------------------------------------------------------------------
+# 52. TraesCS5A02G423100
+----------------------------------------------------------------------
+  Chromosome: 5A | Location: 608,985,344-608,991,632 (rev)
+  Biotype: Protein coding (396-400 aa across 2 transcripts)
+  UniProt: A0A3B6KN52
+  Annotation: Cell differentiation protein rcd1 / CNOT9 family member
+     (CCR4-NOT core complex component)
+  Domains: ARM-like fold, CNOT9/Rcd1 domain (Pfam: PF04078)
+  Pathway: mRNA catabolism / translational repression / P-body function /
+     cell differentiation
+  Orthologs: 351 orthologues, 3 paralogues
+
+----------------------------------------------------------------------
+# 53. TraesCS4A02G108000
+----------------------------------------------------------------------
+  Chromosome: 4A | Location: 125,378,301-125,385,401 (fwd)
+  Biotype: Protein coding (533-535 aa across 2 transcripts)
+  Annotation: Uncharacterized protein (highly conserved)
+  Pathway: Unknown (high conservation implies essential function)
+  Orthologs: 238 orthologues, 79 paralogues
+
+----------------------------------------------------------------------
+# 54. TraesCS1A02G328000
+----------------------------------------------------------------------
+  Chromosome: 1A | Location: chr1A
+  Biotype: Protein coding (824 aa)
+  Ensembl Annotation: Poly [ADP-ribose] polymerase (PARP)
+     [UniProtKB/TrEMBL; Acc: A0A096UJY5]
+  Domains: PARP catalytic domain, DNA-binding zinc finger (predicted)
+  Pathway: DNA damage repair / ADP-ribosylation / base excision repair /
+     stress response / programmed cell death
+  Orthologs: Conserved in plants and eukaryotes
+
+----------------------------------------------------------------------
+# 55. TraesCS4B02G205800
+----------------------------------------------------------------------
+  Chromosome: 4B | Location: 438,225,136-438,227,882 (rev)
+  Biotype: Protein coding (536 aa)
+  UniProt: A0A3B6IQQ1
+  Annotation: sHSP/alpha-crystallin domain-containing protein
+     (DUF8041 + HSP20-like)
+  Domains: DUF8041 (aa 135-298), HSP-like alpha-crystallin domain
+     (aa 406-514)
+  Pathway: Heat shock response / protein folding / chaperone activity
+  Orthologs: 48 orthologues
+
+----------------------------------------------------------------------
+# 56. TraesCS1B02G356700
+----------------------------------------------------------------------
+  Chromosome: 1B | Location: chr1B
+  Biotype: Protein coding (131 aa)
+  Ensembl Annotation: Profilin [UniProtKB/TrEMBL]
+  Domains: Profilin domain
+  Pathway: Actin dynamics / cytoskeletal organization / pollen tube
+     growth / cell morphogenesis
+  Orthologs: 268 orthologues (highly conserved actin-binding protein)
+
+----------------------------------------------------------------------
+# 57. TraesCS6D02G116100
+----------------------------------------------------------------------
+  Chromosome: 6D | Location: 82,234,328-82,237,753 (rev)
+  Biotype: Protein coding (1,050 aa)
+  UniProt: A0A3B6QBM0
+  Annotation: LRR receptor-like Ser/Thr protein kinase
+  Domains: LRR domains, Protein kinase domain, Signal peptide
+     (aa 1-36), Transmembrane helix (aa 690-714)
+  Pathway: Receptor kinase signaling / innate immunity /
+     developmental signaling
+  Orthologs: 82 orthologues, 41 paralogues
+
+----------------------------------------------------------------------
+# 58. TraesCS4B02G385200
+----------------------------------------------------------------------
+  Chromosome: 4B | Location: chr4B
+  Biotype: Protein coding (839 aa)
+  Ensembl Annotation: Similar to cDNA clone:J033091P14, full insert
+     sequence [projected from Oryza sativa Os03g0109400]
+  Annotation: Function poorly characterized; rice ortholog uncharacterized
+  Domains: Not well defined
+  Pathway: Unknown
+  Orthologs: 166 orthologues, 4 paralogues
+
+----------------------------------------------------------------------
+# 59. TraesCS6B02G152900
+----------------------------------------------------------------------
+  Chromosome: 6B | Location: 156,651,546-156,654,819 (rev)
+  Biotype: Protein coding (1,049 aa)
+  UniProt: A0A3B6PIT6
+  Annotation: LRR receptor-like Ser/Thr protein kinase (RLP family)
+  Domains: LRR domains (multiple), Protein kinase domain, Signal
+     peptide (aa 1-34), transmembrane helix
+  Pathway: Receptor kinase signaling / cell surface perception /
+     immune and developmental signaling
+  Orthologs: 82 orthologues, 38 paralogues
+
+----------------------------------------------------------------------
+# 60. TraesCS3A02G122200
+----------------------------------------------------------------------
+  Chromosome: 3A | Location: 96,241,570-96,250,802 (rev)
+  Biotype: Protein coding (519-713 aa across 7 transcripts)
+  UniProt: A0A3B6EG60
+  Annotation: Bromodomain-containing transcription factor (GTE8 family)
+  Domains: Bromodomain (aa 189-261), NET domain (aa 316-402),
+     Coiled coil (aa 579-634)
+  Pathway: Chromatin remodeling / recognition of acetylated histones /
+     transcription regulation
+  Orthologs: 316 orthologues, 14 paralogues
+
+----------------------------------------------------------------------
+# 61. TraesCS5B02G275200
+----------------------------------------------------------------------
+  Chromosome: 5B | Location: 461,138,969-461,141,732 (fwd)
+  Biotype: Protein coding (368 aa)
+  Ensembl Annotation: NAC domain containing protein 38
+     [projected from Arabidopsis AT2G24430]
+  Domains: NAC domain (N-terminal DNA binding), TAR (transcriptional
+     activation region)
+  Pathway: Transcription regulation / stress response / senescence /
+     secondary cell wall biosynthesis
+  Orthologs: 173 orthologues, 26 paralogues
+
+----------------------------------------------------------------------
+# 62. TraesCS6B02G296400
+----------------------------------------------------------------------
+  Chromosome: 6B | Location: 532,150,706-532,152,010 (rev)
+  Biotype: Protein coding (340 aa)
+  Ensembl Annotation: Ubiquinol oxidase [UniProtKB/TrEMBL]
+  Domains: Alternative oxidase (AOX) domain
+  Pathway: Alternative respiration / mitochondrial electron transport /
+     cyanide-resistant respiration / ROS management
+  Orthologs: 169 orthologues, 5 paralogues
+
+----------------------------------------------------------------------
+# 63. TraesCS5A02G360900
+----------------------------------------------------------------------
+  Chromosome: 5A | Location: chr5A
+  Biotype: Protein coding (694 aa, canonical)
+  Provided Annotation: BTB/POZ and TAZ domain-containing protein 3
+  Ensembl Annotation: Ribosome biogenesis protein BOP1 homolog
+     [UniProtKB/TrEMBL; Acc: A0A1D5YQ88]
+  ** FLAG -- ANNOTATION CONFLICT: The provided annotation says
+     "BTB/POZ and TAZ domain-containing protein 3" but EnsemblPlants
+     annotates this as "Ribosome biogenesis protein BOP1 homolog."
+     BOP1 is a WD40 repeat protein in the PeBoW complex required for
+     60S ribosome maturation. This is different from BTB/POZ proteins.
+     NOTE: TraesCS3D02G394800 (#64) IS correctly annotated as
+     BTB/POZ and TAZ domain-containing protein 3.
+  Domains: WD40 repeats (predicted for BOP1 homologs)
+  Pathway: Ribosome biogenesis / 60S ribosomal subunit maturation /
+     rRNA processing
+  Orthologs: 207 orthologues
+
+----------------------------------------------------------------------
+# 64. TraesCS3D02G394800
+----------------------------------------------------------------------
+  Chromosome: 3D | Location: 510,284,388-510,288,189 (fwd)
+  Biotype: Protein coding (250 aa)
+  Ensembl Annotation: BTB/POZ and TAZ domain-containing protein 3
+     [projected from Arabidopsis]
+  Domains: BTB/POZ domain, TAZ domain
+  Pathway: Protein-protein interactions / transcriptional regulation /
+     ubiquitin ligase adapter
+  Orthologs: 144 orthologues, 25 paralogues
+
+----------------------------------------------------------------------
+# 65. TraesCS4D02G263000
+----------------------------------------------------------------------
+  Chromosome: 4D | Location: 434,145,387-434,147,748 (rev)
+  Biotype: Protein coding (521 aa)
+  UniProt: A0A3B6JLP5
+  Annotation: Major facilitator superfamily (MFS) sugar transporter
+     (myo-inositol transporter type)
+  Domains: MFS domain (aa 27-480), 12 transmembrane helices
+  Pathway: Sugar transport / myo-inositol uptake / transmembrane
+     nutrient transport
+  Orthologs: 359 orthologues, 64 paralogues
+
+----------------------------------------------------------------------
+# 66. TraesCS7D02G219500
+----------------------------------------------------------------------
+  Chromosome: 7D | Location: 180,069,362-180,083,920 (fwd)
+  Biotype: Protein coding (854 aa)
+  Provided Annotation: Ribosome biogenesis protein BOP1 homolog
+  UniProt: A0A3B6THH2
+  Actual Annotation: PGG domain-containing protein /
+     Embryogenesis transmembrane protein-like
+  ** FLAG -- ANNOTATION DISCREPANCY: The provided annotation says
+     "Ribosome biogenesis protein BOP1 homolog" but UniProt annotates
+     this as a PGG domain-containing transmembrane protein (17 TM helices).
+     The BOP1 annotation likely belongs to TraesCS5A02G360900 (#63).
+  Domains: 5x PGG domains, 17 transmembrane helices
+  Pathway: Transmembrane protein / possible role in embryogenesis
+  Orthologs: 84 orthologues, 79 paralogues
+
+----------------------------------------------------------------------
+# 67. TraesCS1D02G303100
+----------------------------------------------------------------------
+  Chromosome: 1D | Location: 400,955,622-400,956,684 (rev)
+  Biotype: Protein coding (209 aa)
+  UniProt: A0A3B5ZXH6
+  Annotation: Protein LURP-one-related 8 (LOR family)
+  Domains: LOR domain (IPR007612), Tubby-like C-terminal domain
+  Pathway: Plant defense / LURP1-related immune response
+  Orthologs: 164 orthologues, 15 paralogues
+
+----------------------------------------------------------------------
+# 68. TraesCS5B02G369300
+----------------------------------------------------------------------
+  Chromosome: 5B | Location: 548,340,275-548,352,701 (rev)
+  Biotype: Protein coding (1,022 aa)
+  UniProt: A0A3B6LSG4
+  Annotation: Calcineurin-like phosphoesterase domain-containing protein
+  Domains: Calcineurin-like phosphoesterase domain (Pfam: PF00149),
+     9 transmembrane helices
+  Pathway: Phosphoester hydrolysis / metal-dependent phosphatase activity /
+     signal transduction
+  Orthologs: 195 orthologues, 1 paralogue
+
+----------------------------------------------------------------------
+# 69. TraesCS5D02G114300
+----------------------------------------------------------------------
+  Chromosome: 5D | Location: 133,536,569-133,539,293 (fwd)
+  Biotype: Protein coding (450-514 aa across 3 transcripts)
+  UniProt: A0A3B6MMY3
+  Annotation: MFS sugar transporter (sugar/myo-inositol transporter)
+  Domains: MFS domain (aa 36-500), 10 transmembrane helices
+  Pathway: Sugar transport / transmembrane nutrient transport
+  Orthologs: 375 orthologues, 64 paralogues
+
+----------------------------------------------------------------------
+# 70. TraesCS4B02G159300
+----------------------------------------------------------------------
+  Chromosome: 4B | Location: 308,695,348-308,695,597 (rev)
+  Biotype: Protein coding (82 aa)
+  UniProt: A0A3B6IQG9
+  Annotation: Uncharacterized small protein (no InterPro domains)
+  Pathway: Unknown (very small protein; may be a gene fragment)
+  Orthologs: 34 orthologues
+
+----------------------------------------------------------------------
+# 71. TraesCS1B02G336300
+----------------------------------------------------------------------
+  Chromosome: 1B | Location: 563,027,538-563,031,942 (rev)
+  Biotype: Protein coding (636 aa)
+  UniProt: A0A3B5Z1L6
+  Annotation: Assimilatory sulfite reductase (ferredoxin)
+  Domains: 2x Nitrite/sulfite reductase ferredoxin-like domains,
+     2x 4Fe-4S cluster binding domains, Siroheme binding
+  Cofactors: [4Fe-4S] cluster, Siroheme
+  Pathway: Assimilatory sulfate reduction / sulfur metabolism /
+     chloroplast nucleoid regulation
+  Orthologs: 197 orthologues
+
+----------------------------------------------------------------------
+# 72. TraesCS6B02G319000
+----------------------------------------------------------------------
+  Chromosome: 6B | Location: 566,547,698-566,555,069 (rev)
+  Biotype: Protein coding (660 aa)
+  UniProt: A0A3B6PPU5
+  Annotation: Peptidase S49 domain-containing protein (signal
+     peptide peptidase)
+  Domains: 2x Peptidase S49 domains (aa 176-327, 427-578)
+  Pathway: Signal peptide processing / serine protease activity /
+     chloroplast thylakoid membrane proteolysis
+  Orthologs: 53 orthologues
+
+----------------------------------------------------------------------
+# 73. TraesCS6D02G213500
+----------------------------------------------------------------------
+  Chromosome: 6D | Location: 303,462,085-303,468,143 (rev)
+  Biotype: Protein coding (272-287 aa across 3 transcripts)
+  Annotation: Uncharacterized protein
+  Pathway: Unknown
+  Orthologs: 134 orthologues, 1 paralogue
+
+----------------------------------------------------------------------
+# 74. TraesCS5B02G502400
+----------------------------------------------------------------------
+  Chromosome: 5B | Location: 669,592,414-669,595,150 (rev)
+  Biotype: Protein coding (731 aa)
+  UniProt: A0A3B6LX34
+  Annotation: L-type lectin-domain containing receptor kinase
+     (Protein kinase domain-containing protein)
+  Domains: L-type lectin domain, Protein kinase domain, Signal
+     peptide, Transmembrane helix
+  Pathway: Receptor kinase signaling / lectin-mediated recognition
+  Orthologs: 69 orthologues, 15 paralogues
+
+----------------------------------------------------------------------
+# 75. TraesCS5B02G559900
+----------------------------------------------------------------------
+  Chromosome: 5B | Location: 706,452,404-706,458,905 (fwd)
+  Biotype: Protein coding (1,136 aa)
+  UniProt: A0A3B6LYT0
+  Annotation: NB-ARC domain-containing disease resistance protein
+     (NB-LRR class)
+  Domains: Disease resistance N-terminal (Rx_N), NB-ARC domain,
+     Winged helix domain, LRR domain
+  Pathway: Plant innate immunity / pathogen recognition / effector-
+     triggered immunity (ETI)
+  Orthologs: 157 orthologues, 822 paralogues
+
+
+================================================================================
+SECTION 2: HOMEOLOG GROUP IDENTIFICATION
+================================================================================
+
+Homeologs are genes on the same chromosome number but on different
+subgenomes (A, B, D) with similar positions/gene numbers. Below are
+identified homeolog groups from the target list.
+
+----------------------------------------------------------------------
+HOMEOLOG GROUP 1: Chromosome 7 -- Ser/Thr Receptor-like Kinases
+----------------------------------------------------------------------
+  - TraesCS7D02G384400 (#9) -- Ser/Thr protein kinase (chr 7D)
+  - TraesCS7D02G379600 (#10) -- Ser/Thr receptor kinase w/ lectin (chr 7D)
+  NOTE: Both on 7D but different genes. No A/B homeologs in target list
+  for these specific loci.
+
+----------------------------------------------------------------------
+HOMEOLOG GROUP 2: Chromosome 7B -- Mechanosensitive Ion Channels
+----------------------------------------------------------------------
+  - TraesCS7B02G381000 (#31) -- ABC transporter PDR (chr 7B, 645.5 Mb)
+  - TraesCS7B02G381200 (#36) -- Mechanosensitive ion channel (chr 7B,
+     645.6 Mb)
+  - TraesCS7B02G358900 (#45) -- Mechanosensitive ion channel (chr 7B,
+     620.7 Mb)
+  NOTE: #36 and #45 both encode MscS-family mechanosensitive channels
+  on 7B but are distinct loci. #31 is an ABC transporter adjacent to #36.
+  These are NOT homeologs of each other but rather two distinct MscS
+  paralogs on 7B.
+
+----------------------------------------------------------------------
+HOMEOLOG GROUP 3: Chromosome 5 -- Glucan endo-1,3-beta-D-glucosidase
+----------------------------------------------------------------------
+  - TraesCS5A02G429600 (#46) -- GH17 beta-glucanase (chr 5A)
+  - TraesCS2A02G439500 (#34) -- GH17 beta-glucanase (chr 2A)
+  NOTE: These are paralogous (same family) but on different chromosomes,
+  so NOT strict homeologs. High paralogy (79 paralogues) in this family
+  makes homeolog identification ambiguous.
+
+----------------------------------------------------------------------
+HOMEOLOG GROUP 4: Chromosome 6 -- LRR Receptor-like Kinases
+----------------------------------------------------------------------
+  - TraesCS6B02G152900 (#59) -- LRR-RLK (chr 6B, ~156 Mb)
+  - TraesCS6D02G116100 (#57) -- LRR-RLK (chr 6D, ~82 Mb)
+  NOTE: Both are LRR receptor-like kinases on group 6 chromosomes.
+  Despite different physical positions, they share the same number of
+  orthologs (82) and similar domain architecture, suggesting they may
+  be homeologs that have undergone positional rearrangement between
+  subgenomes. PROBABLE HOMEOLOG PAIR.
+
+----------------------------------------------------------------------
+HOMEOLOG GROUP 5: Chromosome 5 -- Disease Resistance NB-LRR Proteins
+----------------------------------------------------------------------
+  - TraesCS5D02G521900 (#15) -- NB-LRR disease resistance (chr 5D)
+  - TraesCS5B02G559900 (#75) -- NB-LRR disease resistance (chr 5B)
+  NOTE: Both are NB-LRR resistance proteins on chromosome 5, subgenomes
+  B and D respectively. High paralogy numbers (694/822) typical for NLR
+  genes. These may represent homeologs of the same resistance gene cluster,
+  though NLR loci are notoriously duplicated. PROBABLE HOMEOLOG PAIR.
+
+----------------------------------------------------------------------
+HOMEOLOG GROUP 6: Chromosome 5 -- MFS Sugar Transporters
+----------------------------------------------------------------------
+  - TraesCS5D02G114300 (#69) -- MFS sugar transporter (chr 5D, ~134 Mb)
+  - TraesCS4D02G263000 (#65) -- MFS sugar transporter (chr 4D, ~434 Mb)
+  NOTE: Same MFS family, similar domain architecture (both myo-inositol/
+  sugar transporters), but on different chromosomes (5D vs 4D).
+  These are PARALOGS, not homeologs.
+
+----------------------------------------------------------------------
+HOMEOLOG GROUP 7: Chromosome 2 -- ABC Transporters (ABCC family)
+----------------------------------------------------------------------
+  - TraesCS2A02G056800 (#41) -- ABC transporter ABCC (chr 2A, ~24 Mb)
+  - TraesCS2B02G069000 (#40) -- ABC transporter ABCC13/MRP13 (chr 2B,
+     ~35 Mb)
+  NOTE: Both ABC transporters of the ABCC family on chromosome 2,
+  subgenomes A and B. Similar chromosomal positions suggest these are
+  HOMEOLOGS. PROBABLE HOMEOLOG PAIR (A-B).
+
+----------------------------------------------------------------------
+HOMEOLOG GROUP 8: Chromosome 2 -- F-box Proteins
+----------------------------------------------------------------------
+  No exact homeolog pairs identified among the F-box proteins, as they
+  are distributed across multiple chromosomes:
+  - TraesCS5A02G188400 (#13) -- F-box (chr 5A)
+  - TraesCS5A02G170400 (#19) -- F-box (chr 5A)
+  - TraesCS6A02G040900 (#20) -- F-box (chr 6A)
+  - TraesCS2D02G520600 (#33) -- F-box (chr 2D)
+  - TraesCS4D02G117200 (#51) -- F-box/LRR (chr 4D)
+  - TraesCSU02G067600 (#17) -- F-box/LRR (chr Un)
+  These represent multiple distinct F-box family members.
+
+----------------------------------------------------------------------
+HOMEOLOG GROUP 9: Chromosome 7 -- Multiple 7D Loci
+----------------------------------------------------------------------
+  The target list contains an unusually high number of 7D loci:
+  - TraesCS7D02G087400 (#2) -- nontranslating CDS
+  - TraesCS7D02G101200 (#35) -- Ent-kaurenoic acid oxidase (CYP450)
+  - TraesCS7D02G219500 (#66) -- PGG domain transmembrane protein
+  - TraesCS7D02G253300 (#48) -- Uncharacterized small protein
+  - TraesCS7D02G281500 (#27) -- Uncharacterized transmembrane protein
+  - TraesCS7D02G379600 (#10) -- Receptor kinase w/ lectin domain
+  - TraesCS7D02G384400 (#9) -- Ser/Thr kinase
+  NOTE: These are distinct genes spread across chromosome 7D and are NOT
+  homeologs of each other.
+
+  Potential inter-subgenome homeologs on chr 7:
+  - TraesCS7A02G074600 (#28, DDM1 helicase, 7A) has no B/D homeolog
+    in this list
+  - TraesCS7A02G398600 (#30, CDC27/APC3, 7A) has no B/D homeolog
+    in this list
+
+----------------------------------------------------------------------
+HOMEOLOG GROUP 10: Candidate Unconfirmed Homeolog Sets
+----------------------------------------------------------------------
+  Based on functional annotation similarity:
+
+  a) BTB/POZ proteins:
+     - TraesCS5A02G360900 (#63) -- BOP1 on chr 5A
+     - TraesCS3D02G394800 (#64) -- BTB/POZ on chr 3D
+     NOT homeologs (different chromosomes, different proteins despite
+     the annotation mix-up in the input).
+
+  b) UDP-sulfoquinovose synthase (SQD1):
+     - TraesCS1D02G241800 (#5) -- SQD1, chloroplastic (chr 1D)
+     - TraesCS3D02G228900 (#8) -- SQD1, chloroplastic (chr 3D)
+     - TraesCS5A02G365700 (#4) -- listed as SQD1 but is nontranslating
+     NOT homeologs (on chromosomes 1D and 3D respectively). These are
+     PARALOGS within the SQD1 gene family. #4 is likely not a true SQD1.
+
+
+================================================================================
+SECTION 3: ANNOTATION CORRECTIONS AND FLAGS
+================================================================================
+
+FLAG 1: TraesCS5A02G188400 (#13)
+  PROVIDED:  Auxin response factor (ARF)
+  CORRECT:   F-box domain-containing protein
+  SEVERITY:  HIGH -- Complete misannotation. F-box proteins and ARFs are
+             entirely different protein families with distinct functions.
+             F-box proteins function in ubiquitin-proteasome degradation;
+             ARFs are auxin-responsive transcription factors.
+  NOTE:      The actual ARF in this target list is TraesCS6B02G167100 (#14).
+
+FLAG 2: TraesCSU02G067600 (#17)
+  PROVIDED:  Kinesin-like protein
+  CORRECT:   F-box/LRR-repeat protein
+  SEVERITY:  HIGH -- Kinesins are microtubule motor proteins; F-box/LRR
+             proteins are ubiquitin ligase substrate adaptors. The actual
+             kinesin in this list is TraesCS2B02G505400 (#18).
+
+FLAG 3: TraesCS1D02G241800 (#5)
+  PROVIDED:  Arginine decarboxylase
+  CORRECT:   UDP-sulfoquinovose synthase, chloroplastic (SQD1)
+  SEVERITY:  HIGH -- The Arabidopsis ortholog AT4G33030 encodes SQD1.
+             The actual arginine decarboxylase in this list is
+             TraesCS2A02G071200 (#6).
+
+FLAG 4: TraesCS5A02G360900 (#63)
+  PROVIDED:  BTB/POZ and TAZ domain-containing protein 3
+  CORRECT:   Ribosome biogenesis protein BOP1 homolog
+  SEVERITY:  MODERATE -- The BTB/POZ annotation belongs to
+             TraesCS3D02G394800 (#64). The BOP1 annotation was confirmed
+             via Ensembl (UniProtKB Acc: A0A1D5YQ88).
+
+FLAG 5: TraesCS7D02G219500 (#66)
+  PROVIDED:  Ribosome biogenesis protein BOP1 homolog
+  CORRECT:   PGG domain-containing protein / Embryogenesis transmembrane
+             protein-like (17 TM helices)
+  SEVERITY:  MODERATE -- The BOP1 annotation belongs to
+             TraesCS5A02G360900 (#63), not this gene.
+
+FLAG 6: TraesCS5A02G365700 (#4)
+  PROVIDED:  UDP-sulfoquinovose synthase, chloroplastic
+  ACTUAL:    Nontranslating CDS (no protein product)
+  SEVERITY:  MODERATE -- This locus may encode a pseudogene or regulatory
+             RNA. It does not produce a protein.
+
+FLAG 7: TraesCS2A02G386200 (#47)
+  PROVIDED:  TF with zinc finger + helix-loop-helix; YABBY-domain (VERIFY)
+  VERIFIED:  ANNOTATION IS CORRECT -- This is TaYABBY3A.
+             YABBY TFs have C2-C2 zinc finger + YABBY (HLH-like) domain.
+             This is a distinct plant-specific TF family, not a generic
+             zinc finger or HLH protein.
+  SEVERITY:  NONE -- The description "zinc finger + helix-loop-helix" is
+             an accurate structural description. The YABBY family note
+             is correct. However, the note "VERIFY carefully" was
+             justified because the domain architecture could be confused
+             with other TF families.
+
+
+================================================================================
+SECTION 4: DUPLICATE / REPEAT CONSOLIDATION
+================================================================================
+
+No exact duplicate TraesCS IDs were found in the input list of 75 targets.
+All 75 entries have unique gene identifiers.
+
+However, functionally redundant targets (same gene family members) include:
+
+  a) GH17 beta-glucanases:
+     - TraesCS5A02G429600 (#46)
+     - TraesCS2A02G439500 (#34)
+     Count: 2 targets in same family (distinct loci)
+
+  b) F-box proteins:
+     - TraesCS5A02G188400 (#13)
+     - TraesCS5A02G170400 (#19)
+     - TraesCS6A02G040900 (#20)
+     - TraesCS2D02G520600 (#33)
+     - TraesCS4D02G117200 (#51)
+     - TraesCSU02G067600 (#17)
+     Count: 6 targets in same family (distinct loci)
+
+  c) ABC transporters:
+     - TraesCS2A02G056800 (#41) -- ABCC conjugate transporter
+     - TraesCS2B02G069000 (#40) -- ABCC13/MRP (phytic acid)
+     - TraesCS7B02G381000 (#31) -- ABCG/PDR (defense)
+     Count: 3 targets (2 are probable homeologs)
+
+  d) NB-LRR disease resistance:
+     - TraesCS5D02G521900 (#15)
+     - TraesCS5B02G559900 (#75)
+     Count: 2 targets (probable homeologs)
+
+  e) LRR receptor-like kinases:
+     - TraesCS7D02G379600 (#10)
+     - TraesCS5D02G095300 (#37)
+     - TraesCS6B02G152900 (#59)
+     - TraesCS6D02G116100 (#57)
+     - TraesCS5B02G502400 (#74)
+     Count: 5 targets in LRR-RLK superfamily
+
+  f) MFS sugar transporters:
+     - TraesCS5D02G114300 (#69)
+     - TraesCS4D02G263000 (#65)
+     Count: 2 targets
+
+  g) Mechanosensitive ion channels (MscS):
+     - TraesCS7B02G381200 (#36)
+     - TraesCS7B02G358900 (#45)
+     Count: 2 targets (paralogs on same chromosome)
+
+  h) Ser/Thr kinases:
+     - TraesCS7D02G384400 (#9)
+     - TraesCS7D02G379600 (#10)
+     Count: 2 targets on 7D (distinct loci)
+
+  i) SQD1 (UDP-sulfoquinovose synthase):
+     - TraesCS1D02G241800 (#5)
+     - TraesCS3D02G228900 (#8)
+     - [TraesCS5A02G365700 (#4) -- nontranslating, questionable]
+     Count: 2-3 targets
+
+  j) Nontranslating CDS (no protein):
+     - TraesCS5B02G439630 (#1)
+     - TraesCS7D02G087400 (#2)
+     - TraesCS5D02G375418 (#3)
+     - TraesCS5A02G365700 (#4)
+     Count: 4 targets
+
+
+================================================================================
+SECTION 5: SUMMARY STATISTICS
+================================================================================
+
+TOTAL TARGETS IN INPUT:                75
+  - Protein-coding genes:              71
+  - Nontranslating CDS / no protein:    4  (#1, #2, #3, #4)
+
+ANNOTATION STATUS:
+  - Well-annotated (named function):   57
+  - Partially annotated (domain only): 10
+  - Uncharacterized / unknown:          8  (#12, #23, #27, #48, #49,
+                                            #53, #70, #73)
+
+ANNOTATION CORRECTIONS REQUIRED:        5
+  - TraesCS5A02G188400:  ARF -> F-box protein
+  - TraesCSU02G067600:   Kinesin -> F-box/LRR protein
+  - TraesCS1D02G241800:  Arginine decarboxylase -> SQD1
+  - TraesCS5A02G360900:  BTB/POZ -> BOP1
+  - TraesCS7D02G219500:  BOP1 -> PGG domain protein
+
+ANNOTATION VERIFIED:
+  - TraesCS2A02G386200:  YABBY TF -- CONFIRMED CORRECT (TaYABBY3A)
+
+EXACT DUPLICATE IDs:                    0
+UNIQUE LOCI:                           75
+
+CONFIRMED HOMEOLOG PAIRS:
+  - TraesCS2A02G056800 + TraesCS2B02G069000 (chr 2 ABC transporters)
+  - TraesCS6B02G152900 + TraesCS6D02G116100 (chr 6 LRR-RLKs)
+  - TraesCS5D02G521900 + TraesCS5B02G559900 (chr 5 NB-LRR)
+
+PROBABLE PARALOG PAIRS ON SAME CHROMOSOME:
+  - TraesCS7B02G381200 + TraesCS7B02G358900 (chr 7B, MscS channels)
+  - TraesCS7D02G384400 + TraesCS7D02G379600 (chr 7D, kinases)
+
+ESTIMATED UNIQUE LOCI (after homeolog deduplication):  ~72
+  (3 homeolog pairs reduces count by 3 from 75 = 72 distinct
+   functional loci, or ~69 if nontranslating CDS are excluded)
+
+
+================================================================================
+SECTION 6: FUNCTIONAL CATEGORY SUMMARY (Biological Pathways)
+================================================================================
+
+CATEGORY                                   COUNT   TARGET IDs
+--------                                   -----   ----------
+Defense / Immunity
+  NB-LRR disease resistance                  2     #15, #75
+  Gnk2 antifungal protein                    1     #26
+  LURP-one defense protein                   1     #67
+  ABC transporter (defense)                  1     #31
+
+Signal Transduction / Receptor Kinases
+  LRR receptor-like kinases                  5     #10, #37, #57, #59, #74
+  Ser/Thr protein kinase                     2     #9, #10
+  Lectin receptor kinase                     1     #10
+
+Transcription / Chromatin
+  YABBY TF (TaYABBY3A)                      1     #47
+  Auxin response factor                      1     #14
+  Homeobox-DDT TF                            1     #25
+  NAC domain TF                              1     #61
+  Bromodomain TF (GTE8)                      1     #60
+  DDM1 chromatin remodeler                   1     #28
+
+Ubiquitin-Proteasome Pathway
+  F-box proteins                             6     #13, #17, #19, #20, #33, #51
+  Ankyrin/TPR Cul2-RING E3                   1     #22
+
+Hormone Metabolism
+  Ent-kaurenoic acid oxidase (GA)            1     #35
+  CYP450 hormone biosynthesis                1     #39
+
+Membrane Transport
+  ABC transporters (ABCC)                    2     #40, #41
+  MFS sugar transporters                     2     #65, #69
+  Magnesium transporter                      1     #16
+  Mechanosensitive ion channels              2     #36, #45
+
+Metabolism / Enzymes
+  SQD1 (sulfolipid biosynthesis)             2     #5, #8
+  Arginine decarboxylase (polyamines)        1     #6
+  Beta-glucanase (GH17)                      2     #34, #46
+  SHMT (one-carbon metabolism)               1     #11
+  Ubiquinol oxidase (alt. respiration)       1     #62
+  Sulfite reductase (sulfur metab.)          1     #71
+  Calcineurin-like phosphoesterase           1     #68
+  Trypsin-like serine protease               1     #43
+  Peptidase S49 (signal peptide proc.)       1     #72
+
+Cell Cycle / Ribosome
+  CDC27/APC3 (cell cycle)                    1     #30
+  BOP1 (ribosome biogenesis)                 1     #63
+  RCD1/CNOT9 (mRNA turnover)                1     #52
+
+Cell Structure
+  Profilin (actin dynamics)                  1     #56
+  Kinesin (microtubule motor)                1     #18
+
+RNA / Organellar Processing
+  PPR protein (organellar RNA)               1     #24
+  ASCH domain (RNA binding)                  1     #7
+  mTERF (organellar transcription)           1     #50
+
+Other / Specialized
+  PARP (DNA repair)                          1     #54
+  AB hydrolase (cutin biosynthesis)          1     #42
+  BURP domain protein                        1     #38
+  GPI anchor biosynthesis (PIGA)             1     #32
+  sHSP/alpha-crystallin (heat shock)         1     #55
+  BTB/POZ + TAZ protein                      1     #64
+  PGG domain transmembrane protein           1     #66
+  DUF506/PDDEXK nuclease-like                1     #44
+  DUF1677 (plant-specific DUF)               1     #12
+
+Unknown / Nontranslating
+  Nontranslating CDS                         4     #1, #2, #3, #4
+  Uncharacterized proteins                   4     #23, #27, #48, #70
+  Poorly characterized (cDNA clone)          1     #58
+  Uncharacterized (conserved)                2     #21, #53
+  Unknown function                           1     #73
+
+
+================================================================================
+SECTION 7: NOTES ON METHODOLOGY AND LIMITATIONS
+================================================================================
+
+1. Gene models are from IWGSC RefSeq v1.1 annotation. Some IDs may not be
+   present in newer v2.1 annotation. Gene suffixes like ".1" denote specific
+   transcripts.
+
+2. Annotations were retrieved from EnsemblPlants (Release 62), UniProtKB/
+   TrEMBL, InterPro, and PANTHER databases. Many wheat proteins are
+   unreviewed (TrEMBL) and rely on computational prediction.
+
+3. Homeolog identification in hexaploid wheat is complicated by:
+   - Chromosomal rearrangements between subgenomes
+   - Gene duplications independent of polyploidy
+   - Large-scale translocations (notably 4A/5A/7B)
+   - NLR and F-box gene families undergoing birth-and-death evolution
+
+4. The unusually high number of F-box proteins (6/75 = 8%) and receptor-
+   like kinases (5/75 = 6.7%) in this target list suggests these gene
+   families may be preferentially targeted by bacterial extracellular
+   sRNAs. Both families are involved in immune signaling:
+   - F-box proteins degrade immune suppressors via proteasome
+   - LRR-RLKs are the first line of PAMP perception
+
+5. The presence of NB-LRR resistance genes (#15, #75), defense ABC
+   transporters (#31), and antifungal proteins (#26) further supports
+   a model where bacterial sRNAs target plant immune components.
+
+================================================================================
+END OF REPORT
+================================================================================

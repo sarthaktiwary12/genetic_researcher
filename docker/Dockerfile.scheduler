@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Application code
 COPY agents/ agents/
-COPY platform/ platform/
+COPY exrna_platform/ exrna_platform/
 COPY crops/ crops/
 COPY knowledge_base/ knowledge_base/
 COPY targets_config.json .
@@ -21,4 +21,4 @@ COPY targets_config.json .
 # Create data directories
 RUN mkdir -p data/chromadb
 
-CMD ["python", "-m", "platform.scheduler.engine"]
+CMD ["python", "-m", "exrna_platform.scheduler.engine"]

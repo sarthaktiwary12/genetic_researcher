@@ -34,7 +34,7 @@ from agents.config import (
     KNOWLEDGE_BASE,
     PROJECT_ROOT,
 )
-from platform.db.chroma_client import ChromaClient
+from exrna_platform.db.chroma_client import ChromaClient
 
 logger = logging.getLogger(__name__)
 

@@ -7,7 +7,7 @@ mirroring the existing markdown writer interfaces.
 import logging
 from typing import Optional
 
-from platform.db.neo4j_client import Neo4jClient
+from exrna_platform.db.neo4j_client import Neo4jClient
 
 logger = logging.getLogger(__name__)
 

@@ -9,8 +9,8 @@ import logging
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.responses import JSONResponse
 
-from platform.dependencies import get_deps
-from platform.models import SearchRequest, SearchResult, SearchResponse
+from exrna_platform.dependencies import get_deps
+from exrna_platform.models import SearchRequest, SearchResult, SearchResponse
 
 logger = logging.getLogger(__name__)
 

@@ -245,7 +245,7 @@ Respond with a JSON array:
 
     async def _store_alerts(self, alerts: list[dict]) -> int:
         """Store alerts in the literature_alerts database table."""
-        from platform.db.postgres import LiteratureAlert
+        from exrna_platform.db.postgres import LiteratureAlert
         from sqlalchemy import select
 
         stored = 0

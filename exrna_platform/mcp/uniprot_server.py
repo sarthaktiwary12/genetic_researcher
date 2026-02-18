@@ -3,7 +3,7 @@
 import logging
 from typing import Optional
 
-from platform.mcp.base import MCPToolServer
+from exrna_platform.mcp.base import MCPToolServer
 
 logger = logging.getLogger(__name__)
 

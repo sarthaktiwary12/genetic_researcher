@@ -10,8 +10,8 @@ from typing import Optional
 from fastapi import APIRouter, Request, HTTPException, Query
 from fastapi.responses import JSONResponse
 
-from platform.dependencies import get_deps
-from platform.models import CampaignCreate, CampaignResponse, CampaignList
+from exrna_platform.dependencies import get_deps
+from exrna_platform.models import CampaignCreate, CampaignResponse, CampaignList
 
 logger = logging.getLogger(__name__)
 
@@ -121,7 +121,7 @@ async def pause_campaign(request: Request, campaign_id: str):
         # Update status to paused via direct session access
         import uuid
         from sqlalchemy import select
-        from platform.db.postgres import Campaign
+        from exrna_platform.db.postgres import Campaign
 
         async with deps.pg_session_factory() as session:
             result = await session.execute(

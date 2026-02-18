@@ -173,7 +173,7 @@ async def run_campaign(
 
     elif campaign_type == "pubmed_daily_scan":
         from agents.tasks.literature_monitor import run as run_lit
-        from platform.mcp.pubmed_server import PubMedServer
+        from exrna_platform.mcp.pubmed_server import PubMedServer
 
         async with PubMedServer() as pubmed:
             return await run_lit(

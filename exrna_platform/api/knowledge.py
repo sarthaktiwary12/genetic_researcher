@@ -10,8 +10,8 @@ from typing import Optional
 from fastapi import APIRouter, Request, HTTPException, Query
 from fastapi.responses import JSONResponse
 
-from platform.dependencies import get_deps
-from platform.models import (
+from exrna_platform.dependencies import get_deps
+from exrna_platform.models import (
     GeneResponse,
     PathwayResponse,
     CypherQuery,

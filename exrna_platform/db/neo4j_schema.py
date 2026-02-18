@@ -10,7 +10,7 @@ Relationship Types (10):
 """
 
 import logging
-from platform.db.neo4j_client import Neo4jClient
+from exrna_platform.db.neo4j_client import Neo4jClient
 
 logger = logging.getLogger(__name__)
 

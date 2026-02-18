@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Application code
 COPY agents/ agents/
-COPY platform/ platform/
+COPY exrna_platform/ exrna_platform/
 COPY crops/ crops/
 COPY knowledge_base/ knowledge_base/
 COPY targets_config.json .
@@ -23,4 +23,4 @@ RUN mkdir -p data/chromadb
 
 EXPOSE 8000
 
-CMD ["uvicorn", "platform.app:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "exrna_platform.app:app", "--host", "0.0.0.0", "--port", "8000"]

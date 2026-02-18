@@ -7,8 +7,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from platform.dependencies import AppState
-from platform.api import campaigns, knowledge, search, targets, experiments, monitoring, budget
+from exrna_platform.dependencies import AppState
+from exrna_platform.api import campaigns, knowledge, search, targets, experiments, monitoring, budget
 
 logger = logging.getLogger(__name__)
 

@@ -12,9 +12,9 @@ from fastapi import APIRouter, Request, HTTPException, Query
 from fastapi.responses import JSONResponse
 from sqlalchemy import select, func
 
-from platform.dependencies import get_deps
-from platform.db.postgres import MonthlyBudget, ApiCost, Campaign
-from platform.models import BudgetResponse, CostEntry
+from exrna_platform.dependencies import get_deps
+from exrna_platform.db.postgres import MonthlyBudget, ApiCost, Campaign
+from exrna_platform.models import BudgetResponse, CostEntry
 
 logger = logging.getLogger(__name__)
 

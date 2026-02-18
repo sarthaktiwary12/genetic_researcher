@@ -13,7 +13,7 @@ from typing import Optional
 from fastapi import APIRouter, Request, HTTPException, Query
 from fastapi.responses import JSONResponse
 
-from platform.models import GeneResponse, TargetListResponse
+from exrna_platform.models import GeneResponse, TargetListResponse
 
 logger = logging.getLogger(__name__)
 

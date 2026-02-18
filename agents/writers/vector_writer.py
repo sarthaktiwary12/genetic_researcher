@@ -8,7 +8,7 @@ import logging
 import re
 from typing import Optional
 
-from platform.db.chroma_client import ChromaClient
+from exrna_platform.db.chroma_client import ChromaClient
 
 logger = logging.getLogger(__name__)
 

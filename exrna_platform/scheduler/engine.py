@@ -14,8 +14,8 @@ from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
 from apscheduler.triggers.cron import CronTrigger
 from apscheduler.triggers.interval import IntervalTrigger
 
-from platform.scheduler.campaigns import CampaignType, CAMPAIGN_TEMPLATES
-from platform.scheduler.progress import ProgressTracker
+from exrna_platform.scheduler.campaigns import CampaignType, CAMPAIGN_TEMPLATES
+from exrna_platform.scheduler.progress import ProgressTracker
 
 logger = logging.getLogger(__name__)
 

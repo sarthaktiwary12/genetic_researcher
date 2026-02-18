@@ -12,7 +12,7 @@ from typing import Optional
 from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from platform.db.postgres import Campaign, ApiCost, MonthlyBudget
+from exrna_platform.db.postgres import Campaign, ApiCost, MonthlyBudget
 
 logger = logging.getLogger(__name__)
 

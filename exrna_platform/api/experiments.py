@@ -13,9 +13,9 @@ from fastapi.responses import JSONResponse
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 
-from platform.dependencies import get_deps
-from platform.db.postgres import Experiment, ExperimentResult
-from platform.models import (
+from exrna_platform.dependencies import get_deps
+from exrna_platform.db.postgres import Experiment, ExperimentResult
+from exrna_platform.models import (
     ExperimentCreate,
     ExperimentResponse,
     ExperimentResultCreate,

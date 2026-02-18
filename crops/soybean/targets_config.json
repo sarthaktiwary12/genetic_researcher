@@ -2,9 +2,135 @@
   "metadata": {
     "organism": "Glycine max",
     "treatment": "M-9 bacterial EPS solution",
-    "total_targets": 0,
-    "generated_date": null,
-    "notes": "Awaiting target identification"
+    "total_targets": 18,
+    "generated_date": "2026-02-18"
   },
-  "targets": []
+  "targets": [
+    {
+      "gene_id": "GLYMA_01G215100",
+      "annotation": "Phospholipase D beta 1 (lipid signaling; ABA/GA pathway)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "1"
+    },
+    {
+      "gene_id": "GLYMA_09G261100",
+      "annotation": "Exosome subunit Rrp46-like (3' exoribonuclease; RNA processing)",
+      "pathway": "epigenetic_regulation",
+      "priority": "medium",
+      "chromosome": "9"
+    },
+    {
+      "gene_id": "GLYMA_01G009900",
+      "annotation": "LrgB-like membrane protein (defense / cell death regulation)",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": "1"
+    },
+    {
+      "gene_id": "GLYMA_06G259700",
+      "annotation": "TIR-NBS-LRR disease resistance protein",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "6"
+    },
+    {
+      "gene_id": "GLYMA_01G091700",
+      "annotation": "hAT transposon superfamily protein (DUF659 domain; TE-related)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "1"
+    },
+    {
+      "gene_id": "GLYMA_02G220600",
+      "annotation": "UFM1-specific peptidase (Peptidase C78; protein quality control)",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "2"
+    },
+    {
+      "gene_id": "GLYMA_09G051100",
+      "annotation": "Cellulose synthase A4 (CesA4; primary cell wall biogenesis)",
+      "pathway": "cell_wall",
+      "priority": "high",
+      "chromosome": "9"
+    },
+    {
+      "gene_id": "GLYMA_03G196400",
+      "annotation": "Glutaredoxin family protein (thiol-disulfide redox homeostasis)",
+      "pathway": "ros_redox",
+      "priority": "high",
+      "chromosome": "3"
+    },
+    {
+      "gene_id": "GLYMA_08G231200",
+      "annotation": "Urb2/Npa2 ribosome biogenesis factor",
+      "pathway": "metabolic_priming",
+      "priority": "medium",
+      "chromosome": "8"
+    },
+    {
+      "gene_id": "GLYMA_09G192700",
+      "annotation": "ROP GTPase (RHO-related protein from plants 9; ABA signal transduction)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "9"
+    },
+    {
+      "gene_id": "GLYMA_09G063900",
+      "annotation": "Cytokinin oxidase 3 (CKX3; hormone degradation)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "9"
+    },
+    {
+      "gene_id": "GLYMA_10G097500",
+      "annotation": "Hypothetical protein (uncharacterized)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "10"
+    },
+    {
+      "gene_id": "GLYMA_10G242300",
+      "annotation": "LRR receptor-like kinase (ERECTA-like; developmental/defense RLK signaling)",
+      "pathway": "signaling",
+      "priority": "high",
+      "chromosome": "10"
+    },
+    {
+      "gene_id": "GLYMA_10G268800",
+      "annotation": "Hypothetical protein (very short, 61 aa; uncharacterized)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "10"
+    },
+    {
+      "gene_id": "GLYMA_07G060700",
+      "annotation": "CURT1-like thylakoid membrane protein (annotation uncertain; originally labeled cation transport regulator)",
+      "pathway": "photosynthesis",
+      "priority": "medium",
+      "chromosome": "7"
+    },
+    {
+      "gene_id": "GLYMA_05G068700",
+      "annotation": "Invertase/pectin methylesterase inhibitor superfamily protein (sugar sensing / cell wall)",
+      "pathway": "cell_wall",
+      "priority": "medium",
+      "chromosome": "5"
+    },
+    {
+      "gene_id": "GLYMA_06G057500",
+      "annotation": "DUF1677 domain protein (unknown function)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "6"
+    },
+    {
+      "gene_id": "GLYMA_12G091900",
+      "annotation": "Hypothetical integral membrane protein (uncharacterized)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "12"
+    }
+  ]
 }

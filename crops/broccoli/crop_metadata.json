@@ -7,7 +7,7 @@
   "treatment_duration_hours": "4-8",
   "phenotype": "Germination rate increase, vigor increase",
   "knowledge_base_path": "knowledge_base/",
-  "total_targets": 0,
-  "analysis_status": "pending",
+  "total_targets": 89,
+  "analysis_status": "targets_identified",
   "notes": "Awaiting exRNA target identification. Brassicaceae model with well-characterized genome from Arabidopsis relatives."
 }

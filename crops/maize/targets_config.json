@@ -2,9 +2,149 @@
   "metadata": {
     "organism": "Zea mays",
     "treatment": "M-9 bacterial EPS solution",
-    "total_targets": 0,
-    "generated_date": null,
-    "notes": "Awaiting target identification"
+    "total_targets": 20,
+    "generated_date": "2026-02-18"
   },
-  "targets": []
+  "targets": [
+    {
+      "gene_id": "Zm00001eb197370_T001",
+      "annotation": "ABI40 - ABA-Insensitive 4-like / ABI4-related transcription factor (AP2/ERF family; dormancy maintenance)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb154520_T001",
+      "annotation": "HEX6 - Hexokinase 6 (dual-function glucose sensor and glycolytic enzyme; sugar sensing / ABA crosstalk)",
+      "pathway": "metabolic_priming",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb333290_T001",
+      "annotation": "PRX91 - Class III peroxidase 91 (secretory/apoplastic; ROS generation/scavenging, cell wall cross-linking)",
+      "pathway": "ros_redox",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb385450_T002",
+      "annotation": "NPF15 - NRT1/PTR Family 6.3-like transporter (nitrate/peptide/hormone transporter)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb065740_T001",
+      "annotation": "AHL9 - AT-hook motif nuclear-localized protein 9 (chromatin architectural factor; negative regulator of organ elongation)",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb044800_T001",
+      "annotation": "RING63 - RING-type E3 ubiquitin ligase (C3H2C3/RING-H2 type; targets growth-promoting proteins for degradation)",
+      "pathway": "protein_processing",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb194870_T002",
+      "annotation": "RING265 - RING-type E3 ubiquitin ligase (C3HC4 type; selective proteolysis of growth-related substrates)",
+      "pathway": "protein_processing",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb303410_T002",
+      "annotation": "ppr377 - Pentatricopeptide repeat protein 377 (P-type; organelle-targeted; mitochondrial/chloroplast RNA processing)",
+      "pathway": "metabolic_priming",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb159250_T002",
+      "annotation": "CYP10 - Cytochrome P450 family member (CYP71/CYP72 clade; possible GA/BR catabolism)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb187270_T001",
+      "annotation": "MYBR64 - MYB-related transcription factor 64 (ABA response; stomatal regulation; growth suppressor under stress)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb397700_T001",
+      "annotation": "IBP1 - Bowman-Birk type trypsin inhibitor / stress-responsive protease inhibitor",
+      "pathway": "stress_response",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb036320_T002",
+      "annotation": "LOC100273360 - Uncharacterized protein; predicted DUF domain-containing, possible membrane protein",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb018090_T002",
+      "annotation": "PRH130 - Proline-rich protein / extensin-like cell wall structural protein",
+      "pathway": "cell_wall",
+      "priority": "medium",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb292850_T002",
+      "annotation": "si614021b09a - Uncharacterized protein; possible small regulatory peptide or ncRNA-associated locus",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb388550_T001",
+      "annotation": "PCO145926 - Uncharacterized / predicted oxidoreductase (based on remote homology; possibly redox-related)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb408850_T001",
+      "annotation": "IDP8263 - Indeterminate domain protein / uncharacterized protein with predicted zinc finger (possibly transcriptional regulation)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb136860_T001",
+      "annotation": "AI714716 - EST tag; best hit to DUF642 domain protein (cell wall-associated; pectin modification)",
+      "pathway": "cell_wall",
+      "priority": "medium",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb403550_T001",
+      "annotation": "F-box/kelch repeat protein (SCF complex; ubiquitin-proteasome pathway)",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb358860_T001",
+      "annotation": "Predicted RNA-binding protein (RRM domain; post-transcriptional RNA regulation / mRNA stability)",
+      "pathway": "epigenetic_regulation",
+      "priority": "medium",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Zm00001eb066630_T001",
+      "annotation": "Predicted serine/threonine protein kinase (receptor-like kinase; stress perception / signal transduction)",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": ""
+    }
+  ]
 }

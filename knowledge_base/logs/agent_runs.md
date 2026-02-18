@@ -9,3 +9,4 @@
 | 2026-02-17 05:06:49 | pathway_mapping | {"stage": "pathway_mapping", "pathways_total": 14, "pathways_succeeded": 14, "pa... | 96s | Success |
 | 2026-02-17 05:07:33 | literature_dive | {"stage": "literature_dive", "high_priority_targets": 21, "homolog_successes": 2... | 139s | Success |
 | 2026-02-17 05:09:37 | theme_extraction | {"stage": "theme_extraction", "themes": "success", "causal_models": "success", "... | 109s | Success |
+| 2026-02-18 11:38:53 | synthesis_spinach | {"ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag_biology_engine/know... | 836s | Success |

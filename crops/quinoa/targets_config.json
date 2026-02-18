@@ -2,9 +2,226 @@
   "metadata": {
     "organism": "Chenopodium quinoa",
     "treatment": "M-9 bacterial EPS solution",
-    "total_targets": 0,
-    "generated_date": null,
-    "notes": "Awaiting target identification"
+    "total_targets": 31,
+    "generated_date": "2026-02-18"
   },
-  "targets": []
+  "targets": [
+    {
+      "gene_id": "AUR62012347",
+      "annotation": "CqCYP76AD-like / putative CYP76AD pseudogene locus (betalain biosynthesis; nontranslating CDS)",
+      "pathway": "metabolic_priming",
+      "priority": "medium",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62010943",
+      "annotation": "CqHAK5 - High-Affinity K+ transporter 5 (HAK/KUP/KT family)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "2"
+    },
+    {
+      "gene_id": "AUR62044372",
+      "annotation": "CqCNGC14 - Cyclic Nucleotide-Gated Channel 14 (Ca2+ signaling / auxin response)",
+      "pathway": "signaling",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62015391",
+      "annotation": "CqGUN4 - Tetrapyrrole-binding protein, chloroplastic (Mg-chelatase regulator / retrograde signaling)",
+      "pathway": "photosynthesis",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62003502",
+      "annotation": "CqBRL2/VH1-like - BRI1-Like Receptor Kinase 2 (LRR-RLK; vascular development / BR signaling)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62043174",
+      "annotation": "Unknown conserved protein (170 aa; 436 orthologs; possible regulatory/structural)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62027225",
+      "annotation": "Unknown conserved protein (209 aa; 133 orthologs)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62031820",
+      "annotation": "Unknown large protein (1141 aa; 94 orthologs; possible transporter or receptor kinase)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62006498",
+      "annotation": "Unknown protein (478 aa; 25 orthologs; restricted conservation, possible lineage-specific)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62039771",
+      "annotation": "Nontranslating CDS (putative pseudogene or lncRNA; 2096 bp transcript)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62018498",
+      "annotation": "Unknown protein (491 aa; possible enzyme/transporter)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62025094",
+      "annotation": "Unknown conserved single-copy protein (276 aa; 156 orthologs; 2 paralogs)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62033668",
+      "annotation": "Unknown highly conserved protein (266 aa; 400 orthologs; 16 paralogs; possible RING/ubiquitin or TF)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62040122",
+      "annotation": "Unknown small protein, possible defensin-type antimicrobial peptide (117 aa; 1 ortholog; 18 paralogs; Amaranthaceae-specific expansion)",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62008816",
+      "annotation": "Unknown large conserved protein (810 aa; 167 orthologs; 3 paralogs)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62021543",
+      "annotation": "Candidate NBS-LRR disease resistance protein (603 aa; 678 paralogs; probable CC-NBS-LRR innate immunity receptor)",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62014700",
+      "annotation": "Unknown protein, possible transcription factor (361 aa; 185 orthologs; 88 paralogs; possible MYB/WRKY/NAC family)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62037200",
+      "annotation": "Unknown conserved protein (482 aa; 256 orthologs; possible metabolic or transport protein)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62029415",
+      "annotation": "Unknown small protein (168 aa; possible stress-related)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62042100",
+      "annotation": "Unknown small conserved protein (205 aa; highly expressed)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62011287",
+      "annotation": "Unknown lineage-specific protein (335 aa; 4 orthologs only; Amaranthaceae/Caryophyllales-specific candidate)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62035900",
+      "annotation": "Unknown small protein, possible lipid transfer protein (LTP) or defensin (105 aa; 38 paralogs)",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62023678",
+      "annotation": "Unknown conserved single-copy protein (315 aa; 247 orthologs; 4 paralogs)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62016845",
+      "annotation": "Unknown tissue-specific protein (309 aa; GO anatomical entity annotation)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62038512",
+      "annotation": "Unknown small protein (175 aa; 156 orthologs; 25 paralogs; possible sHSP or thioredoxin family)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62020100",
+      "annotation": "Unknown conserved single-copy protein (262 aa; 152 orthologs; 3 paralogs; essential gene candidate)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62045001",
+      "annotation": "Unverified gene model (not present in EnsemblPlants database; requires accession verification)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62007329",
+      "annotation": "Unknown highly conserved protein (313 aa; 263 orthologs; 6 paralogs; near-universal plant protein)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62034256",
+      "annotation": "Nontranslating CDS (putative pseudogene or lncRNA; 714 bp transcript)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62041888",
+      "annotation": "Unknown medium-large protein (609 aa; possible CYP450, transporter, or kinase)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "AUR62019623",
+      "annotation": "Unknown broadly conserved protein (446 aa; 278 orthologs; 7 paralogs; essential conserved gene candidate)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": ""
+    }
+  ]
 }

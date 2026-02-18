@@ -2,9 +2,534 @@
   "metadata": {
     "organism": "Triticum aestivum",
     "treatment": "M-9 bacterial EPS solution",
-    "total_targets": 0,
-    "generated_date": null,
-    "notes": "Awaiting target identification"
+    "total_targets": 75,
+    "generated_date": "2026-02-18"
   },
-  "targets": []
+  "targets": [
+    {
+      "gene_id": "TraesCS5B02G439630",
+      "annotation": "Nontranslating CDS (no protein product; possible regulatory RNA or pseudogene)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "5B"
+    },
+    {
+      "gene_id": "TraesCS7D02G087400",
+      "annotation": "Nontranslating CDS (no protein product)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "7D"
+    },
+    {
+      "gene_id": "TraesCS5D02G375418",
+      "annotation": "Nontranslating CDS (no protein product; possible regulatory element)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "5D"
+    },
+    {
+      "gene_id": "TraesCS5A02G365700",
+      "annotation": "Nontranslating CDS (no protein product; flagged annotation conflict with UDP-sulfoquinovose synthase)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "5A"
+    },
+    {
+      "gene_id": "TraesCS1D02G241800",
+      "annotation": "UDP-sulfoquinovose synthase, chloroplastic (SQD1) [corrected from Arginine decarboxylase]",
+      "pathway": "photosynthesis",
+      "priority": "high",
+      "chromosome": "1D"
+    },
+    {
+      "gene_id": "TraesCS2A02G071200",
+      "annotation": "Arginine decarboxylase (polyamine biosynthesis)",
+      "pathway": "metabolic_priming",
+      "priority": "high",
+      "chromosome": "2A"
+    },
+    {
+      "gene_id": "TraesCS4A02G232100",
+      "annotation": "ASCH domain-containing protein (RNA-binding)",
+      "pathway": "epigenetic_regulation",
+      "priority": "medium",
+      "chromosome": "4A"
+    },
+    {
+      "gene_id": "TraesCS3D02G228900",
+      "annotation": "UDP-sulfoquinovose synthase, chloroplastic (SQD1-related)",
+      "pathway": "photosynthesis",
+      "priority": "medium",
+      "chromosome": "3D"
+    },
+    {
+      "gene_id": "TraesCS7D02G384400",
+      "annotation": "Serine/threonine-protein kinase",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "7D"
+    },
+    {
+      "gene_id": "TraesCS7D02G379600",
+      "annotation": "Non-specific serine/threonine protein kinase (Receptor-like kinase with lectin and apple domains)",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": "7D"
+    },
+    {
+      "gene_id": "TraesCS3D02G378700",
+      "annotation": "Glycine hydroxymethyltransferase (SHMT) / Serine hydroxymethyltransferase",
+      "pathway": "metabolic_priming",
+      "priority": "high",
+      "chromosome": "3D"
+    },
+    {
+      "gene_id": "TraesCS5B02G389900",
+      "annotation": "DUF1677 domain-containing protein (uncharacterized; plant-specific)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "5B"
+    },
+    {
+      "gene_id": "TraesCS5A02G188400",
+      "annotation": "F-box domain-containing protein [corrected from Auxin response factor]",
+      "pathway": "protein_processing",
+      "priority": "high",
+      "chromosome": "5A"
+    },
+    {
+      "gene_id": "TraesCS6B02G167100",
+      "annotation": "Auxin response factor (ARF)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "6B"
+    },
+    {
+      "gene_id": "TraesCS5D02G521900",
+      "annotation": "Disease resistance protein (NB-LRR class)",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "5D"
+    },
+    {
+      "gene_id": "TraesCS3B02G440800",
+      "annotation": "Probable magnesium transporter (CorA-type)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "3B"
+    },
+    {
+      "gene_id": "TraesCSU02G067600",
+      "annotation": "F-box/LRR-repeat protein [corrected from Kinesin-like protein]",
+      "pathway": "protein_processing",
+      "priority": "high",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "TraesCS2B02G505400",
+      "annotation": "Kinesin-like protein (microtubule motor)",
+      "pathway": "development",
+      "priority": "medium",
+      "chromosome": "2B"
+    },
+    {
+      "gene_id": "TraesCS5A02G170400",
+      "annotation": "Uncharacterized F-box protein (AT5G49610-like)",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "5A"
+    },
+    {
+      "gene_id": "TraesCS6A02G040900",
+      "annotation": "F-box domain-containing protein",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "6A"
+    },
+    {
+      "gene_id": "TraesCS4D02G127100",
+      "annotation": "Uncharacterized protein (highly conserved)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "4D"
+    },
+    {
+      "gene_id": "TraesCS4A02G289700",
+      "annotation": "Ankyrin/TPR repeat-containing protein; Cul2-RING E3 ligase superfamily",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "4A"
+    },
+    {
+      "gene_id": "TraesCS3D02G469000",
+      "annotation": "Uncharacterized protein (coiled-coil, disordered; low conservation)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "3D"
+    },
+    {
+      "gene_id": "TraesCS3B02G123400",
+      "annotation": "Pentatricopeptide repeat-containing protein (At5g16860-like)",
+      "pathway": "metabolic_priming",
+      "priority": "high",
+      "chromosome": "3B"
+    },
+    {
+      "gene_id": "TraesCS2A02G124800",
+      "annotation": "Homeobox-DDT domain protein (RLT-3 family; chromatin remodeling)",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "2A"
+    },
+    {
+      "gene_id": "TraesCS2A02G393400",
+      "annotation": "Gnk2-homologous domain-containing protein / Stress-antifungal protein",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": "2A"
+    },
+    {
+      "gene_id": "TraesCS7D02G281500",
+      "annotation": "Uncharacterized transmembrane protein",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "7D"
+    },
+    {
+      "gene_id": "TraesCS7A02G074600",
+      "annotation": "ATP-dependent DNA helicase DDM1 (Decrease in DNA Methylation 1)",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "7A"
+    },
+    {
+      "gene_id": "TraesCS3B02G587600",
+      "annotation": "Uncharacterized protein (large, highly paralogous; possible TE-related)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "3B"
+    },
+    {
+      "gene_id": "TraesCS7A02G398600",
+      "annotation": "Cell division cycle protein 27 homolog B (CDC27/APC3)",
+      "pathway": "development",
+      "priority": "high",
+      "chromosome": "7A"
+    },
+    {
+      "gene_id": "TraesCS7B02G381000",
+      "annotation": "ABC transporter (ABCG family, PDR subfamily; probable general defense protein)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "7B"
+    },
+    {
+      "gene_id": "TraesCS3A02G336700",
+      "annotation": "PIGA GPI anchor biosynthesis domain-containing protein",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "3A"
+    },
+    {
+      "gene_id": "TraesCS2D02G520600",
+      "annotation": "F-box domain-containing protein (with kelch repeats)",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "2D"
+    },
+    {
+      "gene_id": "TraesCS2A02G439500",
+      "annotation": "Glucan endo-1,3-beta-D-glucosidase (GH17 family)",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "2A"
+    },
+    {
+      "gene_id": "TraesCS7D02G101200",
+      "annotation": "Ent-kaurenoic acid oxidase (cytochrome P450; gibberellin biosynthesis)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "7D"
+    },
+    {
+      "gene_id": "TraesCS7B02G381200",
+      "annotation": "Mechanosensitive ion channel protein (MscS family)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "7B"
+    },
+    {
+      "gene_id": "TraesCS5D02G095300",
+      "annotation": "Non-specific Ser/Thr protein kinase (receptor-like kinase with LRR and malectin domains)",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "5D"
+    },
+    {
+      "gene_id": "TraesCS4D02G095300",
+      "annotation": "BURP domain-containing protein (development / stress response)",
+      "pathway": "stress_response",
+      "priority": "medium",
+      "chromosome": "4D"
+    },
+    {
+      "gene_id": "TraesCS5A02G037600",
+      "annotation": "Cytochrome P450 (hormone biosynthesis-related)",
+      "pathway": "hormone_signaling",
+      "priority": "medium",
+      "chromosome": "5A"
+    },
+    {
+      "gene_id": "TraesCS2B02G069000",
+      "annotation": "ABC transporter C family member 13 / Multidrug resistance-associated protein 13 (MRP) / LOW PHYTIC ACID 2",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "2B"
+    },
+    {
+      "gene_id": "TraesCS2A02G056800",
+      "annotation": "ABC transporter (ABCC family) / Conjugate transporter",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "2A"
+    },
+    {
+      "gene_id": "TraesCS1D02G190800",
+      "annotation": "Alpha/beta hydrolase-1 domain-containing protein (Lysophospholipase/Bodyguard 3-related; cutin biosynthesis)",
+      "pathway": "cell_wall",
+      "priority": "medium",
+      "chromosome": "1D"
+    },
+    {
+      "gene_id": "TraesCS5B02G289200",
+      "annotation": "Trypsin-like serine protease (uncharacterized)",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "5B"
+    },
+    {
+      "gene_id": "TraesCS3B02G442800",
+      "annotation": "DUF506/PDDEXK-like domain-containing protein (possible nuclease activity)",
+      "pathway": "unknown",
+      "priority": "medium",
+      "chromosome": "3B"
+    },
+    {
+      "gene_id": "TraesCS7B02G358900",
+      "annotation": "Mechanosensitive ion channel protein (MscS family)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "7B"
+    },
+    {
+      "gene_id": "TraesCS5A02G429600",
+      "annotation": "Glucan endo-1,3-beta-D-glucosidase (GH17 family; callose degradation / plant defense)",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "5A"
+    },
+    {
+      "gene_id": "TraesCS2A02G386200",
+      "annotation": "YABBY transcription factor (TaYABBY3A; zinc finger + YABBY domain; leaf development)",
+      "pathway": "development",
+      "priority": "high",
+      "chromosome": "2A"
+    },
+    {
+      "gene_id": "TraesCS7D02G253300",
+      "annotation": "Uncharacterized small protein (155 aa)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "7D"
+    },
+    {
+      "gene_id": "TraesCS3D02G204700",
+      "annotation": "Uncharacterized protein (no InterPro domains)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "3D"
+    },
+    {
+      "gene_id": "TraesCS6B02G109500",
+      "annotation": "mTERF domain-containing protein (mitochondrial transcription termination factor family)",
+      "pathway": "metabolic_priming",
+      "priority": "medium",
+      "chromosome": "6B"
+    },
+    {
+      "gene_id": "TraesCS4D02G117200",
+      "annotation": "F-box/LRR-repeat protein (with FBD domain)",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "4D"
+    },
+    {
+      "gene_id": "TraesCS5A02G423100",
+      "annotation": "Cell differentiation protein rcd1 / CNOT9 family member (CCR4-NOT core complex component)",
+      "pathway": "epigenetic_regulation",
+      "priority": "medium",
+      "chromosome": "5A"
+    },
+    {
+      "gene_id": "TraesCS4A02G108000",
+      "annotation": "Uncharacterized protein (highly conserved)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "4A"
+    },
+    {
+      "gene_id": "TraesCS1A02G328000",
+      "annotation": "Poly [ADP-ribose] polymerase (PARP; DNA damage repair)",
+      "pathway": "stress_response",
+      "priority": "high",
+      "chromosome": "1A"
+    },
+    {
+      "gene_id": "TraesCS4B02G205800",
+      "annotation": "sHSP/alpha-crystallin domain-containing protein (DUF8041 + HSP20-like; heat shock response)",
+      "pathway": "stress_response",
+      "priority": "medium",
+      "chromosome": "4B"
+    },
+    {
+      "gene_id": "TraesCS1B02G356700",
+      "annotation": "Profilin (actin dynamics / cytoskeletal organization)",
+      "pathway": "development",
+      "priority": "medium",
+      "chromosome": "1B"
+    },
+    {
+      "gene_id": "TraesCS6D02G116100",
+      "annotation": "LRR receptor-like Ser/Thr protein kinase",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": "6D"
+    },
+    {
+      "gene_id": "TraesCS4B02G385200",
+      "annotation": "Uncharacterized protein (poorly characterized; rice ortholog Os03g0109400)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "4B"
+    },
+    {
+      "gene_id": "TraesCS6B02G152900",
+      "annotation": "LRR receptor-like Ser/Thr protein kinase (RLP family)",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": "6B"
+    },
+    {
+      "gene_id": "TraesCS3A02G122200",
+      "annotation": "Bromodomain-containing transcription factor (GTE8 family; chromatin remodeling)",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "3A"
+    },
+    {
+      "gene_id": "TraesCS5B02G275200",
+      "annotation": "NAC domain containing protein 38 (stress response / senescence / secondary cell wall)",
+      "pathway": "stress_response",
+      "priority": "high",
+      "chromosome": "5B"
+    },
+    {
+      "gene_id": "TraesCS6B02G296400",
+      "annotation": "Ubiquinol oxidase / Alternative oxidase (AOX; mitochondrial alternative respiration)",
+      "pathway": "ros_redox",
+      "priority": "medium",
+      "chromosome": "6B"
+    },
+    {
+      "gene_id": "TraesCS5A02G360900",
+      "annotation": "Ribosome biogenesis protein BOP1 homolog [corrected from BTB/POZ protein]",
+      "pathway": "metabolic_priming",
+      "priority": "medium",
+      "chromosome": "5A"
+    },
+    {
+      "gene_id": "TraesCS3D02G394800",
+      "annotation": "BTB/POZ and TAZ domain-containing protein 3",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "3D"
+    },
+    {
+      "gene_id": "TraesCS4D02G263000",
+      "annotation": "Major facilitator superfamily (MFS) sugar transporter (myo-inositol transporter type)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "4D"
+    },
+    {
+      "gene_id": "TraesCS7D02G219500",
+      "annotation": "PGG domain-containing protein / Embryogenesis transmembrane protein-like [corrected from BOP1]",
+      "pathway": "development",
+      "priority": "medium",
+      "chromosome": "7D"
+    },
+    {
+      "gene_id": "TraesCS1D02G303100",
+      "annotation": "Protein LURP-one-related 8 (LOR family; plant defense / immune response)",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": "1D"
+    },
+    {
+      "gene_id": "TraesCS5B02G369300",
+      "annotation": "Calcineurin-like phosphoesterase domain-containing protein",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "5B"
+    },
+    {
+      "gene_id": "TraesCS5D02G114300",
+      "annotation": "MFS sugar transporter (sugar/myo-inositol transporter)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "5D"
+    },
+    {
+      "gene_id": "TraesCS4B02G159300",
+      "annotation": "Uncharacterized small protein (82 aa; possible gene fragment)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "4B"
+    },
+    {
+      "gene_id": "TraesCS1B02G336300",
+      "annotation": "Assimilatory sulfite reductase (ferredoxin; sulfur metabolism)",
+      "pathway": "metabolic_priming",
+      "priority": "high",
+      "chromosome": "1B"
+    },
+    {
+      "gene_id": "TraesCS6B02G319000",
+      "annotation": "Peptidase S49 domain-containing protein (signal peptide peptidase; chloroplast thylakoid proteolysis)",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "6B"
+    },
+    {
+      "gene_id": "TraesCS6D02G213500",
+      "annotation": "Uncharacterized protein",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "6D"
+    },
+    {
+      "gene_id": "TraesCS5B02G502400",
+      "annotation": "L-type lectin-domain containing receptor kinase",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "5B"
+    },
+    {
+      "gene_id": "TraesCS5B02G559900",
+      "annotation": "NB-ARC domain-containing disease resistance protein (NB-LRR class; effector-triggered immunity)",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "5B"
+    }
+  ]
 }

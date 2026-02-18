@@ -2,9 +2,632 @@
   "metadata": {
     "organism": "Brassica oleracea var. italica",
     "treatment": "M-9 bacterial EPS solution",
-    "total_targets": 0,
-    "generated_date": null,
-    "notes": "Awaiting target identification"
+    "total_targets": 89,
+    "generated_date": "2026-02-18"
   },
-  "targets": []
+  "targets": [
+    {
+      "gene_id": "Bo7g095320.1",
+      "annotation": "Hypothetical protein, conserved across plants (152 aa)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo4g107590.1",
+      "annotation": "Uncharacterized protein-coding gene (796 aa)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C4"
+    },
+    {
+      "gene_id": "Bo9g023770.1",
+      "annotation": "Uncharacterized protein-coding gene (297 aa)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo2g146190.1",
+      "annotation": "Uncharacterized protein-coding gene (413 aa)",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C2"
+    },
+    {
+      "gene_id": "Bo1g016960.1",
+      "annotation": "CDK-Activating Kinase 1 (CAK1AT / CDKD;1-like)",
+      "pathway": "signaling",
+      "priority": "high",
+      "chromosome": "C1"
+    },
+    {
+      "gene_id": "Bo1g006720.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C1"
+    },
+    {
+      "gene_id": "Bo3g151500.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo9g173970.1",
+      "annotation": "Chaperone DnaJ-domain superfamily protein (DNAJD5-like)",
+      "pathway": "protein_processing",
+      "priority": "high",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo8g090750.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo8g090760.1",
+      "annotation": "tRNA (guanine-N2)-dimethyltransferase (TRM1-like)",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo2g05500.1",
+      "annotation": "RING finger (C3HC4-type) / BRCT domain protein",
+      "pathway": "protein_processing",
+      "priority": "high",
+      "chromosome": "C2"
+    },
+    {
+      "gene_id": "Bo6g067490.1",
+      "annotation": "PDR9 / ABCG37 pleiotropic drug resistance transporter",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "C6"
+    },
+    {
+      "gene_id": "Bo1g087970.1",
+      "annotation": "Patellin 1 (PATL1) - SEC14/GOLD domain protein",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "C1"
+    },
+    {
+      "gene_id": "Bo9g060010.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo7g118390.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo8g079370.1",
+      "annotation": "NPH3 (Non-Phototropic Hypocotyl 3) family protein",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo8g068260.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo9g173960.1",
+      "annotation": "Rab GDP Dissociation Inhibitor (GDI)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo8g051030.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo9g028910.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo5g103400.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C5"
+    },
+    {
+      "gene_id": "Bo1g079000.1",
+      "annotation": "General Transcription Factor IIIC subunit 5 (TFIIIC5)",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "C1"
+    },
+    {
+      "gene_id": "Bo4g076880.1",
+      "annotation": "Pentatricopeptide Repeat (PPR) superfamily protein",
+      "pathway": "metabolic_priming",
+      "priority": "high",
+      "chromosome": "C4"
+    },
+    {
+      "gene_id": "Bo7g119590.1",
+      "annotation": "CRK26 - Cysteine-Rich Receptor-Like Kinase 26",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo2g047480.1",
+      "annotation": "DNA Primase large subunit / PrimPol",
+      "pathway": "development",
+      "priority": "high",
+      "chromosome": "C2"
+    },
+    {
+      "gene_id": "Bo4g044010.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C4"
+    },
+    {
+      "gene_id": "Bo6g039950.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C6"
+    },
+    {
+      "gene_id": "Bo9g004400.1",
+      "annotation": "Glycosyltransferase (GT family)",
+      "pathway": "cell_wall",
+      "priority": "medium",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo4g061330.1",
+      "annotation": "THIC - Thiamine (Vitamin B1) Biosynthesis Protein",
+      "pathway": "metabolic_priming",
+      "priority": "high",
+      "chromosome": "C4"
+    },
+    {
+      "gene_id": "Bo9g126160.1",
+      "annotation": "Glycosyl Hydrolase Family 17 (GH17) beta-1,3-glucanase",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo8g068060.1",
+      "annotation": "MADS-box transcription factor (Type II MIKC-type) [corrected from MEF2-like]",
+      "pathway": "development",
+      "priority": "high",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo1g064030.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C1"
+    },
+    {
+      "gene_id": "Bo4g187880.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C4"
+    },
+    {
+      "gene_id": "Bo6g039960.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C6"
+    },
+    {
+      "gene_id": "Bo7g097580.1",
+      "annotation": "Vesicle Transport Protein (SNARE-related or SEC-related)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo9g171280.1",
+      "annotation": "Protein kinase domain-containing protein",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo7g107400.1",
+      "annotation": "CRK29 - Cysteine-Rich Receptor-Like Kinase 29",
+      "pathway": "defense_immunity",
+      "priority": "high",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo7g098960.1",
+      "annotation": "Pectinesterase / Pectin Methylesterase (PME)",
+      "pathway": "cell_wall",
+      "priority": "high",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo8g106010.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo7g067480.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo3g026630.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo8g102500.1",
+      "annotation": "RNA-Dependent RNA Polymerase (RDR)",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo5g010530.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C5"
+    },
+    {
+      "gene_id": "Bo3g024060.1",
+      "annotation": "Protein kinase superfamily protein",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo01182s010.1",
+      "annotation": "P-loop NTPase superfamily protein",
+      "pathway": "stress_response",
+      "priority": "medium",
+      "chromosome": ""
+    },
+    {
+      "gene_id": "Bo3g021630.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo5g122640.1",
+      "annotation": "Protein kinase",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "C5"
+    },
+    {
+      "gene_id": "Bo7g114200.1",
+      "annotation": "Auxin Response Factor (ARF)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo3g064760.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo9g169690.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo8g066360.1",
+      "annotation": "MBD10 - Methyl-CpG-Binding Domain protein 10",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo3g185280.1",
+      "annotation": "Branched-Chain Alpha-Keto Acid Decarboxylase E1 Beta Subunit (BCKDH E1-beta)",
+      "pathway": "metabolic_priming",
+      "priority": "high",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo7g104180.1",
+      "annotation": "DUF789 domain protein",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo6g103590.1",
+      "annotation": "HEAT repeat-containing protein",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "C6"
+    },
+    {
+      "gene_id": "Bo7g040340.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo2g149490.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C2"
+    },
+    {
+      "gene_id": "Bo9g108640.1",
+      "annotation": "Timeless family protein",
+      "pathway": "development",
+      "priority": "medium",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo4g078300.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C4"
+    },
+    {
+      "gene_id": "Bo5g064420.1",
+      "annotation": "CTP Synthase (CTPS)",
+      "pathway": "metabolic_priming",
+      "priority": "high",
+      "chromosome": "C5"
+    },
+    {
+      "gene_id": "Bo3g107110.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo8g050640.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo9g014050.1",
+      "annotation": "Vesicle Transport Protein",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo9g011330.1",
+      "annotation": "Protein Phosphatase 2A Regulatory Subunit A (PP2A-A)",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo1g141380.1",
+      "annotation": "RING/U-box E3 Ubiquitin Ligase",
+      "pathway": "protein_processing",
+      "priority": "high",
+      "chromosome": "C1"
+    },
+    {
+      "gene_id": "Bo3g009380.1",
+      "annotation": "FIZZY-RELATED 3 (FZR3 / CCS52B)",
+      "pathway": "development",
+      "priority": "high",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo8g005810.1",
+      "annotation": "Signal Peptide Peptidase-Like 5 (SPPL5)",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo1g025790.1",
+      "annotation": "CDPK15 / CPK15 - Calcium-Dependent Protein Kinase",
+      "pathway": "signaling",
+      "priority": "high",
+      "chromosome": "C1"
+    },
+    {
+      "gene_id": "Bo5g063050.1",
+      "annotation": "HD-ZIP Class IV Transcription Factor (ATML1/PDF2-like)",
+      "pathway": "development",
+      "priority": "high",
+      "chromosome": "C5"
+    },
+    {
+      "gene_id": "Bo3g103050.1",
+      "annotation": "Beta-Galactosidase 10 (BGAL10)",
+      "pathway": "cell_wall",
+      "priority": "high",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo9g135400.1",
+      "annotation": "CCCH-type Zinc Finger Protein",
+      "pathway": "stress_response",
+      "priority": "high",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo9g151660.1",
+      "annotation": "Copper Transporter 5 (COPT5)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo1g028330.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C1"
+    },
+    {
+      "gene_id": "Bo5g123150.1",
+      "annotation": "ARM Repeat Superfamily Protein",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "C5"
+    },
+    {
+      "gene_id": "Bo3g036650.1",
+      "annotation": "Chitinase (Class II/IV)",
+      "pathway": "defense_immunity",
+      "priority": "medium",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo4g186570.1",
+      "annotation": "Alkyl Transferase",
+      "pathway": "epigenetic_regulation",
+      "priority": "medium",
+      "chromosome": "C4"
+    },
+    {
+      "gene_id": "Bo9g140700.1",
+      "annotation": "Protein Kinase",
+      "pathway": "signaling",
+      "priority": "medium",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo5g002580.1",
+      "annotation": "CYP703A2 - Cytochrome P450 Monooxygenase",
+      "pathway": "development",
+      "priority": "high",
+      "chromosome": "C5"
+    },
+    {
+      "gene_id": "Bo9g077800.1",
+      "annotation": "ABC Protein 1 (ABCB subfamily transporter)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "medium",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo8g023200.1",
+      "annotation": "Nodulin MtN21/EamA-like Transporter (UMAMIT family)",
+      "pathway": "transport_ion_homeostasis",
+      "priority": "high",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo3g185500.1",
+      "annotation": "SBI1 - Seed Imbibition 1",
+      "pathway": "hormone_signaling",
+      "priority": "high",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo8g059140.1",
+      "annotation": "EXO84B - Exocyst Complex Component",
+      "pathway": "development",
+      "priority": "high",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo9g178960.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo5g019690.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C5"
+    },
+    {
+      "gene_id": "Bo7g089050.1",
+      "annotation": "C2 Calcium/Lipid-Binding (CaLB) Domain Protein (MCTP-like)",
+      "pathway": "signaling",
+      "priority": "high",
+      "chromosome": "C7"
+    },
+    {
+      "gene_id": "Bo9g181290.1",
+      "annotation": "WCRKC Thioredoxin 2 (TrxL2.2)",
+      "pathway": "ros_redox",
+      "priority": "high",
+      "chromosome": "C9"
+    },
+    {
+      "gene_id": "Bo3g001980.1",
+      "annotation": "TPR-like (Tetratricopeptide Repeat-like) Protein",
+      "pathway": "protein_processing",
+      "priority": "medium",
+      "chromosome": "C3"
+    },
+    {
+      "gene_id": "Bo8g114370.1",
+      "annotation": "TRF-like 7 (TRFL7) - Telomere Repeat-Binding Factor-like",
+      "pathway": "epigenetic_regulation",
+      "priority": "high",
+      "chromosome": "C8"
+    },
+    {
+      "gene_id": "Bo4g125320.1",
+      "annotation": "Uncharacterized protein-coding gene",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C4"
+    },
+    {
+      "gene_id": "Bo4g078800.1",
+      "annotation": "Endomembrane-associated protein of unknown function",
+      "pathway": "unknown",
+      "priority": "low",
+      "chromosome": "C4"
+    }
+  ]
 }

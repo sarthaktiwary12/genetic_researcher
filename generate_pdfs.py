@@ -534,13 +534,13 @@ def main():
         if not md_path.exists():
             print(f"  SKIP: {md_path} not found")
             continue
-        output = OUTPUT_DIR / f"ExRNA_{crop.title()}_Report_CONFIDENTIAL.pdf"
+        output = OUTPUT_DIR / f"Bacterial_sRNA_Seed_Germination_{crop.title()}_Analysis.pdf"
         generate_pdf(md_path, output, crop)
 
     # Cross-crop
     cross_md = REPORTS_DIR / "cross_crop_commonalities.md"
     if cross_md.exists():
-        output = OUTPUT_DIR / "ExRNA_Cross_Crop_Commonalities_CONFIDENTIAL.pdf"
+        output = OUTPUT_DIR / "Bacterial_sRNA_Cross_Crop_Conserved_Mechanisms.pdf"
         generate_cross_crop_pdf(cross_md, output)
 
     print(f"\nAll PDFs generated in {OUTPUT_DIR}/")

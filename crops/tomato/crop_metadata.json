@@ -1,0 +1,13 @@
+{
+  "species": "Solanum lycopersicum",
+  "common_name": "tomato",
+  "family": "Solanaceae",
+  "genome_assembly": "SL5.0",
+  "treatment": "M-9 bacterial EPS solution",
+  "treatment_duration_hours": "4-8",
+  "phenotype": "Germination rate increase, vigor increase",
+  "knowledge_base_path": "knowledge_base/",
+  "total_targets": 0,
+  "analysis_status": "pending",
+  "notes": "Existing PDF reports available in raw_data/"
+}

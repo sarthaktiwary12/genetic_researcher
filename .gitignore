@@ -29,5 +29,9 @@ Thumbs.db
 # Logs
 *.log
 
+# Data directories (generated, not tracked)
+data/
+*.db
+
 # Claude
 .claude/

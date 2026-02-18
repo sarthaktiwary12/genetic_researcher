@@ -90,30 +90,34 @@ async def run_stage(
 
     Stages 1-4 use Gemini (existing behavior).
     Stage 5 (synthesis) uses Claude.
-    Model router selects the best model when available.
+    All stages receive a CropContext for crop-specific paths.
     """
+    from agents.crop_context import CropContext
+    ctx = CropContext(crop)
+    ctx.ensure_dirs()
+
     if stage == "gene_analysis":
         from agents.tasks.batch_gene_analysis import run
-        return await run(gemini_client)
+        return await run(gemini_client, ctx=ctx)
 
     elif stage == "pathway_mapping":
         from agents.tasks.pathway_analysis import run
-        return await run(gemini_client)
+        return await run(gemini_client, ctx=ctx)
 
     elif stage == "literature_dive":
         from agents.tasks.literature_deep_dive import run
-        return await run(gemini_client)
+        return await run(gemini_client, ctx=ctx)
 
     elif stage == "theme_extraction":
         from agents.tasks.theme_extraction import run
-        return await run(gemini_client)
+        return await run(gemini_client, ctx=ctx)
 
     elif stage == "synthesis":
         if not claude_client:
             logging.warning("No Claude client available for synthesis. Skipping.")
             return {"error": "Claude client not configured", "stage": "synthesis"}
         from agents.tasks.synthesis_task import run
-        return await run(claude_client, crop=crop)
+        return await run(claude_client, crop=crop, ctx=ctx)
 
     elif stage == "cross_crop":
         if not claude_client:

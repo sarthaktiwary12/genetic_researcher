@@ -32,6 +32,7 @@ def write_pathway_analysis(
     genes: list[dict],
     analysis: str,
     tldr: str = "",
+    base_dir: Path = None,
 ) -> Path:
     """Write a pathway analysis file.
 
@@ -40,6 +41,8 @@ def write_pathway_analysis(
         genes: List of gene dicts in this pathway.
         analysis: Full pathway analysis from Gemini.
         tldr: Short summary.
+        base_dir: Optional base directory for pathways. When provided,
+                  writes to base_dir/ instead of KB_PATHWAYS.
 
     Returns:
         Path to the written file.
@@ -48,7 +51,8 @@ def write_pathway_analysis(
         pathway_key, (pathway_key.replace("_", " ").title(), f"{pathway_key}.md")
     )
 
-    filepath = KB_PATHWAYS / filename
+    output_dir = base_dir if base_dir is not None else KB_PATHWAYS
+    filepath = output_dir / filename
     filepath.parent.mkdir(parents=True, exist_ok=True)
 
     gene_table = "| Gene ID | Annotation | Priority |\n|---------|------------|----------|\n"
@@ -77,9 +81,20 @@ def write_pathway_analysis(
     return filepath
 
 
-def write_cross_pathway_analysis(analysis: str) -> Path:
-    """Write cross-pathway interaction analysis."""
-    filepath = KB_PATHWAYS / "cross_pathway_interactions.md"
+def write_cross_pathway_analysis(analysis: str, base_dir: Path = None) -> Path:
+    """Write cross-pathway interaction analysis.
+
+    Args:
+        analysis: Full cross-pathway analysis text.
+        base_dir: Optional base directory for pathways. When provided,
+                  writes to base_dir/ instead of KB_PATHWAYS.
+
+    Returns:
+        Path to the written file.
+    """
+    output_dir = base_dir if base_dir is not None else KB_PATHWAYS
+    filepath = output_dir / "cross_pathway_interactions.md"
+    filepath.parent.mkdir(parents=True, exist_ok=True)
 
     content = f"""# Cross-Pathway Interactions
 > TL;DR: Analysis of interactions between all pathway groups in the exRNA target set.

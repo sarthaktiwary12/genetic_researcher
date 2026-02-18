@@ -20,8 +20,23 @@ def _sanitize_filename(gene_id: str, annotation: str) -> str:
     return f"{gene_part}_{short_annotation}.md"
 
 
-def _get_priority_dir(priority: str) -> Path:
-    """Get the directory for a given priority level."""
+def _get_priority_dir(priority: str, base_dir: Path = None) -> Path:
+    """Get the directory for a given priority level.
+
+    Args:
+        priority: Priority level (high/medium/low).
+        base_dir: Optional base directory for targets. When provided,
+                  uses base_dir/{high|medium|low}_priority/ instead of
+                  the hardcoded config paths.
+    """
+    if base_dir is not None:
+        dirs = {
+            "high": base_dir / "high_priority",
+            "medium": base_dir / "medium_priority",
+            "low": base_dir / "low_priority",
+        }
+        return dirs.get(priority.lower(), base_dir / "low_priority")
+
     dirs = {
         "high": KB_TARGETS_HIGH,
         "medium": KB_TARGETS_MEDIUM,
@@ -37,6 +52,7 @@ def write_target_analysis(
     priority: str,
     analysis: str,
     tldr: str = "",
+    base_dir: Path = None,
 ) -> Path:
     """Write a single gene target analysis file.
 
@@ -47,11 +63,14 @@ def write_target_analysis(
         priority: Priority level (high/medium/low).
         analysis: Full analysis text from Gemini.
         tldr: Short summary (auto-extracted if empty).
+        base_dir: Optional base directory for targets. When provided,
+                  writes to base_dir/{priority}_priority/ instead of
+                  the hardcoded config paths.
 
     Returns:
         Path to the written file.
     """
-    priority_dir = _get_priority_dir(priority)
+    priority_dir = _get_priority_dir(priority, base_dir=base_dir)
     priority_dir.mkdir(parents=True, exist_ok=True)
 
     filename = _sanitize_filename(gene_id, annotation)
@@ -88,6 +107,7 @@ def write_batch_summary(
     genes: list[dict],
     batch_analysis: str,
     batch_id: int,
+    base_dir: Path = None,
 ) -> Path:
     """Write a batch summary for a group of genes.
 
@@ -95,13 +115,19 @@ def write_batch_summary(
         genes: List of gene dicts from the batch.
         batch_analysis: The batch analysis text.
         batch_id: Numeric batch identifier.
+        base_dir: Optional base directory for research output. When provided,
+                  writes to base_dir/ instead of KB_RESEARCH_LIT.
 
     Returns:
         Path to the written file.
     """
-    from agents.config import KB_RESEARCH_LIT
+    if base_dir is not None:
+        output_dir = base_dir
+    else:
+        from agents.config import KB_RESEARCH_LIT
+        output_dir = KB_RESEARCH_LIT
 
-    filepath = KB_RESEARCH_LIT / f"batch_{batch_id:03d}_summary.md"
+    filepath = output_dir / f"batch_{batch_id:03d}_summary.md"
     filepath.parent.mkdir(parents=True, exist_ok=True)
 
     gene_list = "\n".join(f"- {g['gene_id']}: {g['annotation']}" for g in genes)

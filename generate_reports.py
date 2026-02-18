@@ -75,9 +75,10 @@ def generate_crop_report(crop: str) -> Path:
     confounders = load_text(crop_synth / "confounders.md", 4000) or load_text(KB / "synthesis" / "confounders.md", 4000)
     validation = load_text(crop_synth / "validation_plan.md", 4000) or load_text(KB / "synthesis" / "validation_plan.md", 4000)
 
-    # Load pathway index
-    pathways_index = load_text(KB / "pathways" / "INDEX.md", 3000)
-    themes_index = load_text(KB / "themes" / "INDEX.md", 3000)
+    # Load pathway and theme indexes (per-crop first, fallback to shared KB)
+    crop_kb = CROPS_DIR / crop / "knowledge_base"
+    pathways_index = load_text(crop_kb / "pathways" / "INDEX.md", 3000) or load_text(KB / "pathways" / "INDEX.md", 3000)
+    themes_index = load_text(crop_kb / "themes" / "INDEX.md", 3000) or load_text(KB / "themes" / "INDEX.md", 3000)
 
     # Build pathway table
     pathway_rows = ""

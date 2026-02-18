@@ -6,6 +6,7 @@ import logging
 from datetime import date, datetime
 
 from agents.config import TARGETS_CONFIG, KB_RESEARCH_LIT
+from agents.crop_context import CropContext, strip_llm_preamble
 from agents.gemini_client import GeminiClient
 from agents.prompts.gene_analysis import (
     SYSTEM_INSTRUCTION,
@@ -22,13 +23,17 @@ BATCH_SIZE = 10  # Genes per batch for summary analysis
 
 
 def load_targets() -> list[dict]:
-    """Load gene targets from config file."""
+    """Load gene targets from config file (legacy fallback)."""
     with open(TARGETS_CONFIG) as f:
         data = json.load(f)
     return data["targets"]
 
 
-async def analyze_single_gene(client: GeminiClient, gene: dict) -> dict:
+async def analyze_single_gene(
+    client: GeminiClient,
+    gene: dict,
+    base_dir=None,
+) -> dict:
     """Run deep analysis on a single gene target."""
     prompt = single_gene_prompt(
         gene_id=gene["gene_id"],
@@ -43,6 +48,9 @@ async def analyze_single_gene(client: GeminiClient, gene: dict) -> dict:
             max_output_tokens=4096,
         )
 
+        # Strip LLM preamble before further processing
+        analysis = strip_llm_preamble(analysis)
+
         # Extract a TL;DR from the first paragraph
         lines = [l.strip() for l in analysis.split("\n") if l.strip() and not l.startswith("#")]
         tldr = " ".join(lines[:2])[:250]
@@ -55,6 +63,7 @@ async def analyze_single_gene(client: GeminiClient, gene: dict) -> dict:
             priority=gene["priority"],
             analysis=analysis,
             tldr=tldr,
+            base_dir=base_dir,
         )
 
         return {
@@ -76,7 +85,10 @@ async def analyze_single_gene(client: GeminiClient, gene: dict) -> dict:
 
 
 async def analyze_batch_summary(
-    client: GeminiClient, genes: list[dict], batch_id: int
+    client: GeminiClient,
+    genes: list[dict],
+    batch_id: int,
+    batch_base_dir=None,
 ) -> dict:
     """Run batch summary analysis on a group of genes."""
     prompt = batch_gene_summary_prompt(genes)
@@ -88,7 +100,12 @@ async def analyze_batch_summary(
             max_output_tokens=4096,
         )
 
-        filepath = write_batch_summary(genes, analysis, batch_id)
+        # Strip LLM preamble
+        analysis = strip_llm_preamble(analysis)
+
+        filepath = write_batch_summary(
+            genes, analysis, batch_id, base_dir=batch_base_dir,
+        )
 
         return {
             "batch_id": batch_id,
@@ -102,8 +119,14 @@ async def analyze_batch_summary(
         return {"batch_id": batch_id, "status": "error", "error": str(e)}
 
 
-async def run(client: GeminiClient) -> dict:
+async def run(client: GeminiClient, ctx: CropContext = None) -> dict:
     """Execute Stage 1: Batch Gene Analysis.
+
+    Args:
+        client: GeminiClient instance.
+        ctx: Optional CropContext. When provided, reads targets from the
+             crop-specific config and writes to crop-specific directories.
+             Falls back to legacy shared paths when None.
 
     Returns:
         Summary dict with results.
@@ -112,14 +135,30 @@ async def run(client: GeminiClient) -> dict:
     logger.info("STAGE 1: BATCH GENE ANALYSIS")
     logger.info("=" * 60)
 
-    targets = load_targets()
+    if ctx is not None:
+        ctx.ensure_dirs()
+        targets = ctx.load_targets()
+        targets_base_dir = ctx.kb_targets
+        batch_base_dir = ctx.kb_research_lit
+        index_targets_dir = ctx.kb_targets
+        index_research_dir = ctx.kb_research
+    else:
+        targets = load_targets()
+        targets_base_dir = None
+        batch_base_dir = None
+        index_targets_dir = None
+        index_research_dir = None
+
     logger.info(f"Loaded {len(targets)} targets from config")
 
     start_time = datetime.now()
 
     # Phase 1: Individual gene analyses (all in parallel)
     logger.info(f"Phase 1: Analyzing {len(targets)} individual genes...")
-    individual_tasks = [analyze_single_gene(client, gene) for gene in targets]
+    individual_tasks = [
+        analyze_single_gene(client, gene, base_dir=targets_base_dir)
+        for gene in targets
+    ]
     individual_results = await asyncio.gather(*individual_tasks)
 
     successes = [r for r in individual_results if r["status"] == "success"]
@@ -130,7 +169,7 @@ async def run(client: GeminiClient) -> dict:
     logger.info(f"Phase 2: Running batch summaries (batch size {BATCH_SIZE})...")
     batches = [targets[i:i + BATCH_SIZE] for i in range(0, len(targets), BATCH_SIZE)]
     batch_tasks = [
-        analyze_batch_summary(client, batch, idx)
+        analyze_batch_summary(client, batch, idx, batch_base_dir=batch_base_dir)
         for idx, batch in enumerate(batches)
     ]
     batch_results = await asyncio.gather(*batch_tasks)
@@ -141,15 +180,18 @@ async def run(client: GeminiClient) -> dict:
     analyses_written = {
         r["gene_id"]: r for r in individual_results if r["status"] == "success"
     }
-    update_targets_index(targets, analyses_written)
+    update_targets_index(targets, analyses_written, base_dir=index_targets_dir)
 
-    update_research_index([{
-        "date": date.today().isoformat(),
-        "stage": "gene_analysis",
-        "description": f"Analyzed {len(targets)} gene targets individually + {len(batches)} batch summaries",
-        "output_dir": "targets/, research/literature/",
-        "status": f"{len(successes)}/{len(targets)} succeeded ({duration:.0f}s)",
-    }])
+    update_research_index(
+        [{
+            "date": date.today().isoformat(),
+            "stage": "gene_analysis",
+            "description": f"Analyzed {len(targets)} gene targets individually + {len(batches)} batch summaries",
+            "output_dir": "targets/, research/literature/",
+            "status": f"{len(successes)}/{len(targets)} succeeded ({duration:.0f}s)",
+        }],
+        base_dir=index_research_dir,
+    )
 
     stats = client.get_stats()
     logger.info(f"Stage 1 complete in {duration:.0f}s")

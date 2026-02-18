@@ -23,6 +23,7 @@ from agents.config import (
     KB_RESEARCH, ORGANISM, TREATMENT, PHENOTYPE, MECHANISM,
     CROPS_DIR, PROJECT_ROOT,
 )
+from agents.crop_context import CropContext, strip_llm_preamble
 from agents.claude_client import ClaudeClient
 from agents.prompts.claude_synthesis import (
     SYNTHESIS_SYSTEM,
@@ -43,17 +44,50 @@ def _get_crop_context(crop: str) -> dict:
     return {"species": ORGANISM, "common_name": crop, "treatment": TREATMENT}
 
 
-def _get_output_dir(crop: str) -> Path:
+def _get_output_dir(crop: str, ctx: CropContext = None) -> Path:
     """Get the synthesis output directory for a crop."""
+    if ctx is not None:
+        ctx.kb_synthesis.mkdir(parents=True, exist_ok=True)
+        return ctx.kb_synthesis
     output_dir = CROPS_DIR / crop / "synthesis"
     output_dir.mkdir(parents=True, exist_ok=True)
     return output_dir
+
+
+def _resolve_targets_dir(ctx: CropContext = None) -> Path:
+    """Get the targets directory, preferring crop-specific when available."""
+    if ctx is not None:
+        return ctx.kb_targets
+    return KB_TARGETS
+
+
+def _resolve_pathways_dir(ctx: CropContext = None) -> Path:
+    """Get the pathways directory, preferring crop-specific when available."""
+    if ctx is not None:
+        return ctx.kb_pathways
+    return KB_PATHWAYS
+
+
+def _resolve_themes_dir(ctx: CropContext = None) -> Path:
+    """Get the themes directory, preferring crop-specific when available."""
+    if ctx is not None:
+        return ctx.kb_themes
+    return KB_THEMES
+
+
+def _resolve_synthesis_dir(ctx: CropContext = None) -> Path:
+    """Get the shared synthesis directory for backward compatibility writes."""
+    if ctx is not None:
+        return ctx.kb_synthesis
+    return KB_SYNTHESIS
 
 
 def _load_tldr_summaries(directory: Path, max_files: int = 120) -> str:
     """Load TL;DR lines from all markdown files in a directory tree."""
     summaries = []
     count = 0
+    if not directory.exists():
+        return ""
     for md_file in sorted(directory.rglob("*.md")):
         if md_file.name == "INDEX.md" or count >= max_files:
             continue
@@ -75,6 +109,8 @@ def _load_full_analyses(directory: Path, max_files: int = 20) -> str:
     """Load full content from markdown files (for smaller collections)."""
     texts = []
     count = 0
+    if not directory.exists():
+        return ""
     for md_file in sorted(directory.rglob("*.md")):
         if md_file.name == "INDEX.md" or count >= max_files:
             continue
@@ -90,18 +126,24 @@ def _load_full_analyses(directory: Path, max_files: int = 20) -> str:
     return "\n\n---\n\n".join(texts)
 
 
-async def synthesize_ranked_targets(client: ClaudeClient, crop: str) -> dict:
+async def synthesize_ranked_targets(
+    client: ClaudeClient, crop: str, ctx: CropContext = None,
+) -> dict:
     """Produce comprehensive target ranking for a specific crop."""
-    meta = _get_crop_context(crop)
-    output_dir = _get_output_dir(crop)
+    meta = _get_crop_context(crop) if ctx is None else ctx.metadata
+    output_dir = _get_output_dir(crop, ctx=ctx)
     species = meta.get("species", ORGANISM)
+    common_name = meta.get("common_name", crop)
 
     logger.info(f"Synthesizing ranked targets for {crop} ({species})...")
 
-    target_summaries = _load_tldr_summaries(KB_TARGETS)
-    pathway_summaries = _load_full_analyses(KB_PATHWAYS, max_files=15)
+    targets_dir = _resolve_targets_dir(ctx)
+    pathways_dir = _resolve_pathways_dir(ctx)
 
-    prompt = f"Crop: {species} ({crop})\n\n" + ranked_targets_prompt(target_summaries, pathway_summaries)
+    target_summaries = _load_tldr_summaries(targets_dir)
+    pathway_summaries = _load_full_analyses(pathways_dir, max_files=15)
+
+    prompt = f"Crop: {species} ({common_name})\n\n" + ranked_targets_prompt(target_summaries, pathway_summaries)
     response = await client.query_synthesis(
         prompt=prompt,
         system_instruction=SYNTHESIS_SYSTEM,
@@ -109,22 +151,25 @@ async def synthesize_ranked_targets(client: ClaudeClient, crop: str) -> dict:
     )
 
     output_path = output_dir / "ranked_targets.md"
-    output_path.write_text(f"# Ranked Target Analysis — {crop.title()} ({species})\n\n{response}")
+    output_path.write_text(f"# Ranked Target Analysis -- {common_name.title()} ({species})\n\n{response}")
     logger.info(f"Wrote ranked targets: {output_path}")
 
     # Also write to shared KB for backwards compatibility
     shared_path = KB_SYNTHESIS / "ranked_targets.md"
     shared_path.parent.mkdir(parents=True, exist_ok=True)
-    shared_path.write_text(f"# Ranked Target Analysis — {crop.title()} ({species})\n\n{response}")
+    shared_path.write_text(f"# Ranked Target Analysis -- {common_name.title()} ({species})\n\n{response}")
 
     return {"file": str(output_path), "length": len(response)}
 
 
-async def synthesize_causal_models(client: ClaudeClient, crop: str) -> dict:
+async def synthesize_causal_models(
+    client: ClaudeClient, crop: str, ctx: CropContext = None,
+) -> dict:
     """Build alternative causal models for a specific crop."""
-    meta = _get_crop_context(crop)
-    output_dir = _get_output_dir(crop)
+    meta = _get_crop_context(crop) if ctx is None else ctx.metadata
+    output_dir = _get_output_dir(crop, ctx=ctx)
     species = meta.get("species", ORGANISM)
+    common_name = meta.get("common_name", crop)
 
     logger.info(f"Synthesizing causal models for {crop}...")
 
@@ -133,10 +178,13 @@ async def synthesize_causal_models(client: ClaudeClient, crop: str) -> dict:
     if rt_path.exists():
         ranked_targets = rt_path.read_text()[:5000]
 
-    pathway_analyses = _load_full_analyses(KB_PATHWAYS, max_files=15)
-    theme_analyses = _load_full_analyses(KB_THEMES, max_files=6)
+    pathways_dir = _resolve_pathways_dir(ctx)
+    themes_dir = _resolve_themes_dir(ctx)
 
-    prompt = f"Crop: {species} ({crop})\n\n" + causal_models_prompt(ranked_targets, pathway_analyses, theme_analyses)
+    pathway_analyses = _load_full_analyses(pathways_dir, max_files=15)
+    theme_analyses = _load_full_analyses(themes_dir, max_files=6)
+
+    prompt = f"Crop: {species} ({common_name})\n\n" + causal_models_prompt(ranked_targets, pathway_analyses, theme_analyses)
 
     response = await client.query_reasoning(
         prompt=prompt,
@@ -145,25 +193,29 @@ async def synthesize_causal_models(client: ClaudeClient, crop: str) -> dict:
     )
 
     output_path = output_dir / "causal_models.md"
-    output_path.write_text(f"# Causal Models — {crop.title()} ({species})\n\n{response}")
+    output_path.write_text(f"# Causal Models -- {common_name.title()} ({species})\n\n{response}")
     logger.info(f"Wrote causal models: {output_path}")
 
     shared_path = KB_SYNTHESIS / "causal_models.md"
-    shared_path.write_text(f"# Causal Models — {crop.title()} ({species})\n\n{response}")
+    shared_path.parent.mkdir(parents=True, exist_ok=True)
+    shared_path.write_text(f"# Causal Models -- {common_name.title()} ({species})\n\n{response}")
 
     return {"file": str(output_path), "length": len(response)}
 
 
-async def synthesize_confounders(client: ClaudeClient, crop: str) -> dict:
+async def synthesize_confounders(
+    client: ClaudeClient, crop: str, ctx: CropContext = None,
+) -> dict:
     """Analyze potential confounders for a specific crop."""
-    meta = _get_crop_context(crop)
-    output_dir = _get_output_dir(crop)
+    meta = _get_crop_context(crop) if ctx is None else ctx.metadata
+    output_dir = _get_output_dir(crop, ctx=ctx)
     species = meta.get("species", ORGANISM)
+    common_name = meta.get("common_name", crop)
     total = meta.get("total_targets", 0)
 
     logger.info(f"Analyzing confounders for {crop}...")
 
-    context = f"""Organism: {species} ({crop})
+    context = f"""Organism: {species} ({common_name})
 Treatment: {meta.get('treatment', TREATMENT)}
 Phenotype: {PHENOTYPE}
 Mechanism: {MECHANISM}
@@ -179,20 +231,24 @@ ROS/redox, transport/ion homeostasis, metabolic priming"""
     )
 
     output_path = output_dir / "confounders.md"
-    output_path.write_text(f"# Confounder Analysis — {crop.title()} ({species})\n\n{response}")
+    output_path.write_text(f"# Confounder Analysis -- {common_name.title()} ({species})\n\n{response}")
     logger.info(f"Wrote confounder analysis: {output_path}")
 
     shared_path = KB_SYNTHESIS / "confounders.md"
-    shared_path.write_text(f"# Confounder Analysis — {crop.title()} ({species})\n\n{response}")
+    shared_path.parent.mkdir(parents=True, exist_ok=True)
+    shared_path.write_text(f"# Confounder Analysis -- {common_name.title()} ({species})\n\n{response}")
 
     return {"file": str(output_path), "length": len(response)}
 
 
-async def synthesize_validation_plan(client: ClaudeClient, crop: str) -> dict:
+async def synthesize_validation_plan(
+    client: ClaudeClient, crop: str, ctx: CropContext = None,
+) -> dict:
     """Design the 4-tier validation experimental plan for a specific crop."""
-    output_dir = _get_output_dir(crop)
-    meta = _get_crop_context(crop)
+    output_dir = _get_output_dir(crop, ctx=ctx)
+    meta = _get_crop_context(crop) if ctx is None else ctx.metadata
     species = meta.get("species", ORGANISM)
+    common_name = meta.get("common_name", crop)
 
     logger.info(f"Designing validation plan for {crop}...")
 
@@ -211,7 +267,7 @@ async def synthesize_validation_plan(client: ClaudeClient, crop: str) -> dict:
     if cf_path.exists():
         confounders = cf_path.read_text()[:5000]
 
-    prompt = f"Crop: {species} ({crop})\n\n" + validation_plan_prompt(ranked, causal, confounders)
+    prompt = f"Crop: {species} ({common_name})\n\n" + validation_plan_prompt(ranked, causal, confounders)
     response = await client.query_synthesis(
         prompt=prompt,
         system_instruction=SYNTHESIS_SYSTEM,
@@ -219,29 +275,45 @@ async def synthesize_validation_plan(client: ClaudeClient, crop: str) -> dict:
     )
 
     output_path = output_dir / "validation_plan.md"
-    output_path.write_text(f"# Validation Plan — {crop.title()} ({species})\n\n{response}")
+    output_path.write_text(f"# Validation Plan -- {common_name.title()} ({species})\n\n{response}")
     logger.info(f"Wrote validation plan: {output_path}")
 
     shared_path = KB_SYNTHESIS / "validation_plan.md"
-    shared_path.write_text(f"# Validation Plan — {crop.title()} ({species})\n\n{response}")
+    shared_path.parent.mkdir(parents=True, exist_ok=True)
+    shared_path.write_text(f"# Validation Plan -- {common_name.title()} ({species})\n\n{response}")
 
     return {"file": str(output_path), "length": len(response)}
 
 
-async def run(client: ClaudeClient, crop: str = "spinach") -> dict:
+async def run(
+    client: ClaudeClient,
+    crop: str = "spinach",
+    ctx: CropContext = None,
+) -> dict:
     """Execute the full Stage 5 synthesis pipeline for a specific crop.
 
-    Order matters: ranked_targets → (causal_models + confounders) → validation_plan.
+    Args:
+        client: ClaudeClient instance.
+        crop: Crop name (used when ctx is None for legacy compatibility).
+        ctx: Optional CropContext. When provided, reads from crop-specific
+             knowledge base directories and writes synthesis output to
+             crop-specific paths. Falls back to legacy shared paths when None.
+
+    Order matters: ranked_targets -> (causal_models + confounders) -> validation_plan.
     """
+    if ctx is not None:
+        ctx.ensure_dirs()
+        crop = ctx.crop
+
     start = time.time()
     results = {"crop": crop}
 
     # Phase 1: Ranked targets (needed by later phases)
-    results["ranked_targets"] = await synthesize_ranked_targets(client, crop)
+    results["ranked_targets"] = await synthesize_ranked_targets(client, crop, ctx=ctx)
 
     # Phase 2: Causal models + Confounders (parallel)
-    causal_task = synthesize_causal_models(client, crop)
-    confounder_task = synthesize_confounders(client, crop)
+    causal_task = synthesize_causal_models(client, crop, ctx=ctx)
+    confounder_task = synthesize_confounders(client, crop, ctx=ctx)
     causal_result, confounder_result = await asyncio.gather(
         causal_task, confounder_task
     )
@@ -249,7 +321,7 @@ async def run(client: ClaudeClient, crop: str = "spinach") -> dict:
     results["confounders"] = confounder_result
 
     # Phase 3: Validation plan (depends on all above)
-    results["validation_plan"] = await synthesize_validation_plan(client, crop)
+    results["validation_plan"] = await synthesize_validation_plan(client, crop, ctx=ctx)
 
     duration = time.time() - start
     results["duration_seconds"] = round(duration, 1)

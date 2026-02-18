@@ -13,6 +13,7 @@ from agents.config import (
     KB_RESEARCH_HOMOLOGS,
     KB_RESEARCH_MECHANISMS,
 )
+from agents.crop_context import CropContext, strip_llm_preamble
 from agents.gemini_client import GeminiClient
 from agents.prompts.literature_search import (
     SYSTEM_INSTRUCTION,
@@ -26,15 +27,24 @@ logger = logging.getLogger(__name__)
 
 
 def load_high_priority_targets() -> list[dict]:
-    """Load only high-priority targets from config."""
+    """Load only high-priority targets from config (legacy fallback)."""
     with open(TARGETS_CONFIG) as f:
         data = json.load(f)
     return [t for t in data["targets"] if t["priority"] == "high"]
 
 
-def load_existing_analysis(gene_id: str) -> str:
-    """Load existing analysis for a gene to provide context for deep dive."""
-    for f in KB_TARGETS_HIGH.glob(f"{gene_id.replace('.', '_')}*.md"):
+def load_existing_analysis(gene_id: str, targets_high_dir: Path = None) -> str:
+    """Load existing analysis for a gene to provide context for deep dive.
+
+    Args:
+        gene_id: The gene identifier.
+        targets_high_dir: Optional directory to search for high-priority analyses.
+                          Falls back to KB_TARGETS_HIGH when None.
+    """
+    search_dir = targets_high_dir if targets_high_dir is not None else KB_TARGETS_HIGH
+    if not search_dir.exists():
+        return "(No prior analysis available)"
+    for f in search_dir.glob(f"{gene_id.replace('.', '_')}*.md"):
         try:
             return f.read_text()[:2000]  # First 2000 chars
         except Exception:
@@ -42,9 +52,15 @@ def load_existing_analysis(gene_id: str) -> str:
     return "(No prior analysis available)"
 
 
-async def homolog_research(client: GeminiClient, gene: dict) -> dict:
+async def homolog_research(
+    client: GeminiClient,
+    gene: dict,
+    homologs_dir: Path = None,
+) -> dict:
     """Research homologs for a single gene."""
     prompt = homolog_search_prompt(gene["gene_id"], gene["annotation"])
+
+    output_dir = homologs_dir if homologs_dir is not None else KB_RESEARCH_HOMOLOGS
 
     try:
         result = await client.query_bulk(
@@ -53,7 +69,10 @@ async def homolog_research(client: GeminiClient, gene: dict) -> dict:
             max_output_tokens=4096,
         )
 
-        filepath = KB_RESEARCH_HOMOLOGS / f"{gene['gene_id'].replace('.', '_')}_homologs.md"
+        # Strip LLM preamble
+        result = strip_llm_preamble(result)
+
+        filepath = output_dir / f"{gene['gene_id'].replace('.', '_')}_homologs.md"
         filepath.parent.mkdir(parents=True, exist_ok=True)
 
         content = f"""# Homolog Research: {gene['gene_id']} - {gene['annotation']}
@@ -71,12 +90,21 @@ async def homolog_research(client: GeminiClient, gene: dict) -> dict:
         return {"gene_id": gene["gene_id"], "status": "error", "error": str(e)}
 
 
-async def deep_literature_research(client: GeminiClient, gene: dict) -> dict:
+async def deep_literature_research(
+    client: GeminiClient,
+    gene: dict,
+    targets_high_dir: Path = None,
+    mechanisms_dir: Path = None,
+) -> dict:
     """Deep literature dive for a single gene."""
-    existing_analysis = load_existing_analysis(gene["gene_id"])
+    existing_analysis = load_existing_analysis(
+        gene["gene_id"], targets_high_dir=targets_high_dir,
+    )
     prompt = literature_deep_dive_prompt(
         gene["gene_id"], gene["annotation"], existing_analysis
     )
+
+    output_dir = mechanisms_dir if mechanisms_dir is not None else KB_RESEARCH_MECHANISMS
 
     try:
         result = await client.query_reasoning(
@@ -85,7 +113,10 @@ async def deep_literature_research(client: GeminiClient, gene: dict) -> dict:
             max_output_tokens=8192,
         )
 
-        filepath = KB_RESEARCH_MECHANISMS / f"{gene['gene_id'].replace('.', '_')}_deep_dive.md"
+        # Strip LLM preamble
+        result = strip_llm_preamble(result)
+
+        filepath = output_dir / f"{gene['gene_id'].replace('.', '_')}_deep_dive.md"
         filepath.parent.mkdir(parents=True, exist_ok=True)
 
         content = f"""# Deep Literature Dive: {gene['gene_id']} - {gene['annotation']}
@@ -104,9 +135,14 @@ async def deep_literature_research(client: GeminiClient, gene: dict) -> dict:
         return {"gene_id": gene["gene_id"], "status": "error", "error": str(e)}
 
 
-async def exrna_background_research(client: GeminiClient) -> dict:
+async def exrna_background_research(
+    client: GeminiClient,
+    lit_dir: Path = None,
+) -> dict:
     """Research cross-kingdom exRNA biology fundamentals."""
     prompt = exrna_biology_prompt()
+
+    output_dir = lit_dir if lit_dir is not None else KB_RESEARCH_LIT
 
     try:
         result = await client.query_reasoning(
@@ -115,7 +151,10 @@ async def exrna_background_research(client: GeminiClient) -> dict:
             max_output_tokens=8192,
         )
 
-        filepath = KB_RESEARCH_LIT / "exrna_biology_background.md"
+        # Strip LLM preamble
+        result = strip_llm_preamble(result)
+
+        filepath = output_dir / "exrna_biology_background.md"
         filepath.parent.mkdir(parents=True, exist_ok=True)
 
         content = f"""# Cross-Kingdom Extracellular RNA Biology
@@ -133,8 +172,14 @@ async def exrna_background_research(client: GeminiClient) -> dict:
         return {"status": "error", "error": str(e)}
 
 
-async def run(client: GeminiClient) -> dict:
+async def run(client: GeminiClient, ctx: CropContext = None) -> dict:
     """Execute Stage 3: Literature Deep-Dive.
+
+    Args:
+        client: GeminiClient instance.
+        ctx: Optional CropContext. When provided, reads targets from
+             crop-specific config and writes to crop-specific research
+             directories. Falls back to legacy shared paths when None.
 
     Returns:
         Summary dict with results.
@@ -143,24 +188,52 @@ async def run(client: GeminiClient) -> dict:
     logger.info("STAGE 3: LITERATURE DEEP-DIVE")
     logger.info("=" * 60)
 
-    high_targets = load_high_priority_targets()
+    if ctx is not None:
+        ctx.ensure_dirs()
+        all_targets = ctx.load_targets()
+        high_targets = [t for t in all_targets if t["priority"] == "high"]
+        targets_high_dir = ctx.kb_targets_high
+        homologs_dir = ctx.kb_research_homologs
+        mechanisms_dir = ctx.kb_research_mechanisms
+        lit_dir = ctx.kb_research_lit
+        index_research_dir = ctx.kb_research
+    else:
+        high_targets = load_high_priority_targets()
+        targets_high_dir = None
+        homologs_dir = None
+        mechanisms_dir = None
+        lit_dir = None
+        index_research_dir = None
+
     logger.info(f"Found {len(high_targets)} high-priority targets for deep dive")
 
     start_time = datetime.now()
 
     # Phase 1: Homolog research for all high-priority targets
     logger.info("Phase 1: Homolog research...")
-    homolog_tasks = [homolog_research(client, gene) for gene in high_targets]
+    homolog_tasks = [
+        homolog_research(client, gene, homologs_dir=homologs_dir)
+        for gene in high_targets
+    ]
 
     # Phase 2: Deep literature dive for all high-priority targets
     logger.info("Phase 2: Deep literature dives...")
-    deep_tasks = [deep_literature_research(client, gene) for gene in high_targets]
+    deep_tasks = [
+        deep_literature_research(
+            client, gene,
+            targets_high_dir=targets_high_dir,
+            mechanisms_dir=mechanisms_dir,
+        )
+        for gene in high_targets
+    ]
 
     # Phase 3: exRNA background (single query)
     logger.info("Phase 3: exRNA biology background...")
 
     # Run all phases in parallel
-    all_tasks = homolog_tasks + deep_tasks + [exrna_background_research(client)]
+    all_tasks = homolog_tasks + deep_tasks + [
+        exrna_background_research(client, lit_dir=lit_dir)
+    ]
     all_results = await asyncio.gather(*all_tasks)
 
     homolog_results = all_results[:len(high_targets)]

@@ -2,7 +2,7 @@
   "species": "Brassica oleracea var. italica",
   "common_name": "broccoli",
   "family": "Brassicaceae",
-  "genome_assembly": null,
+  "genome_assembly": "TO1000/JZS v1.0",
   "treatment": "M-9 bacterial EPS solution",
   "treatment_duration_hours": "4-8",
   "phenotype": "Germination rate increase, vigor increase",

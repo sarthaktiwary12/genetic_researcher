@@ -15,17 +15,25 @@ from agents.config import (
 logger = logging.getLogger(__name__)
 
 
-def update_targets_index(targets: list[dict], analyses_written: dict) -> Path:
+def update_targets_index(
+    targets: list[dict],
+    analyses_written: dict,
+    base_dir: Path = None,
+) -> Path:
     """Update the targets INDEX.md with summary of all analyzed targets.
 
     Args:
         targets: Full list of gene target dicts from config.
         analyses_written: Dict mapping gene_id to {'priority': str, 'filepath': str, 'tldr': str}.
+        base_dir: Optional base directory for targets. When provided,
+                  writes INDEX.md to base_dir/ instead of KB_TARGETS.
 
     Returns:
         Path to the updated index file.
     """
-    filepath = KB_TARGETS / "INDEX.md"
+    output_dir = base_dir if base_dir is not None else KB_TARGETS
+    filepath = output_dir / "INDEX.md"
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     high = [t for t in targets if t.get("priority") == "high"]
     medium = [t for t in targets if t.get("priority") == "medium"]
@@ -39,7 +47,7 @@ def update_targets_index(targets: list[dict], analyses_written: dict) -> Path:
         table += f"| {t['gene_id']} | {t['annotation']} | {t['pathway']} | {t['priority'].capitalize()} | {status} |\n"
 
     content = f"""# Gene Targets Index
-> TL;DR: {len(targets)} spinach gene targets predicted to be downregulated by bacterial exRNAs. {len(high)} high priority, {len(medium)} medium, {len(low)} low.
+> TL;DR: {len(targets)} gene targets predicted to be downregulated by bacterial exRNAs. {len(high)} high priority, {len(medium)} medium, {len(low)} low.
 > Last Updated: {date.today().isoformat()}
 
 ## Priority Distribution
@@ -61,16 +69,20 @@ def update_targets_index(targets: list[dict], analyses_written: dict) -> Path:
     return filepath
 
 
-def update_pathways_index(pathways: dict) -> Path:
+def update_pathways_index(pathways: dict, base_dir: Path = None) -> Path:
     """Update the pathways INDEX.md.
 
     Args:
         pathways: Dict mapping pathway_key to {'gene_count': int, 'filename': str, 'tldr': str}.
+        base_dir: Optional base directory for pathways. When provided,
+                  writes INDEX.md to base_dir/ instead of KB_PATHWAYS.
 
     Returns:
         Path to the updated index file.
     """
-    filepath = KB_PATHWAYS / "INDEX.md"
+    output_dir = base_dir if base_dir is not None else KB_PATHWAYS
+    filepath = output_dir / "INDEX.md"
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     table = "| Pathway | File | Targets | Summary |\n"
     table += "|---------|------|---------|----------|\n"
@@ -94,16 +106,20 @@ See [cross_pathway_interactions.md](cross_pathway_interactions.md)
     return filepath
 
 
-def update_themes_index(themes: dict) -> Path:
+def update_themes_index(themes: dict, base_dir: Path = None) -> Path:
     """Update the themes INDEX.md.
 
     Args:
         themes: Dict mapping theme_name to {'filename': str, 'tldr': str}.
+        base_dir: Optional base directory for themes. When provided,
+                  writes INDEX.md to base_dir/ instead of KB_THEMES.
 
     Returns:
         Path to the updated index file.
     """
-    filepath = KB_THEMES / "INDEX.md"
+    output_dir = base_dir if base_dir is not None else KB_THEMES
+    filepath = output_dir / "INDEX.md"
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     table = "| Theme | File | Summary |\n"
     table += "|-------|------|---------|\n"
@@ -126,16 +142,20 @@ See individual theme files for cross-theme analysis.
     return filepath
 
 
-def update_research_index(runs: list[dict]) -> Path:
+def update_research_index(runs: list[dict], base_dir: Path = None) -> Path:
     """Update the research log INDEX.md.
 
     Args:
         runs: List of dicts with 'date', 'stage', 'description', 'output_dir', 'status'.
+        base_dir: Optional base directory for research. When provided,
+                  writes INDEX.md to base_dir/ instead of KB_RESEARCH.
 
     Returns:
         Path to the updated index file.
     """
-    filepath = KB_RESEARCH / "INDEX.md"
+    output_dir = base_dir if base_dir is not None else KB_RESEARCH
+    filepath = output_dir / "INDEX.md"
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     table = "| Date | Stage | Description | Output | Status |\n"
     table += "|------|-------|-------------|--------|--------|\n"
@@ -160,17 +180,25 @@ def update_research_index(runs: list[dict]) -> Path:
     return filepath
 
 
-def update_master_index(stats: dict) -> Path:
+def update_master_index(stats: dict, base_dir: Path = None) -> Path:
     """Update the master knowledge_base INDEX.md.
 
     Args:
         stats: Dict with 'total_targets', 'high_priority', 'medium_priority', 'low_priority',
                'pathways_analyzed', 'themes_extracted', 'stages_complete'.
+        base_dir: Optional base directory for knowledge_base. When provided,
+                  writes INDEX.md to base_dir/ instead of KNOWLEDGE_BASE.
 
     Returns:
         Path to the updated index file.
     """
-    filepath = KNOWLEDGE_BASE / "INDEX.md"
+    output_dir = base_dir if base_dir is not None else KNOWLEDGE_BASE
+    filepath = output_dir / "INDEX.md"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    organism = stats.get("organism", "Spinacia oleracea")
+    common_name = stats.get("common_name", "spinach")
+    treatment = stats.get("treatment", "M-9 bacterial EPS solution")
 
     stages = stats.get("stages_complete", [])
     stage_checks = {
@@ -187,11 +215,11 @@ def update_master_index(stats: dict) -> Path:
         stage_list += f"- [{check}] {label}\n"
 
     content = f"""# ExRNA Biology Research Engine - Master Index
-> TL;DR: Knowledge base for investigating how bacterial extracellular small RNAs improve spinach germination. {stats.get('total_targets', '~100')} predicted gene targets organized by pathway and priority.
+> TL;DR: Knowledge base for investigating how bacterial extracellular small RNAs improve {common_name} germination. {stats.get('total_targets', '~100')} predicted gene targets organized by pathway and priority.
 > Last Updated: {date.today().isoformat()}
 
 ## Research Question
-Which spinach transcripts, if downregulated by bacterial exRNAs (antisense), explain improved germination and seedling vigor?
+Which {common_name} ({organism}) transcripts, if downregulated by bacterial exRNAs (antisense), explain improved germination and seedling vigor?
 
 ## Knowledge Base Structure
 | Directory | Contents | Status |
@@ -211,8 +239,8 @@ Which spinach transcripts, if downregulated by bacterial exRNAs (antisense), exp
 - Medium priority: {stats.get('medium_priority', '?')}
 - Low priority: {stats.get('low_priority', '?')}
 - Pathways covered: {stats.get('pathways_analyzed', '?')}
-- Organism: Spinacia oleracea (spinach)
-- Treatment: M-9 bacterial EPS solution
+- Organism: {organism} ({common_name})
+- Treatment: {treatment}
 """
 
     filepath.write_text(content)

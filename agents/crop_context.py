@@ -27,6 +27,7 @@ class CropContext:
             self.metadata = json.loads(meta_path.read_text())
         else:
             self.metadata = {}
+            logger.warning(f"No crop_metadata.json for '{crop}'. Pipeline QC may fail.")
 
         self.organism = self.metadata.get("species", "Unknown")
         self.common_name = self.metadata.get("common_name", crop)
@@ -62,12 +63,13 @@ class CropContext:
             d.mkdir(parents=True, exist_ok=True)
 
     def load_targets(self) -> list[dict]:
-        """Load targets from this crop's config."""
-        if not self.targets_config.exists():
-            logger.error(f"No targets_config.json for {self.crop}")
-            return []
-        data = json.loads(self.targets_config.read_text())
-        return data.get("targets", [])
+        """Load targets from this crop's config.
+
+        Raises QCError subclasses if config is missing, empty, or has
+        mismatched gene IDs. This prevents silent empty-data propagation.
+        """
+        from agents.qc import validate_targets_config
+        return validate_targets_config(self.crop)
 
     def priority_dir(self, priority: str) -> Path:
         """Get the target directory for a priority level."""

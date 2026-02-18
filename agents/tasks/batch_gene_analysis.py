@@ -135,6 +135,9 @@ async def run(client: GeminiClient, ctx: CropContext = None) -> dict:
     logger.info("STAGE 1: BATCH GENE ANALYSIS")
     logger.info("=" * 60)
 
+    from agents.qc import preflight_check
+    preflight_check(ctx.crop if ctx else "spinach", "gene_analysis")
+
     if ctx is not None:
         ctx.ensure_dirs()
         targets = ctx.load_targets()
@@ -149,6 +152,8 @@ async def run(client: GeminiClient, ctx: CropContext = None) -> dict:
         index_targets_dir = None
         index_research_dir = None
 
+    if len(targets) == 0:
+        raise RuntimeError(f"0 targets loaded for '{ctx.crop if ctx else 'spinach'}'. Aborting Stage 1.")
     logger.info(f"Loaded {len(targets)} targets from config")
 
     start_time = datetime.now()

@@ -43,13 +43,13 @@ def load_existing_analysis(gene_id: str, targets_high_dir: Path = None) -> str:
     """
     search_dir = targets_high_dir if targets_high_dir is not None else KB_TARGETS_HIGH
     if not search_dir.exists():
-        return "(No prior analysis available)"
+        return ""
     for f in search_dir.glob(f"{gene_id.replace('.', '_')}*.md"):
         try:
             return f.read_text()[:2000]  # First 2000 chars
         except Exception:
             pass
-    return "(No prior analysis available)"
+    return ""
 
 
 async def homolog_research(
@@ -188,6 +188,9 @@ async def run(client: GeminiClient, ctx: CropContext = None) -> dict:
     logger.info("STAGE 3: LITERATURE DEEP-DIVE")
     logger.info("=" * 60)
 
+    from agents.qc import preflight_check
+    preflight_check(ctx.crop if ctx else "spinach", "literature_dive")
+
     if ctx is not None:
         ctx.ensure_dirs()
         all_targets = ctx.load_targets()
@@ -205,6 +208,8 @@ async def run(client: GeminiClient, ctx: CropContext = None) -> dict:
         lit_dir = None
         index_research_dir = None
 
+    if len(high_targets) == 0:
+        raise RuntimeError("0 high-priority targets. Stage 3 has nothing to analyze.")
     logger.info(f"Found {len(high_targets)} high-priority targets for deep dive")
 
     start_time = datetime.now()

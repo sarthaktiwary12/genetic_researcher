@@ -93,6 +93,12 @@ async def run_stage(
     All stages receive a CropContext for crop-specific paths.
     """
     from agents.crop_context import CropContext
+    from agents.qc import preflight_check, QCError
+    try:
+        preflight_check(crop, stage)
+    except QCError as e:
+        return {"stage": stage, "crop": crop, "error": f"QC failed: {e}", "status": "aborted"}
+
     ctx = CropContext(crop)
     ctx.ensure_dirs()
 
@@ -153,6 +159,11 @@ async def run_all(
         )
         results[stage] = result
         log_run(f"{stage}_{crop}", result)
+
+        if result.get("status") == "aborted" or "error" in result:
+            logging.error(f"[PIPELINE HALT] {stage} failed. Stopping to prevent wasted API spend.")
+            results["pipeline_status"] = "halted"
+            break
 
         logging.info(f"Stage {stage} result: {json.dumps(result, indent=2, default=str)}")
 
@@ -273,14 +284,35 @@ async def main():
     parser.add_argument("--campaign", help="Campaign type to run (for scheduler integration)")
     parser.add_argument("--campaign-config", help="JSON config for campaign", default="{}")
     parser.add_argument("--test", action="store_true", help="Run connectivity test")
+    parser.add_argument("--dry-run", action="store_true", help="Run QC preflight checks without making API calls")
+    parser.add_argument("--validate", action="store_true", help="Validate all stages for a crop and report results")
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose logging")
 
     args = parser.parse_args()
     setup_logging(args.verbose)
 
-    if not args.stage and not args.test and not args.campaign:
+    if not args.stage and not args.test and not args.campaign and not args.validate:
         parser.print_help()
         sys.exit(1)
+
+    # Handle --dry-run and --validate before initializing API clients
+    if args.dry_run or args.validate:
+        from agents.qc import preflight_check, validate_all_stages, QCError
+        setup_logging(args.verbose)
+
+        if args.validate or (args.dry_run and (not args.stage or args.stage == "all")):
+            results = validate_all_stages(args.crop)
+            print(json.dumps(results, indent=2, default=str))
+            all_passed = all(r.get("status") != "FAILED" for r in results.values())
+            sys.exit(0 if all_passed else 1)
+        else:
+            try:
+                result = preflight_check(args.crop, args.stage)
+                print(f"DRY RUN PASSED: {json.dumps(result, indent=2)}")
+                sys.exit(0)
+            except QCError as e:
+                print(f"DRY RUN FAILED: {e}", file=sys.stderr)
+                sys.exit(1)
 
     # Initialize clients
     gemini_client = GeminiClient()

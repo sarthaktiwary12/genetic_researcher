@@ -77,10 +77,10 @@ def load_all_summaries(kb_targets_dir: Path = None) -> str:
                         tldr = line
                 if header or tldr:
                     summaries.append(f"{header}\n{tldr}")
-            except Exception:
-                pass
+            except Exception as e:
+                logger.warning(f"Could not read {f}: {e}")
 
-    return "\n\n".join(summaries) if summaries else "(No analyses available yet)"
+    return "\n\n".join(summaries) if summaries else ""
 
 
 def load_pathway_summaries(kb_pathways_dir: Path = None) -> str:
@@ -93,7 +93,7 @@ def load_pathway_summaries(kb_pathways_dir: Path = None) -> str:
     pathways_dir = kb_pathways_dir if kb_pathways_dir is not None else KB_PATHWAYS
     summaries = []
     if not pathways_dir.exists():
-        return "(No pathway analyses available)"
+        return ""
 
     for f in sorted(pathways_dir.glob("*.md")):
         if f.name == "INDEX.md":
@@ -110,10 +110,10 @@ def load_pathway_summaries(kb_pathways_dir: Path = None) -> str:
                     tldr = line
             if header or tldr:
                 summaries.append(f"{header}\n{tldr}")
-        except Exception:
-            pass
+        except Exception as e:
+            logger.warning(f"Could not read {f}: {e}")
 
-    return "\n\n".join(summaries) if summaries else "(No pathway analyses available)"
+    return "\n\n".join(summaries) if summaries else ""
 
 
 async def extract_themes(
@@ -347,6 +347,9 @@ async def run(client: GeminiClient, ctx: CropContext = None) -> dict:
     logger.info("STAGE 4: THEME EXTRACTION & SYNTHESIS")
     logger.info("=" * 60)
 
+    from agents.qc import preflight_check
+    preflight_check(ctx.crop if ctx else "spinach", "theme_extraction")
+
     if ctx is not None:
         ctx.ensure_dirs()
         kb_targets_dir = ctx.kb_targets
@@ -372,6 +375,10 @@ async def run(client: GeminiClient, ctx: CropContext = None) -> dict:
     gene_summaries = load_all_summaries(kb_targets_dir=kb_targets_dir)
     pathway_summaries = load_pathway_summaries(kb_pathways_dir=kb_pathways_dir)
     logger.info(f"Loaded summaries ({len(gene_summaries)} chars genes, {len(pathway_summaries)} chars pathways)")
+
+    from agents.qc import validate_non_empty_string, CostGate
+    validate_non_empty_string(gene_summaries, "gene summaries for Stage 4", min_chars=200)
+    validate_non_empty_string(pathway_summaries, "pathway summaries for Stage 4", min_chars=100)
 
     # Run theme extraction and confounder analysis in parallel
     logger.info("Running theme extraction, causal models, and confounder analysis...")

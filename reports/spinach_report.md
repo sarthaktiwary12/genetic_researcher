@@ -71,55 +71,13 @@ and seedling vigor when seeds are treated with M-9 bacterial EPS solution.
 
 ## Pathway Analysis Summary
 
-# Pathway Analysis Index
-> TL;DR: Gene targets grouped by 14 biological pathways. Key pathways include hormone signaling, defense/immunity, epigenetics, ROS/redox, transport, and metabolic priming.
-> Last Updated: 2026-02-18
-
-## Pathways
-| Pathway | File | Targets | Summary |
-|---------|------|---------|----------|
-| Cell Wall Remodeling | [cell_wall_remodeling.md](cell_wall_remodeling.md) | 3 | Of course. As a plant systems biologist, I will analyze the coordinated downregu |
-| Defense Immunity | [defense_immunity.md](defense_immunity.md) | 5 | Of course. As a plant systems biologist, I will analyze this "Defense Immunity"  |
-| Dna Repair Replication | [dna_repair_replication.md](dna_repair_replication.md) | 6 | Of course. As a plant systems biologist, I will analyze this pathway by integrat |
-| Epigenetic Regulation | [epigenetic_regulation.md](epigenetic_regulation.md) | 6 | Of course. As a plant systems biologist, I will analyze this set of epigenetical |
-| Hormone Signaling | [hormone_signaling.md](hormone_signaling.md) | 3 | Of course. As a plant systems biologist, I will analyze the coordinated function |
-| Metabolic | [metabolic_priming.md](metabolic_priming.md) | 15 | Of course. As a plant systems biologist, I will analyze this set of downregulate |
-| Organelle Biogenesis | [organelle_biogenesis.md](organelle_biogenesis.md) | 6 | Of course. As a plant systems biologist, I will analyze this "Organelle Biogenes |
-| Protein Turnover | [protein_turnover.md](protein_turnover.md) | 11 | Of course. As a plant systems biologist, I will analyze the coordinated downregu |
-| Rna Processing | [rna_processing.md](rna_processing.md) | 10 | Of course. As a plant systems biologist, here is a pathway-level analysis of the |
-| Ros Redox | [ros_redox.md](ros_redox.md) | 3 | Of course. As a plant systems biologist, here is a detailed pathway-level analys |
-| Signaling | [signaling.md](signaling.md) | 11 | Of course. As a plant systems biologist, here is a pathway-level analysis of the |
-| Transport Ion Homeostasis | [transport_ion_homeostasis.md](transport_ion_homeostasis.md) | 18 | Of course. As a plant systems biologist, I will analyze the "Transport Ion Homeo |
-| Transposon Related | [transposon_related.md](transposon_related.md) | 5 | Of course. As a plant systems biologist, here is a detailed pathway-level analys |
-| Unknown | [unknown_function.md](unknown_function.md) | 7 | Of course. As a plant systems biologist, I will analyze this gene set. The key c |
-
-
-## Cross-Pathway Analysis
-See [cross_pathway_interactions.md](cross_pathway_interactions.md)
-
+_Pathway analysis pending._
 
 ---
 
 ## Theme Analysis Summary
 
-# Themes Index
-> TL;DR: 6 cross-cutting biological themes extracted from target analysis.
-> Last Updated: 2026-02-18
-
-## Themes
-| Theme | File | Summary |
-|-------|------|---------|
-| Defense Downshift | [defense_downshift.md](defense_downshift.md) | Theme analysis for defense downshift |
-| Epigenetic Remodeling | [epigenetic_remodeling.md](epigenetic_remodeling.md) | Theme analysis for epigenetic remodeling |
-| ROS Optimization | [ros_optimization.md](ros_optimization.md) | Theme analysis for ros optimization |
-| Hormone Nodes | [hormone_nodes.md](hormone_nodes.md) | Theme analysis for hormone nodes |
-| Transport / Ion Homeostasis | [transport_ion_homeostasis.md](transport_ion_homeostasis.md) | Theme analysis for transport / ion homeostasis |
-| Metabolic Priming | [metabolic_priming.md](metabolic_priming.md) | Theme analysis for metabolic priming |
-
-
-## Theme Interactions
-See individual theme files for cross-theme analysis.
-
+_Theme analysis pending._
 
 ---
 

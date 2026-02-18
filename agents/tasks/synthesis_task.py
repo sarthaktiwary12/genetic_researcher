@@ -6,8 +6,6 @@ Produces per-crop synthesis in crops/{crop}/synthesis/:
 - confounders.md
 - validation_plan.md
 
-Also copies to knowledge_base/synthesis/ for backwards compatibility.
-
 Uses ClaudeClient.query_synthesis() (Sonnet) for most tasks,
 query_reasoning() (Opus) for critical review.
 """
@@ -19,7 +17,7 @@ import time
 from pathlib import Path
 
 from agents.config import (
-    KB_TARGETS, KB_PATHWAYS, KB_THEMES, KB_SYNTHESIS,
+    KB_TARGETS, KB_PATHWAYS, KB_THEMES,
     KB_RESEARCH, ORGANISM, TREATMENT, PHENOTYPE, MECHANISM,
     CROPS_DIR, PROJECT_ROOT,
 )
@@ -75,13 +73,6 @@ def _resolve_themes_dir(ctx: CropContext = None) -> Path:
     return KB_THEMES
 
 
-def _resolve_synthesis_dir(ctx: CropContext = None) -> Path:
-    """Get the shared synthesis directory for backward compatibility writes."""
-    if ctx is not None:
-        return ctx.kb_synthesis
-    return KB_SYNTHESIS
-
-
 def _load_tldr_summaries(directory: Path, max_files: int = 120) -> str:
     """Load TL;DR lines from all markdown files in a directory tree."""
     summaries = []
@@ -120,8 +111,8 @@ def _load_full_analyses(directory: Path, max_files: int = 20) -> str:
                 content = content[:3000] + "\n[... truncated]"
             texts.append(content)
             count += 1
-        except Exception:
-            pass
+        except Exception as e:
+            logger.warning(f"Could not read {md_file}: {e}")
 
     return "\n\n---\n\n".join(texts)
 
@@ -143,7 +134,12 @@ async def synthesize_ranked_targets(
     target_summaries = _load_tldr_summaries(targets_dir)
     pathway_summaries = _load_full_analyses(pathways_dir, max_files=15)
 
+    from agents.qc import validate_non_empty_string, validate_loaded_data_gene_ids, CostGate
+    validate_non_empty_string(target_summaries, f"target summaries for '{crop}'", min_chars=200)
+    validate_loaded_data_gene_ids(target_summaries, crop)
+
     prompt = f"Crop: {species} ({common_name})\n\n" + ranked_targets_prompt(target_summaries, pathway_summaries)
+    CostGate.check("claude-sonnet", f"ranked targets for {crop}", len(prompt))
     response = await client.query_synthesis(
         prompt=prompt,
         system_instruction=SYNTHESIS_SYSTEM,
@@ -153,11 +149,6 @@ async def synthesize_ranked_targets(
     output_path = output_dir / "ranked_targets.md"
     output_path.write_text(f"# Ranked Target Analysis -- {common_name.title()} ({species})\n\n{response}")
     logger.info(f"Wrote ranked targets: {output_path}")
-
-    # Also write to shared KB for backwards compatibility
-    shared_path = KB_SYNTHESIS / "ranked_targets.md"
-    shared_path.parent.mkdir(parents=True, exist_ok=True)
-    shared_path.write_text(f"# Ranked Target Analysis -- {common_name.title()} ({species})\n\n{response}")
 
     return {"file": str(output_path), "length": len(response)}
 
@@ -184,7 +175,13 @@ async def synthesize_causal_models(
     pathway_analyses = _load_full_analyses(pathways_dir, max_files=15)
     theme_analyses = _load_full_analyses(themes_dir, max_files=6)
 
+    from agents.qc import validate_non_empty_string, validate_loaded_data_gene_ids, CostGate
+    combined = ranked_targets + pathway_analyses + theme_analyses
+    validate_non_empty_string(combined, f"causal model inputs for '{crop}'", min_chars=200)
+    validate_loaded_data_gene_ids(combined, crop)
+
     prompt = f"Crop: {species} ({common_name})\n\n" + causal_models_prompt(ranked_targets, pathway_analyses, theme_analyses)
+    CostGate.check("claude-opus", f"causal models for {crop}", len(prompt))
 
     response = await client.query_reasoning(
         prompt=prompt,
@@ -195,10 +192,6 @@ async def synthesize_causal_models(
     output_path = output_dir / "causal_models.md"
     output_path.write_text(f"# Causal Models -- {common_name.title()} ({species})\n\n{response}")
     logger.info(f"Wrote causal models: {output_path}")
-
-    shared_path = KB_SYNTHESIS / "causal_models.md"
-    shared_path.parent.mkdir(parents=True, exist_ok=True)
-    shared_path.write_text(f"# Causal Models -- {common_name.title()} ({species})\n\n{response}")
 
     return {"file": str(output_path), "length": len(response)}
 
@@ -223,7 +216,11 @@ Total targets: {total}
 Key pathways: hormone signaling, defense/immunity, epigenetic regulation,
 ROS/redox, transport/ion homeostasis, metabolic priming"""
 
+    from agents.qc import validate_non_empty_string, CostGate
+    validate_non_empty_string(context, f"confounder context for '{crop}'", min_chars=50)
+
     prompt = confounder_analysis_prompt(context)
+    CostGate.check("claude-opus", f"confounders for {crop}", len(prompt))
     response = await client.query_reasoning(
         prompt=prompt,
         system_instruction=SYNTHESIS_SYSTEM,
@@ -233,10 +230,6 @@ ROS/redox, transport/ion homeostasis, metabolic priming"""
     output_path = output_dir / "confounders.md"
     output_path.write_text(f"# Confounder Analysis -- {common_name.title()} ({species})\n\n{response}")
     logger.info(f"Wrote confounder analysis: {output_path}")
-
-    shared_path = KB_SYNTHESIS / "confounders.md"
-    shared_path.parent.mkdir(parents=True, exist_ok=True)
-    shared_path.write_text(f"# Confounder Analysis -- {common_name.title()} ({species})\n\n{response}")
 
     return {"file": str(output_path), "length": len(response)}
 
@@ -267,7 +260,12 @@ async def synthesize_validation_plan(
     if cf_path.exists():
         confounders = cf_path.read_text()[:5000]
 
+    from agents.qc import validate_non_empty_string, CostGate
+    combined = ranked + causal + confounders
+    validate_non_empty_string(combined, f"validation plan inputs for '{crop}'", min_chars=200)
+
     prompt = f"Crop: {species} ({common_name})\n\n" + validation_plan_prompt(ranked, causal, confounders)
+    CostGate.check("claude-sonnet", f"validation plan for {crop}", len(prompt))
     response = await client.query_synthesis(
         prompt=prompt,
         system_instruction=SYNTHESIS_SYSTEM,
@@ -277,10 +275,6 @@ async def synthesize_validation_plan(
     output_path = output_dir / "validation_plan.md"
     output_path.write_text(f"# Validation Plan -- {common_name.title()} ({species})\n\n{response}")
     logger.info(f"Wrote validation plan: {output_path}")
-
-    shared_path = KB_SYNTHESIS / "validation_plan.md"
-    shared_path.parent.mkdir(parents=True, exist_ok=True)
-    shared_path.write_text(f"# Validation Plan -- {common_name.title()} ({species})\n\n{response}")
 
     return {"file": str(output_path), "length": len(response)}
 
@@ -304,6 +298,9 @@ async def run(
     if ctx is not None:
         ctx.ensure_dirs()
         crop = ctx.crop
+
+    from agents.qc import preflight_check
+    preflight_check(crop, "synthesis")
 
     start = time.time()
     results = {"crop": crop}

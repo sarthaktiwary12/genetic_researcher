@@ -80,8 +80,8 @@ def load_gene_analyses(
                         summary_lines.extend(lines[idx:idx + 10])
                         break
                 analyses[target["gene_id"]] = "\n".join(summary_lines) if summary_lines else content[:500]
-            except Exception:
-                pass
+            except Exception as e:
+                logger.warning(f"Could not read analysis for {target['gene_id']}: {e}")
 
     return analyses
 
@@ -159,6 +159,9 @@ async def run(client: GeminiClient, ctx: CropContext = None) -> dict:
     logger.info("=" * 60)
     logger.info("STAGE 2: PATHWAY ANALYSIS")
     logger.info("=" * 60)
+
+    from agents.qc import preflight_check
+    preflight_check(ctx.crop if ctx else "spinach", "pathway_mapping")
 
     if ctx is not None:
         ctx.ensure_dirs()

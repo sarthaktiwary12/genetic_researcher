@@ -30,3 +30,8 @@
 | 2026-02-18 12:20:15 | pathway_mapping_maize | {"stage": "pathway_mapping", "pathways_total": 14, "pathways_succeeded": 14, "pa... | 95s | Success |
 | 2026-02-18 12:22:31 | literature_dive_maize | {"stage": "literature_dive", "high_priority_targets": 21, "homolog_successes": 2... | 135s | Success |
 | 2026-02-18 12:24:15 | theme_extraction_maize | {"stage": "theme_extraction", "themes": "success", "causal_models": "success", "... | 103s | Success |
+| 2026-02-18 12:38:21 | synthesis_broccoli | {"ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag_biology_engine/know... | 808s | Success |
+| 2026-02-18 12:52:00 | synthesis_wheat | {"ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag_biology_engine/know... | 818s | Success |
+| 2026-02-18 13:05:37 | synthesis_quinoa | {"ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag_biology_engine/know... | 816s | Success |
+| 2026-02-18 13:18:40 | synthesis_soybean | {"ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag_biology_engine/know... | 782s | Success |
+| 2026-02-18 13:31:35 | synthesis_maize | {"ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag_biology_engine/know... | 775s | Success |

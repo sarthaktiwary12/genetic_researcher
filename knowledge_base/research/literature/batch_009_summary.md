@@ -1,6 +1,6 @@
 # Batch 9 Gene Analysis Summary
 > TL;DR: Batch analysis of 10 gene targets.
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
 ## Genes in Batch
 - SOV6g027850.1: Nardilysin-like
@@ -20,6 +20,6 @@ Here's an assessment of the spinach gene targets for their relevance to germinat
 
 | Gene ID          | Priority | Key reason downregulation helps germination                                    | Evidence strength |
 | :--------------- | :------- | :----------------------------------------------------------------------------- | :---------------- |
-| SOV6g027850.1    | Medium   | Could degrade a negative regulator of germination or be part of a stress pathway. | Moderate          |
-| SOV4g000660.1    | High     | Likely involved in perceiving an inhibitory signal or activating anti-germination pathway. | Strong            |
-| SOV4g006140.1    | Low      | Downregulation of essential membrane synthesis
+| SOV6g027850.1    | Medium   | May degrade positive regulators of germination or contribute to negative pathways. | Weak              |
+| SOV4g000660.1    | High     | Likely involved in perceiving/transmitting inhibitory signals (e.g., ABA) that suppress germination. | Moderate          |
+| SOV4g006140.1    | Low      | Downregulation of phospholipid

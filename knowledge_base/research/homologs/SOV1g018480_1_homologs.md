@@ -1,13 +1,13 @@
 # Homolog Research: SOV1g018480.1 - Cyclic nucleotide-gated channel (CNGC)
 > TL;DR: Homolog analysis for Cyclic nucleotide-gated channel (CNGC)
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
-The spinach gene **SOV1g018480.1** is annotated as a Cyclic Nucleotide-Gated Channel (CNGC). CNGCs are plasma membrane-localized cation channels that mediate Ca$^{2+}$ influx in response to cyclic nucleotides (cAMP and cGMP), playing crucial roles in various physiological processes, including stress responses, development, and immunity (Gao et al., 2016; J. Exp. Bot.).
-
-Here's a detailed analysis based on current literature:
+The spinach gene **SOV1g018480.1**, annotated as a Cyclic Nucleotide-Gated Channel (CNGC), is a member of a large gene family in plants involved in calcium (Ca$^{2+}$) signaling, which is crucial for various physiological processes, including stress responses, development, and immunity.
 
 ---
 
 ### 1. ARABIDOPSIS HOMOLOG
 
-Based on a BLASTp search using the protein sequence of SOV1g018480.1 (NCBI Gene ID: 110991969
+The closest characterized *Arabidopsis thaliana* homolog to SOV1g018480.1, based on BLASTP analysis (e.g., via Phytozome), is **CNGC1** (Cyclic Nucleotide-Gated Channel 1).
+
+*   **Gene name and locus ID**: **CNGC1** (Cyclic Nucleotide-

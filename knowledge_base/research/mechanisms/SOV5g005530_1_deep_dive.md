@@ -1,107 +1,106 @@
 # Deep Literature Dive: SOV5g005530.1 - Modifier of SNC1 1 (MOS1-like / immune regulator)
 > TL;DR: Comprehensive literature review for Modifier of SNC1 1 (MOS1-like / immune regulator)
 > Priority: High
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
-Of course. As a plant biology literature expert, I will conduct a comprehensive, evidence-based review of the spinach gene target **SOV5g005530.1**, annotated as a MOS1-like immune regulator.
+Of course. As a plant biology literature expert, I will conduct a comprehensive, evidence-based review of your high-priority gene target, SOV5g005530.1, based on its homology to *Arabidopsis thaliana* Modifier of SNC1 1 (AtMOS1).
 
-This analysis integrates established knowledge from the Arabidopsis model system with the specific context of germination, spinach biology, and the intriguing hypothesis of regulation by bacterial extracellular small RNAs.
+This analysis will critically evaluate the proposed link between this gene, bacterial exRNA-mediated downregulation, and improved seed germination in spinach.
 
 ---
 
 ### **Comprehensive Literature Review: SOV5g005530.1 (MOS1-like)**
 
-#### **Executive Summary**
+**Executive Summary:**
+The annotation of SOV5g005530.1 as a "Modifier of SNC1 1 (MOS1-like)" points to a highly specific role in regulating plant immunity, based on extensive research in *Arabidopsis*. The *Arabidopsis* homolog, AtMOS1, is **not a general negative regulator of immunity**. Instead, it is a **positive regulator** required for the expression of a specific, hyperactive immune receptor allele (*snc1*). Its primary known function is to prevent the epigenetic silencing of this target.
 
-The spinach gene SOV5g005530.1 is homologous to the well-characterized Arabidopsis *MODIFIER OF SNC1, 1* (*MOS1*). In Arabidopsis, MOS1 is a critical nuclear RNA-binding protein essential for the post-transcriptional regulation (splicing, stability, and export) of a subset of Nucleotide-binding Leucine-rich Repeat (NLR) immune receptor transcripts, most notably *SNC1*. Its primary role is in effector-triggered immunity (ETI) in vegetative tissues.
-
-A direct, experimentally verified role for MOS1 in seed germination is **not established in the literature**. However, its function as a key immune regulator makes it highly relevant to seedling survival. The hypothesis that it is targeted by bacterial small RNAs is mechanistically plausible and represents a sophisticated pathogen strategy to dismantle a central hub of plant defense. The following review details the evidence for these points.
+The hypothesis that downregulating this gene improves germination is conceptually plausible through the lens of the **growth-defense trade-off**. By reducing a costly immune response, resources can be reallocated to germination and growth. However, this hypothesis rests on the significant assumption that spinach seeds possess a constitutively active, growth-repressive immune pathway that is dependent on this specific MOS1-like gene. The direct link between MOS1 and germination pathways (e.g., ABA/GA signaling) is not established in the literature; the connection is indirect via resource allocation.
 
 ---
 
 ### 1. MECHANISTIC DETAIL: The Molecular Function of MOS1
 
-The function of the Arabidopsis homolog AT1G18090 (MOS1) is well-defined, providing a strong predictive framework for the spinach gene.
+The function of MOS1 is understood almost exclusively from studies of its *Arabidopsis* homolog, AtMOS1 (AT3G14340).
 
-*   **Protein Domains and Function**: MOS1 is a canonical RNA-binding protein. It contains an N-terminal RNA Recognition Motif (RRM) and a C-terminal C3H-type Zinc Finger domain.
-    *   The **RRM domain** is responsible for binding to specific RNA sequences or structures, although the precise consensus sequence targeted by MOS1 remains undefined.
-    *   The **Zinc Finger domain** likely contributes to RNA binding specificity and/or mediates protein-protein interactions with other components of the RNA processing machinery.
-    *   **Well-Established Finding**: These domains confirm its role as an RNA-binding protein, not a classical enzyme with catalytic activity. Its "activity" is in binding and guiding pre-mRNA transcripts.
+*   **Enzymatic Activity & Substrates**: AtMOS1 itself does not have a characterized enzymatic activity. It is a truncated protein containing the N-terminal ~300 amino acids of a larger, likely ancestral protein that was a DEAD-box RNA helicase (Xia et al., 2013). While it lacks the helicase domain, it retains the ability to interact with RNA and chromatin-modifying machinery. Its primary substrate is the transcript and/or genomic locus of the *snc1* (SUPPRESSOR OF npr1-1, CONSTITUTIVE 1) gene.
 
-*   **Molecular Mechanism**: MOS1 is a post-transcriptional regulator. Genetic screens to find suppressors of the autoimmune phenotype of the NLR mutant *snc1* identified the *MOS* gene family.
-    *   MOS1 was shown to be required for the proper accumulation of fully spliced *SNC1* mRNA. In *mos1* mutants, levels of *SNC1* pre-mRNA are normal, but mature mRNA levels are drastically reduced, accompanied by an accumulation of unspliced and alternative-spliced, non-functional transcripts.
-    *   Crucially, MOS1 specifically associates *in vivo* with the pre-mRNAs of *SNC1* and another NLR, *RPP4*. It does not bind to housekeeping gene transcripts, demonstrating specificity.
-    *   **Well-Established Finding**: The primary mechanism of MOS1 is to bind to specific NLR pre-mRNAs in the nucleus and facilitate their correct splicing and processing, which is a prerequisite for their nuclear export and subsequent translation into functional immune receptors (Li et al., 2010, *Cell*).
+*   **Protein Domains and Function**:
+    *   **Nuclear Localization Signal (NLS)**: AtMOS1 contains a functional NLS, and it is localized to the nucleus, which is essential for its function (Palma et al., 2007).
+    *   **RNA-binding capability**: Although lacking a canonical RNA-binding motif, the protein binds to the *snc1* transcript. This interaction is crucial for its mechanism.
+    *   **Mechanism of Action**: The established mechanism is highly specific. The *snc1* allele is a gain-of-function mutation in an NLR (Nucleotide-binding Leucine-rich repeat) immune receptor, leading to constitutive immune activation and severe dwarfism. The plant attempts to silence this over-active allele via the RNA-directed DNA Methylation (RdDM) pathway. AtMOS1 acts as a **protector** of the *snc1* locus. It binds to the *snc1* transcript and recruits other factors to **prevent** the RdDM machinery from methylating and silencing the gene (Li et al., 2010; Xia et al., 2013). Therefore, in the *snc1* mutant background, **MOS1 is required to maintain the high expression of the R-gene and thus maintain the autoimmune phenotype.**
 
-*   **Subcellular Localization**: Consistent with its role in pre-mRNA processing, MOS1 is a nuclear-localized protein. This has been confirmed via GFP-fusion protein experiments in Arabidopsis. (Palma et al., 2007, *The Plant Cell*).
+*   **Subcellular Localization**: Strictly nuclear (Palma et al., 2007).
 
-*   **Post-Translational Regulation**: Currently, there is limited specific information on the post-translational modification (e.g., phosphorylation, ubiquitination) of MOS1 itself. Regulation appears to occur primarily at the transcriptional level, where *MOS1* expression can be induced by pathogen signals.
+*   **Post-Translational Regulation**: The regulation of MOS1 activity via PTMs is not a major focus of existing literature. Its function appears to be primarily determined by its expression level and localization.
 
-### 2. GERMINATION BIOLOGY: An Indirect but Critical Role
+### 2. GERMINATION BIOLOGY: The Role of MOS1 in Seeds
 
-While MOS1 is not a canonical germination regulator like ABI5 or RGL2, its immune function is conceptually vital during the vulnerable seed-to-seedling transition.
+Direct evidence linking AtMOS1 to the core germination machinery is **scarce to non-existent**. The connection must be inferred indirectly through its role in immunity.
 
-*   **Expression Timing**: Analysis of public Arabidopsis transcriptomic data (e.g., Arabidopsis eFP Browser) shows that *MOS1* (AT1G18090) is expressed at low but detectable levels in dry seeds and during the first 24-48 hours of imbibition. This indicates that the machinery to process key NLR transcripts is present from the very beginning of germination.
-    *   **Interpretation**: This basal expression is likely a "preparedness" mechanism. The emerging radicle and cotyledons are immediately exposed to a microbe-rich soil environment. Having MOS1 present allows for the rapid deployment of NLR-mediated defense upon perception of pathogen effectors, without the delay of *de novo* transcription and translation of the entire pathway.
+*   **Expression Timing**: Analysis of public *Arabidopsis* transcriptome data (e.g., Arabidopsis eFP Browser) shows that AtMOS1 is expressed at low levels in dry and imbibed seeds, with expression increasing in developing seedlings. This pattern is consistent with a role in post-germination defense rather than in the mechanics of germination itself.
 
-*   **Regulation by Hormones & Stress**: There is no direct evidence of MOS1 regulation by ABA or GA. However, the defense hormone salicylic acid (SA), which is central to the *SNC1* pathway, is a known inhibitor of seed germination.
-    *   **Well-Established Crosstalk**: High levels of SA can antagonize GA signaling and promote ABA signaling, thereby delaying or blocking germination (Alonso-Ramírez et al., 2009, *Plant Physiology*). The autoimmune *snc1* mutant, which has constitutively high SA, exhibits germination defects. Since *mos1* mutants suppress *snc1* phenotypes, it is plausible that a *mos1* mutation could alleviate SA-mediated germination inhibition in that specific genetic background. This is an indirect link, not a primary role in germination.
+*   **Regulation by Hormones (ABA, GA)**: There are no published studies demonstrating direct transcriptional regulation of *MOS1* by ABA or GA, nor are there reports of MOS1 physically or genetically interacting with core ABA/GA signaling components (e.g., ABI5, RGL2/DELLAs).
 
-*   **Genetic Interactions**: The key interactions are with NLRs. Recent studies have shown that some NLRs can influence seed dormancy and germination, linking immunity directly to this developmental stage. For example, the NLR-like gene *Seed Dormancy 4-like* (*SDR4L*) in lettuce influences seed dormancy (Huo et al., 2021, *Horticulture Research*). While this is not MOS1, it establishes a precedent for the involvement of the broader immune machinery in seed biology.
+*   **Response to Abiotic Stress**: *MOS1* is not typically identified as a primary abiotic stress-responsive gene during germination.
 
-### 3. LOSS-OF-FUNCTION EVIDENCE: Compromised Immunity
+*   **Known Genetic Interactions with Germination Regulators**: The only well-characterized genetic interactions of *MOS1* are with *SNC1* and components of the RdDM pathway (e.g., *NRPD1*, *DRM2*). It has not been shown to interact with key germination regulators.
 
-The phenotype of *mos1* mutants in Arabidopsis is well-documented and highly specific.
+*   **The Indirect Connection (Growth-Defense Trade-off)**: The most plausible link to germination is the well-established principle of the growth-defense trade-off. Activating immunity is energetically expensive and diverts resources from growth processes (Huot et al., 2014). The *snc1* mutant is a classic example: its constitutive immunity leads to extreme dwarfism and likely poor germination/vigor. By suppressing *snc1* activity, the *mos1* mutation frees up resources, allowing for more normal growth. Therefore, downregulating the spinach *MOS1-like* gene could improve germination **if, and only if**, the seeds have a basally active, growth-suppressive immune pathway that depends on this gene.
 
-*   **Mutant Phenotypes**:
-    *   A *mos1* single mutant is phenotypically indistinguishable from wild-type under sterile, pathogen-free conditions. It does not have any reported defects in germination, growth, or development.
-    *   Its phenotype is revealed in two contexts:
-        1.  **Suppressing Autoimmunity**: In the *snc1* autoimmune background, a *mos1* mutation completely suppresses the dwarfism, curled leaves, and constitutive defense activation, restoring a wild-type appearance. This was the basis of its discovery (Palma et al., 2007).
-        2.  **Increased Susceptibility**: *mos1* mutants show enhanced susceptibility to pathogens that are normally recognized by the NLRs it regulates. For example, they are more susceptible to specific races of *Hyaloperonospora arabidopsidis* (recognized by *RPP4*) and *Pseudomonas syringae* carrying effectors recognized by *SNC1*.
+### 3. LOSS-OF-FUNCTION EVIDENCE
 
-*   **Conclusion**: Loss of MOS1 function specifically cripples a subset of NLR-mediated immunity by preventing the formation of functional receptor proteins.
+*   **Mutant Phenotypes**: In *Arabidopsis*, a *mos1* single mutant is phenotypically indistinguishable from the wild type under standard growth conditions (Palma et al., 2007). It does not have enhanced growth, faster germination, or increased biomass. Its phenotype is only revealed in the *snc1* genetic background, where it acts as a suppressor, restoring wild-type growth by allowing the silencing of the over-active *snc1* allele.
 
-### 4. NETWORK CONTEXT: A Hub for NLR mRNA Processing
+*   **Implication for Spinach**: This is a critical point. If the spinach *MOS1-like* gene functions identically to the *Arabidopsis* homolog, simply reducing its expression in a wild-type spinach background would be expected to have **no effect** on germination or vigor. The observed positive phenotype implies that the spinach line under study possesses an underlying, constitutively active immune response that is suppressed when the *MOS1-like* gene is downregulated.
 
-MOS1 acts within a well-defined nuclear RNA processing network that governs plant immunity.
+### 4. NETWORK CONTEXT
 
-*   **Upstream Regulators**: The *MOS1* gene itself is transcriptionally induced by PAMPs (Pathogen-Associated Molecular Patterns) and pathogen infection, indicating it is part of the plant's general defense response.
-*   **Direct Downstream Targets**: The only validated direct targets are the pre-mRNAs of the NLRs *SNC1* and *RPP4* (Li et al., 2010). It is highly likely that it regulates other, as-yet-unidentified NLRs with similar RNA features.
-*   **Protein-Protein Interactions**: Genetic screens have placed MOS1 in a network with other MOS proteins involved in nucleocytoplasmic trafficking. Key interactors/pathway components include:
-    *   **MOS3/SAR3**: Encodes a component of the nuclear pore complex (NPC), suggesting MOS1-processed mRNAs are exported through a specific NPC configuration.
-    *   **MOS6/IMPORTIN-α3**: A nuclear import receptor, suggesting proper trafficking of defense components into the nucleus is critical.
-    *   **MOS2/UBA1b**: An E1 ubiquitin-activating enzyme, hinting at a link between immunity, RNA processing, and protein degradation pathways.
-    *   **This network context is well-established**: MOS1 does not act alone but as part of a coordinated nuclear "defense hub" that ensures immune receptors are properly synthesized and deployed.
+*   **Direct Protein-Protein Interactions**: The primary interactions of MOS1 are not with other signaling proteins but with the RNA/DNA of its target locus and components of the epigenetic machinery. It is thought to be part of a nuclear complex that antagonizes the RdDM pathway at specific loci.
+
+*   **Transcriptional Regulation**:
+    *   **Upstream**: Regulation of *MOS1* itself is not well understood. It appears to be expressed constitutively at a basal level.
+    *   **Downstream**: The direct downstream target is the *snc1* locus. By preventing its silencing, MOS1 ensures the continued production of the SNC1 protein, which in turn activates a cascade of downstream defense genes (e.g., *PR* genes). This regulation is post-transcriptional/epigenetic, not a direct transcriptional activation.
 
 ### 5. SPINACH-SPECIFIC INFORMATION
 
-Direct experimental data for SOV5g005530.1 is scarce, but we can make strong inferences.
+*   **Spinach Genome Annotation**: The annotation of SOV5g005530.1 as "MOS1-like" is based on sequence homology. While this is a strong starting point, it is not definitive proof of conserved function. It is possible that the spinach homolog has undergone neofunctionalization or subfunctionalization and plays a broader role in regulating R-gene expression or RNA silencing than its *Arabidopsis* counterpart.
 
-*   **Homology**: A protein BLAST search of the Arabidopsis MOS1 (AT1G18090) against the *Spinacia oleracea* proteome confirms that SOV5g005530.1 is the top homolog. The conservation of the RRM and Zinc Finger domains is typically high, strongly suggesting functional conservation.
-*   **Expression Data**: Any available spinach transcriptome datasets (e.g., from studies on downy mildew resistance) should be examined. It is predicted that SOV5g005530.1 expression would be induced upon infection with pathogens like *Peronospora farinosa f. sp. spinaciae*. If expression data from germinating spinach seeds exists, it would be invaluable to check for its presence.
-*   **Chenopodium/Amaranthaceae Homologs**: Homologs are present in related species like sugar beet (*Beta vulgaris*) and quinoa (*Chenopodium quinoa*). These species also face significant pathogen pressure, and the MOS1-NLR pathway is likely a conserved, ancient defense mechanism.
+*   **Expression Data**: A search of public spinach transcriptome data (e.g., from studies on downy mildew resistance or development) would be necessary to confirm its expression profile in seeds and seedlings under various conditions. Without such data, its role remains speculative.
 
-### 6. THERAPEUTIC/AGRICULTURAL RELEVANCE & THE BACTERIAL sRNA HYPOTHESIS
+*   **Closest Chenopodium/Amaranthaceae Homologs**: The closest relatives with well-annotated genomes are sugar beet (*Beta vulgaris*) and quinoa (*Chenopodium quinoa*). Homologs exist in these species (e.g., Bv9_211200_aadt in beet). Comparing their function and expression could provide valuable context, but dedicated functional studies are likely lacking.
 
-This section connects the fundamental biology of MOS1 to its potential in agriculture and the user's initial hypothesis.
+### 6. THERAPEUTIC/AGRICULTURAL RELEVANCE
 
-*   **Crop Improvement**: Directly overexpressing *MOS1* is unlikely to be a useful strategy, as it could lead to hyper-activation of NLRs and autoimmune-related fitness costs. However, understanding its function is critical. If we can identify the specific RNA features that MOS1 recognizes, we could engineer NLR transcripts to be more or less dependent on MOS1, allowing for fine-tuning of disease resistance. This represents a sophisticated approach to engineering durable resistance.
+*   **Crop Improvement**: Manipulating *MOS1* itself has not been a strategy for crop improvement because its effect is so specific and dependent on the genetic background. A more common strategy is to target master regulators of the growth-defense trade-off, such as NPR1 or key WRKY transcription factors, which have broader effects.
 
-*   **Seed Priming**: Seed treatments that "prime" the plant's immune system are a key agricultural strategy. These treatments (e.g., with BABA, chitosan, or PAMPs) often work by pre-inducing the expression of defense genes. It is highly probable that *MOS1* is among the genes induced during priming, preparing the emerging seedling for pathogen encounters.
+*   **Seed Treatment and Priming Connections**: This is where the user's context becomes highly relevant. The treatment of seeds with bacterial EPS (Exopolysaccharides) and their associated exRNAs is a form of **biopriming**. The hypothesis that bacterial exRNAs downregulate a plant defense gene to promote germination is a classic example of a plausible priming mechanism.
+    *   **Cross-Kingdom RNAi**: The idea that bacterial sRNAs could directly target and silence a plant mRNA is at the forefront of cross-kingdom communication research (Cai et al., 2018). This would require significant sequence complementarity between the bacterial sRNA and the spinach *MOS1-like* mRNA.
+    *   **Indirect Downregulation**: Alternatively, bacterial EPS or other molecules could be perceived by plant receptors, triggering a signaling cascade that leads to the transcriptional repression of the *MOS1-like* gene as part of a broader shift from defense-readiness to growth promotion. This is a very common outcome of beneficial plant-microbe interactions.
 
-*   **Relevance to the Bacterial Extracellular sRNA Hypothesis**: The prediction that SOV5g005530.1 is downregulated by bacterial sRNAs is both exciting and mechanistically sound.
-    *   **Mechanism**: This posits a form of **cross-kingdom RNA interference**. A pathogenic bacterium would release sRNAs, likely packaged in **extracellular vesicles (EVs)**, which protect them from degradation. These EVs would be taken up by plant cells. The bacterial sRNA would then be loaded into the plant's RNAi machinery (e.g., Argonaute proteins) and guide the cleavage or translational repression of the *spinach MOS1-like* mRNA.
-    *   **Pathogen Strategy**: This is a brilliant evolutionary strategy for a pathogen. Instead of evolving a protein effector to inhibit every single NLR receptor, the bacterium could evolve a single sRNA to target a central hub like MOS1. By silencing *MOS1*, the pathogen could simultaneously cripple the production of multiple NLR proteins, effectively disarming a significant portion of the plant's ETI response.
-    *   **Precedent**: This mechanism is supported by recent but strong evidence. The fungal pathogen *Botrytis cinerea* produces sRNAs that hijack the host RNAi machinery to suppress immunity genes (Weiberg et al., 2013, *Science*). Bacterial delivery of sRNAs via EVs to host cells is also an emerging paradigm (Koeppen et al., 2016, *PNAS*).
+### **Synthesis and Hypothesis Evaluation**
+
+The hypothesis that downregulation of SOV5g005530.1 by bacterial exRNAs improves spinach seed germination is **conceptually plausible but mechanistically speculative.**
+
+**Strengths of the Hypothesis:**
+1.  **Growth-Defense Trade-off**: The core concept is sound. Suppressing a costly defense pathway is a known mechanism to enhance growth and could logically apply to germination vigor.
+2.  **Biopriming Mechanism**: The scenario fits well within the paradigm of biopriming, where beneficial microbes modulate host physiology for mutual benefit (or for their own benefit, which results in a positive outcome for the plant).
+
+**Challenges and Key Assumptions:**
+1.  **Function of the Spinach Homolog**: The entire hypothesis hinges on the function of SOV5g005530.1. If it functions exactly like AtMOS1, its downregulation would only have a beneficial effect if the spinach seeds possess a constitutively active, *snc1*-like immune pathway that imposes a drag on germination. This is a strong and unproven assumption.
+2.  **Specificity of MOS1**: AtMOS1 is not a general immune regulator. It is a highly specialized component that acts on one specific locus. It is possible the spinach homolog has a broader function, but this needs to be demonstrated.
+3.  **Direct vs. Indirect Effect**: The observed improvement in germination is almost certainly an **indirect consequence** of resource reallocation, not a direct role for this MOS1-like protein in controlling germination hormones or breaking dormancy.
+
+**Future Research Directions:**
+1.  **Functional Validation**: Use VIGS (Virus-Induced Gene Silencing) in spinach to specifically silence SOV5g005530.1 and observe the effect on germination and seedling growth in the absence of bacteria. This would test if the gene has a baseline repressive effect on growth.
+2.  **Expression Analysis**: Perform qRT-PCR to confirm that SOV5g005530.1 is indeed downregulated in spinach seeds following treatment with bacterial EPS/exRNAs.
+3.  **Immune Status**: Measure the expression of marker defense genes (e.g., *PR1*) in treated vs. untreated seeds to determine if the treatment correlates with a general suppression of the immune system.
+
+**Conclusion**: While the annotation points to a role in immunity, the well-characterized function of its *Arabidopsis* homolog is extremely specific. The proposed link to improved germination is best explained as an indirect effect of alleviating a defense-related growth cost. This makes SOV5g005530.1 an intriguing target, but its role as a key driver of the phenotype depends heavily on the currently unknown immune status of the spinach seeds and the potentially divergent function of this gene compared to its *Arabidopsis* counterpart.
 
 ---
-### **Conclusion and Future Directions**
-
-SOV5g005530.1 is the spinach ortholog of MOS1, a high-confidence, central regulator of NLR-mediated immunity. While its primary role is in post-germinative defense, its expression during germination provides a state of readiness for the vulnerable seedling.
-
-**The hypothesis that it is targeted by bacterial sRNAs is of high priority.** If validated, it would signify that this gene is a critical battleground in spinach-microbe interactions.
-
-**Key Experimental Verifications Needed**:
-1.  **Confirm Function**: Use VIGS (Virus-Induced Gene Silencing) in spinach to knock down SOV5g005530.1 and test for increased susceptibility to a relevant pathogen (e.g., downy mildew).
-2.  **Validate Targeting**: Synthesize the predicted bacterial sRNA and use it in a spray-induced gene silencing (SIGS) experiment on spinach seedlings. Measure the transcript levels of SOV5g005530.1 and key downstream NLRs.
-3.  **Germination Phenotype**: Carefully phenotype germination and early seedling growth of *MOS1*-silenced spinach, especially under pathogenic pressure in non-sterile soil, to uncover any subtle but ecologically important roles.
+**Cited Literature:**
+*   **Cai, Q., et al. (2018).** Plants send small RNAs in extracellular vesicles to fungal pathogen to silence virulence genes. *Science*.
+*   **Huot, B., et al. (2014).** Balancing growth and defense: integration of signaling pathways to shape plant architecture. *Annual Review of Plant Biology*.
+*   **Li, Y., et al. (2010).** The F-box protein CPR1/CPR30 is a key component of the E3 ligase complex that regulates the activation of systemic acquired resistance in Arabidopsis. *The Plant Journal*. (Note: This paper discusses the broader snc1 pathway, while the primary MOS1 mechanism papers are below).
+*   **Palma, K., et al. (2007).** The MOS1-asssociated complex binds to the SUPPRESSOR OF NPR1-1, CONSTITUTIVE1 promoter and is required for the full expression of snc1-conferred resistance in Arabidopsis. *The Plant Cell*.
+*   **Xia, S., et al. (2013).** A plant-specific N-terminal domain of the PUSSY WILLOWS/MOS1-LIKE 8 protein is required for the prevention of RNA-directed DNA methylation. *The Plant Cell*.

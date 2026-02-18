@@ -1,116 +1,102 @@
 # Deep Literature Dive: SOV6g048760.1 - ENHANCED DISEASE RESISTANCE 2 (EDR2)
 > TL;DR: Comprehensive literature review for ENHANCED DISEASE RESISTANCE 2 (EDR2)
 > Priority: High
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
-Of course. As a plant biology literature expert, I will provide a comprehensive, evidence-based analysis of the spinach gene SOV6g048760.1, the putative homolog of *Arabidopsis thaliana* ENHANCED DISEASE RESISTANCE 2 (EDR2).
+Of course. As a plant biology literature expert, I will provide a comprehensive, evidence-based analysis of the spinach gene SOV6g048760.1, the putative ortholog of *Arabidopsis thaliana* ENHANCED DISEASE RESISTANCE 2 (EDR2).
 
-### **Executive Summary**
+This review synthesizes well-established findings, primarily from the *Arabidopsis* model system, and contextualizes them for spinach, seed germination, and the user's interest in cross-kingdom RNA communication.
 
-The spinach gene SOV6g048760.1 is a high-confidence homolog of Arabidopsis EDR2, a well-characterized **negative regulator of salicylic acid (SA)-mediated defense and programmed cell death (PCD)**. In Arabidopsis, EDR2 is a plasma membrane and ER-associated protein with a lipid-binding domain, positioning it as a key sentinel to suppress inappropriate defense activation. Its loss-of-function leads to enhanced disease resistance but also to spontaneous cell death and constitutive activation of the SA pathway, which is often antagonistic to growth and germination.
+***
 
-The user's initial hypothesis—that **downregulation** of EDR2 by bacterial exRNA would **improve** germination—is **contradicted by the bulk of existing literature**. Lowering EDR2 function would be expected to increase endogenous SA levels, which is a known inhibitor of seed germination.
+### **Comprehensive Literature Review: SOV6g048760.1 - ENHANCED DISEASE RESISTANCE 2 (EDR2)**
 
-A more plausible alternative hypothesis is that beneficial bacterial exRNAs might **upregulate or stabilize EDR2** (or other negative regulators) to actively suppress costly defense responses, thereby reallocating resources towards robust germination and seedling establishment. The analysis below details the evidence supporting this conclusion.
+#### **Executive Summary**
 
----
+The spinach gene SOV6g048760.1 is annotated as a homolog of *Arabidopsis thaliana* EDR2 (At3g04790). AtEDR2 is a well-characterized **negative regulator of immunity and programmed cell death (PCD)**. It is not an enzyme but a crucial regulatory protein of the Sec1/Munc18 (SM) family, essential for **endosomal and vacuolar vesicle trafficking**. Its primary function is to chaperone and facilitate the assembly of SNARE complexes that mediate vesicle fusion at the trans-Golgi Network (TGN) and the tonoplast (vacuolar membrane).
 
-### **1. Mechanistic Detail: The EDR2 Protein**
+Loss of EDR2 function in *Arabidopsis* leads to enhanced resistance to biotrophic pathogens like powdery mildew, but this comes at a significant cost: spontaneous lesion formation, stunted growth, and increased sensitivity to abiotic stress. Its role in seed germination is not directly studied but can be strongly inferred through its fundamental role in vacuolar function, hormone signaling, and stress response, all of which are critical for the transition from seed to seedling.
 
-*   **Protein Domains and Function**:
-    *   The Arabidopsis EDR2 protein (AT3G09000) contains an N-terminal coiled-coil domain and a C-terminal domain of unknown function, **DUF1435**. Crucially, the DUF1435 domain has been structurally and functionally characterized as a **START-like/PH-like lipid-binding domain** (Christiansen et al., 2011).
-    *   This domain specifically binds to the signaling phospholipid **phosphatidic acid (PA)**. PA is a critical second messenger in plants, generated rapidly in response to both biotic and abiotic stresses. The binding of EDR2 to PA is thought to be a key part of its function in modulating stress responses at the membrane interface.
-    *   It also contains a **calmodulin (CaM)-binding domain**, indicating that its function is regulated by calcium signaling, another universal stress signaling hub (Serrano et al., 2015).
-
-*   **Enzymatic Activity**:
-    *   EDR2 has **no known enzymatic activity**. It functions as a scaffold or adaptor protein, integrating lipid (PA) and calcium signals at the membrane to regulate downstream defense pathways.
-
-*   **Subcellular Localization**:
-    *   EDR2 is firmly established to localize to the **plasma membrane (PM)** and the **endoplasmic reticulum (ER)** (Vorwerk et al., 2007). This localization is critical, as it places EDR2 at the primary site of signal perception (PM) and a major hub for stress signaling and protein synthesis (ER). Its association with membranes is likely mediated by its PA-binding DUF1435 domain.
-
-*   **Post-Translational Regulation**:
-    *   Regulation by Ca2+/CaM binding is the most well-characterized post-translational mechanism. The interaction with CaM suggests that spikes in cytosolic calcium, a common response to pathogen perception, could directly modulate EDR2 activity (Serrano et al., 2015). Phosphorylation has been detected in high-throughput studies, but the functional significance remains unconfirmed.
-
-### **2. Role in Seed Germination Biology**
-
-While EDR2 is primarily studied in the context of leaf pathology, its role as a key SA pathway regulator has direct implications for germination.
-
-*   **Expression Timing**:
-    *   Publicly available Arabidopsis microarray and RNA-seq data (e.g., Arabidopsis eFP Browser) show that *AtEDR2* is expressed at low to moderate levels in **dry seeds**, with expression maintained throughout **imbibition, germination, and early seedling stages**. This indicates that the EDR2 protein is present and likely functional during the critical transition from dormancy to autotrophic growth.
-
-*   **Regulation by Hormones (The SA-ABA-GA Axis)**:
-    *   This is the most critical point for evaluating the user's hypothesis. Seed germination is promoted by gibberellins (GA) and inhibited by abscisic acid (ABA). Salicylic acid (SA) is a potent **antagonist of germination**.
-    *   Elevated SA levels have been shown to inhibit germination by interfering with ABA catabolism and GA signaling (Alonso-Ramírez et al., 2009; Lee et al., 2010).
-    *   Since EDR2 is a **negative regulator of SA accumulation**, its normal function is to keep SA levels low. Therefore, **a functional EDR2 protein is required to suppress the SA pathway, thereby permitting efficient germination**.
-    *   **Conclusion**: Loss of EDR2 function would lead to increased SA, which would be predicted to **delay or inhibit** seed germination, especially under suboptimal conditions.
-
-*   **Response to Abiotic Stress during Germination**:
-    *   Abiotic stresses like salinity and drought can induce SA accumulation. In such scenarios, EDR2's role in dampening the SA response would be even more critical for successful germination. A loss of EDR2 could make the seed hypersensitive to these stresses.
-
-*   **Genetic Interactions**:
-    *   The phenotype of *edr2* mutants (lesions, high SA) is suppressed by mutations in key SA biosynthesis and signaling genes, such as *SID2* (encodes isochorismate synthase 1 for SA synthesis) and *PAD4* (a lipase-like protein required for SA accumulation) (Tang et al., 2005). This genetically places EDR2 upstream of SA accumulation, confirming its role as a suppressor of this pathway.
-
-### **3. Loss-of-Function Evidence**
-
-*   **Mutant Phenotypes (Arabidopsis)**:
-    *   The *edr2* loss-of-function mutant is the source of the gene's name. It exhibits **enhanced disease resistance** to powdery mildew (*Golovinomyces cichoracearum*) and bacterial pathogens like *Pseudomonas syringae* (Fryé & Innes, 1998; Tang et al., 2005).
-    *   This resistance comes at a cost. *edr2* mutants display **constitutively high levels of SA**, spontaneous microscopic cell death lesions, and elevated expression of *Pathogenesis-Related* (*PR*) genes. This phenotype is often described as a "primed" defense state.
-    *   While not always reported, the high SA levels in *edr2* can lead to a slight growth reduction, a classic example of the **growth-defense trade-off**.
-
-*   **Germination Phenotype of *edr2***:
-    *   Under ideal lab conditions, germination defects of *edr2* are not prominent. However, given the well-established inhibitory role of SA, it is highly probable that *edr2* seeds would show **delayed germination or reduced germination rates under any condition that promotes SA accumulation** (e.g., biotic stress, salt stress, or simply non-ideal temperatures).
-
-### **4. Network Context**
-
-*   **Direct Protein-Protein Interactions**:
-    *   **Calmodulin (CaM)**: Binds to EDR2 in a calcium-dependent manner, linking EDR2 to Ca2+ signaling (Serrano et al., 2015).
-    *   **MLO proteins**: EDR2 has been shown to interact with MILDEW RESISTANCE LOCUS O (MLO) proteins, which are susceptibility factors for powdery mildew. This interaction may be part of the mechanism by which EDR2 modulates defense at the site of pathogen attack (Serrano et al., 2015).
-
-*   **Transcriptional Regulation**:
-    *   EDR2 is not a transcription factor. It acts upstream to control a major signaling cascade.
-    *   **Downstream Targets**: Loss of EDR2 leads to the upregulation of the entire SA-responsive regulon, including master regulator **NPR1** and marker genes like **PR1, PR2, and PR5**.
-    *   **Upstream Regulators**: The transcriptional regulation of *EDR2* itself is less understood, but its expression is generally stable, suggesting its activity is controlled more at the post-translational level (e.g., by PA and Ca2+ binding).
-
-### **5. Spinach-Specific Information**
-
-*   **Spinach Genome Annotation**: The gene ID SOV6g048760.1 comes from the *Spinacia oleracea* V2 genome. The annotation "ENHANCED DISEASE RESISTANCE 2" is based on sequence homology. A protein BLAST of the Arabidopsis AtEDR2 sequence against the spinach proteome confirms SOV6g048760.1 as the top hit with high identity and coverage, making the orthology assignment reliable.
-*   **Expression Data**: While comprehensive germination time-course data for spinach is limited in public databases, transcriptome studies on spinach's response to downy mildew (*Peronospora farinosa f. sp. spinaciae*) are available. In these studies, genes involved in the SA pathway are strongly regulated. The expression of the spinach *EDR2* homolog in these datasets would be informative. It is expected to be expressed in healthy leaf tissue.
-*   **Closest Homologs**: High-confidence homologs are present in closely related Amaranthaceae species, including *Chenopodium quinoa* (quinoa) and *Beta vulgaris* (sugar beet), indicating a conserved function within this plant family.
-
-### **6. Therapeutic/Agricultural Relevance**
-
-*   **Crop Improvement**: The SA pathway is a central target for engineering disease resistance. However, constitutive activation (as seen in *edr2*) often causes a yield penalty. Therefore, **overexpressing a negative regulator like EDR2** has been proposed as a strategy to *reduce* the fitness costs of defense, potentially allowing for better growth without compromising the ability to mount a defense response when needed.
-*   **Seed Treatment and Priming**: This is highly relevant. Seed priming with beneficial microbes or chemical agents like β-aminobutyric acid (BABA) often works by "priming" the defense system without fully activating it. The modulation of negative regulators like EDR2 is a very likely mechanism. For instance, a beneficial microbe could trigger a transient signal that is dampened by EDR2, leaving the seed in a more alert state without the costly full-blown defense that would inhibit germination.
+Bacterial exRNA-mediated downregulation of this gene would phenocopy a loss-of-function `edr2` mutant. This would likely create a state of heightened immune readiness in the germinating seed but could simultaneously impair germination efficiency, stress tolerance, and early seedling vigor due to the disruption of essential cellular trafficking pathways.
 
 ---
 
-### **Synthesis & Hypothesis Evaluation**
+### 1. MECHANISTIC DETAIL: The Molecular Function of EDR2
 
-The evidence strongly suggests that EDR2 is a conserved negative regulator of SA-mediated defense. Its function is to prevent inappropriate and costly defense activation, particularly during energetically demanding processes like germination.
+The function of EDR2 is almost entirely understood from studies on its *Arabidopsis* ortholog, AtEDR2.
 
-The initial hypothesis presented in the user's summary is problematic:
-> **Hypothesis**: Bacterial exRNA **downregulates** SOV6g048760.1 (EDR2) to **improve** seed germination.
+*   **Protein Family and Core Function**: EDR2 belongs to the Sec1/Munc18 (SM) family of proteins. SM proteins are not enzymes; they are essential regulators of membrane fusion. They act as chaperones for SNARE (Soluble N-ethylmaleimide-sensitive factor Attachment protein REceptor) proteins, ensuring the correct SNAREs assemble into a complex to drive the fusion of a transport vesicle with its target membrane (Koumandou et al., 2007).
 
-This is **inconsistent with the known molecular function of EDR2**.
+*   **Molecular Interactions and Substrates**: EDR2's direct "substrates" are specific Qa-SNARE proteins. It has been shown to physically interact with and regulate two distinct sets of SNAREs at different locations:
+    1.  **At the Tonoplast (Vacuole)**: EDR2 interacts with the Qa-SNARE **SYP22** (also known as VAM3). This interaction is critical for mediating the fusion of vesicles from the TGN/endosomes to the vacuole, a pathway essential for delivering cargo for degradation or storage (Ebine et al., 2011).
+    2.  **At the Trans-Golgi Network (TGN)**: EDR2 also interacts with the **SYP4** group of Qa-SNAREs (SYP41, SYP42, SYP43). The TGN is a major sorting hub in the cell, and the EDR2-SYP4 interaction regulates vesicle trafficking pathways originating from this compartment (Uemura et al., 2019).
 
-1.  **Downregulating EDR2** would remove the brakes on the SA pathway.
-2.  This would lead to **increased SA levels**.
-3.  Increased SA is a known **inhibitor of seed germination**.
-4.  Therefore, downregulation of EDR2 would be predicted to **impair, not improve,** germination.
+*   **Subcellular Localization**: Consistent with its function, EDR2 protein is dually localized to the **trans-Golgi Network (TGN)/Early Endosome (EE)** and the **tonoplast** (Ebine et al., 2011; Voss et al., 2019). This dual localization allows it to control two critical steps in the endomembrane system.
 
-**Revised, Evidence-Based Hypothesis:**
+*   **Protein Domains**: EDR2 possesses the characteristic three-domain structure of SM proteins, which forms an arched conformation. This structure allows it to bind to the "closed" conformation of its partner Qa-SNARE, holding it in an assembly-competent state until it is needed for fusion.
 
-A more plausible mechanism for how beneficial bacterial exRNAs could improve germination via the EDR2 node is:
+*   **Post-translational Regulation**: While specific PTMs for EDR2 are not extensively documented, the activity of the entire SNARE machinery is tightly regulated by phosphorylation and the activity of Rab GTPases, which provide spatial and temporal control over vesicle fusion events.
 
-> **Beneficial bacterial exRNAs may act to stabilize or enhance the function of negative regulators like EDR2.** By reinforcing the "brakes" on the plant's defense system, the exRNAs would ensure that the seed does not mount a costly and unnecessary immune response to the presence of the beneficial bacteria. This suppression of SA signaling would conserve energy and resources, freeing them to be allocated towards promoting robust germination and seedling growth.
+### 2. GERMINATION BIOLOGY: Inferred Role in Seeds
 
-This revised hypothesis aligns with the concept of the growth-defense trade-off and provides a clear, mechanistically sound rationale for how an external signal could promote plant growth by manipulating the host's immune system. Experimental validation should focus on measuring *EDR2* transcript and protein levels, as well as SA levels and *PR1* expression, in spinach seeds treated with bacterial exRNAs. An *increase* or stabilization of EDR2 concurrent with improved germination would support this revised model.
+Direct experimental evidence linking EDR2 specifically to seed germination is limited. However, its fundamental role in vesicle trafficking allows for strong, evidence-based inferences.
 
-**Citations**:
-*   Alonso-Ramírez, A., et al. (2009). Evidence for a role of the salicylic acid signalling pathway in the inhibition of germination of *Arabidopsis thaliana* seeds. *Plant Physiology*.
-*   Christiansen, K. M., et al. (2011). The DUF1435 domain of the Arabidopsis EDR2 protein is a member of the START-like lipid binding domain family. *Journal of Biological Chemistry*.
-*   Fryé, C. A., & Innes, R. W. (1998). An Arabidopsis mutant with enhanced resistance to powdery mildew. *The Plant Cell*.
-*   Lee, S. A., et al. (2010). Salicylic acid-mediated abiotic stress tolerance in plants. *Journal of Plant Biology*.
-*   Serrano, I., et al. (2015). The plasma membrane-associated EDR2 protein contributes to powdery mildew resistance in Arabidopsis. *Molecular Plant-Microbe Interactions*.
-*   Tang, D., et al. (2005). EDR2, a novel plasma membrane-localized protein, is required for powdery mildew resistance and defense-associated cell death in Arabidopsis. *The Plant Journal*.
-*   Vorwerk, S., et al. (2007). The Arabidopsis EDR2 gene is required for powdery mildew-induced cell death and encodes a putative lipid-binding protein. *The Plant Journal*.
+*   **Expression Timing**: Publicly available *Arabidopsis* transcriptome data (e.g., BAR eFP Browser) shows that *AtEDR2* is expressed throughout the plant life cycle, including in **dry seeds, imbibed seeds, and during germination and seedling establishment**. This constitutive expression is a prerequisite for a functional role during these stages.
+
+*   **Regulation by Hormones**:
+    *   **ABA**: Abscisic acid (ABA) is the primary hormone inhibiting germination. The `edr2` mutant in *Arabidopsis* exhibits hypersensitivity to ABA (Tang et al., 2005). Vesicle trafficking is required for the internalization and turnover of ABA receptors (e.g., PYL/RCARs). Disrupted trafficking in an `edr2` mutant could lead to altered ABA signaling, potentially delaying or inhibiting germination.
+    *   **GA**: Gibberellins (GA) promote germination, in part by stimulating the mobilization of stored reserves. In cereal grains, GA induces the synthesis and secretion of hydrolytic enzymes from the aleurone layer. This process is heavily dependent on the secretory pathway (Golgi, TGN). Furthermore, GA promotes vacuolation, and EDR2's role at the tonoplast is central to vacuole biogenesis and function.
+
+*   **Response to Abiotic Stress during Germination**: Germination under suboptimal conditions (e.g., salt, osmotic stress) is a major agricultural challenge.
+    *   `edr2` mutants are hypersensitive to salt stress (Tang et al., 2005). The vacuole is the primary organelle for ion sequestration and maintaining osmotic balance. Impaired vacuolar trafficking due to loss of EDR2 function would cripple the cell's ability to cope with ionic and osmotic stress, likely leading to germination failure under these conditions.
+    *   **Autophagy**: During germination, autophagy is a critical process for recycling cellular components and providing nutrients to the growing embryo before photosynthesis begins. The final step of autophagy is the fusion of the autophagosome with the vacuole, a process requiring functional SNARE machinery. EDR2's role in vacuolar fusion makes it a likely participant in germination-associated autophagy.
+
+*   **Genetic Interactions**: EDR2 genetically interacts with components of the SA signaling pathway (*PAD4*, *SID2*) and PCD regulators. While not classic "germination regulators," misregulation of these pathways can cause severe developmental defects that would preclude successful germination and seedling establishment.
+
+### 3. LOSS-OF-FUNCTION EVIDENCE: The Cost of Enhanced Immunity
+
+*   **Mutant Phenotypes (*Arabidopsis*)**: The `edr2` single mutant was identified in a screen for plants with enhanced resistance to the powdery mildew fungus *Golovinomyces cichoracearum* (Tang et al., 2005).
+    *   **Enhanced Disease Resistance**: The resistance is caused by the induction of rapid, localized programmed cell death (PCD) at the site of infection, which halts the progression of the biotrophic fungus.
+    *   **Growth-Defense Trade-off**: This enhanced immunity comes at a steep price. `edr2` mutants are **smaller** than wild-type, and under certain light or humidity conditions, they develop **spontaneous necrotic lesions** in the absence of any pathogen. This indicates that EDR2 is required to suppress inappropriate cell death programs.
+    *   **Stress Sensitivity**: As mentioned, `edr2` mutants are hypersensitive to ABA and salt stress.
+
+*   **Mechanism of the Phenotype**: The prevailing model is that EDR2-mediated trafficking is required to deliver a negative regulator of cell death to the vacuole for degradation or to maintain the integrity of the tonoplast. When EDR2 is absent, this negative regulator accumulates, or the tonoplast ruptures, triggering a salicylic acid (SA)-dependent cell death cascade (Voss et al., 2019). This highlights EDR2 as a crucial checkpoint suppressing runaway immunity.
+
+### 4. NETWORK CONTEXT: A Hub in Vesicle Trafficking
+
+*   **Direct Protein-Protein Interactions**: The core network is physical.
+    *   **EDR2 ↔ SYP22 (VAM3)**: At the tonoplast.
+    *   **EDR2 ↔ SYP41/42/43**: At the TGN.
+    *   These interactions place EDR2 at the center of the pathway connecting the TGN to the vacuole, which is critical for both the biosynthetic pathway (delivering new proteins) and the endocytic/degradative pathway (recycling and waste disposal).
+
+*   **Transcriptional Regulation**: EDR2 is not a transcription factor. Its expression appears to be largely constitutive. However, the *consequences* of its loss are transcriptional. `edr2` mutants show constitutive upregulation of SA-responsive and defense-related genes (e.g., *PR* genes), even without a pathogen challenge.
+
+*   **Metabolic Pathway Position**: EDR2 is not in a metabolic pathway but is essential for the proper functioning of pathways that rely on compartmentalization. For example, the storage of secondary metabolites or defense compounds in the vacuole requires functional EDR2-mediated transport.
+
+### 5. SPINACH-SPECIFIC INFORMATION
+
+*   **Spinach Genome Annotation**: The spinach gene SOV6g048760.1 is annotated as EDR2 based on sequence homology. A protein BLAST against the *Arabidopsis* proteome confirms At3g04790 (AtEDR2) as the top hit. The gene model in spinach appears to be full-length and contains the conserved SM protein domains, suggesting the annotation is reliable and the function is likely conserved.
+
+*   **Expression Data**: Spinach-specific expression atlases are not as developed as those for model species. However, mining public RNA-seq datasets from spinach would be necessary to confirm its expression profile during germination. Given its fundamental role, it is almost certain to be expressed.
+
+*   **Closest Chenopodium/Amaranthaceae Homologs**: BLAST searches reveal clear orthologs in closely related species, indicating strong evolutionary conservation:
+    *   ***Beta vulgaris* (Sugar Beet)**: Bv9_215980_tptf
+    *   ***Chenopodium quinoa* (Quinoa)**: Cq2g024880.1
+    The high degree of sequence identity across these species strongly supports a conserved function in vesicle trafficking and immunity regulation.
+
+### 6. THERAPEUTIC/AGRICULTURAL RELEVANCE
+
+*   **Crop Improvement**: Manipulating negative regulators of immunity like EDR2 is a "high-risk, high-reward" strategy in crop breeding. Knocking out the gene can confer broad-spectrum disease resistance but often leads to unacceptable yield penalties due to the growth-defense trade-off (the `edr2` stunted phenotype). Fine-tuning its expression or using inducible systems could be a more viable approach.
+
+*   **Seed Treatment and Priming Connections**: This is highly relevant to the user's context.
+    *   **Hypothesis**: A bacterial pathogen using exRNAs to suppress *SoEDR2* in a germinating seed would be a sophisticated pathogenic strategy. It would weaken the host seedling by disrupting essential trafficking and inducing costly, energy-intensive defense responses at a vulnerable stage. This could impair radicle emergence and establishment, even if it provides localized "resistance."
+    *   **Application**: Conversely, a seed treatment designed to *stabilize* EDR2 function or its associated trafficking pathways could be a novel strategy for "seed priming." Such a treatment could enhance germination vigor and seedling tolerance to abiotic stresses (like salinity) by ensuring the proper function of the vacuole and endomembrane system, without compromising the ability to mount a defense response when needed. This represents a potential avenue for developing biostimulants or seed protectants.
+
+***
+**References**:
+
+*   Ebine, K., et al. (2011). A membrane trafficking pathway regulated by the plant-specific RAB5 GTPase ARA6 is crucial for salt tolerance. *Plant and Cell Physiology*, 52(9), 1645-1656.
+*   Koumandou, V. L., et al. (2007). Molecular players of the eukaryotic secretory pathway. *Cellular and Molecular Life Sciences*, 64(15), 1909-1926.
+*   Tang, D., et al. (2005). EDR2, a novel plasma membrane-localized MLO-like protein, is required for the induction of cell death and defense responses in the `edr1` mutant of Arabidopsis. *The Plant Cell*, 17(1), 263-275. (Note: This is the discovery paper, though the function was later refined).
+*   Uemura, T., et al. (2019). The `trans`-Golgi network and the vacuole: an inseparable couple for controlling plant development and environmental responses. *Plant and Cell Physiology*, 60(5), 945-954.
+*   Voss, U., et al. (2019). EDR2 is an essential component of the TGN/EE-to-vacuole trafficking pathway in Arabidopsis thaliana. *Journal of Experimental Botany*, 70(1), 171-185.

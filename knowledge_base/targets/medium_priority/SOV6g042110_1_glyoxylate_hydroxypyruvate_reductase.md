@@ -1,8 +1,8 @@
 # SOV6g042110.1 - Glyoxylate/hydroxypyruvate reductase
-> TL;DR: Here's an analysis of the spinach gene target SOV6g042110.1 (Glyoxylate/hydroxypyruvate reductase), considering its predicted downregulation by bacterial extracellular small RNAs and the observed phenotypic improvements in spinach seed germination. -
+> TL;DR: Here's an analysis of the spinach gene SOV6g042110.1 (Glyoxylate/hydroxypyruvate reductase) in the context of bacterial exRNA-mediated downregulation and improved germination/seedling growth. ---
 > Priority: Medium
 > Pathway: metabolic
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
 ## Gene Information
 - **Gene ID**: SOV6g042110.1
@@ -12,13 +12,14 @@
 
 ## Analysis
 
-Here's an analysis of the spinach gene target SOV6g042110.1 (Glyoxylate/hydroxypyruvate reductase), considering its predicted downregulation by bacterial extracellular small RNAs and the observed phenotypic improvements in spinach seed germination.
+Here's an analysis of the spinach gene SOV6g042110.1 (Glyoxylate/hydroxypyruvate reductase) in the context of bacterial exRNA-mediated downregulation and improved germination/seedling growth.
 
 ---
 
-### 1. FUNCTION: What is the known/predicted function of this gene?
+### 1. FUNCTION: Glyoxylate/hydroxypyruvate reductase
 
 **KNOWN FACTS:**
-*   **Enzyme Class:** Glyoxylate/hydroxypyruvate reductase (GHR; EC 1.1.1.26/1.1.1.81). This enzyme typically has dual specificity, catalyzing the NAD(P)H-dependent reduction of both glyoxylate to glycolate and hydroxypyruvate to glycerate.
-*   **Metabolic Pathways:**
-    *
+*   **Enzyme Activity**: Glyoxylate/hydroxypyruvate reductase (GHR; EC 1.1.1.26/79) is a dual-function enzyme that catalyzes two key reactions:
+    1.  The NADH-dependent reduction of glyoxylate to glycolate.
+    2.  The NADH/NADPH-dependent reduction of hydroxypyruvate to glycerate.
+*   **

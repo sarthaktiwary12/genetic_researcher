@@ -1,6 +1,6 @@
 # Batch 8 Gene Analysis Summary
 > TL;DR: Batch analysis of 10 gene targets.
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
 ## Genes in Batch
 - SOV3g033920.1: PP2A regulatory subunit A (65 kDa)
@@ -16,11 +16,10 @@
 
 ## Analysis
 
-Here's a quick assessment of the spinach gene targets for their relevance to germination improvement when downregulated by bacterial exRNAs:
+Here's an assessment of the spinach gene targets:
 
-| Gene ID | Priority | Key reason downregulation helps germination | Evidence strength |
-| :------------------ | :------- | :--------------------------------------------------------- | :---------------- |
-| SOV3g033920.1 | Medium | Potentially modulates hormone signaling (e.g., GA/ABA balance) towards germination. | Moderate |
-| SOV4g038060.1 | Medium | May repress germination-promoting genes or promote dormancy. | Moderate |
-| SOV4g054740.1 | Low | Primarily involved in chloroplast development; downregulation unlikely to improve germination. | Weak |
-| SOV2
+| Gene ID          | Priority | Key reason downregulation helps germination                                    | Evidence strength |
+| :--------------- | :------- | :---------------------------------------------------------------------------- | :---------------- |
+| SOV3g033920.1    | Medium   | Could shift hormone balance (e.g., reduce ABA signaling, enhance GA signaling). | Moderate          |
+| SOV4g038060.1    | Medium   | Could alleviate transcriptional repression of germination-promoting genes.     | Weak              |
+| SOV4g054740.1    | Low      | Unlikely to improve germination; more likely to impair post-germinative development. | Unknown           |

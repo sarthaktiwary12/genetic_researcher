@@ -1,6 +1,6 @@
 # Batch 7 Gene Analysis Summary
 > TL;DR: Batch analysis of 10 gene targets.
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
 ## Genes in Batch
 - SOV1g020340.1: MYB transcription factor
@@ -16,22 +16,14 @@
 
 ## Analysis
 
-Here is an assessment of the spinach gene targets:
+Here's a quick assessment of the spinach gene targets:
 
-SOV1g020340.1 | High | Could reduce ABA sensitivity or promote GA pathways by regulating target genes. | Moderate
-SOV4g005210.1 | Low | Highly speculative; general downregulation likely detrimental to essential organelle function. | Weak
-SOV1g018480.1 | High | Could reduce ABA-induced Ca2+ signaling or stress responses that inhibit germination. | Moderate
-SOV1g044260.1 | Low | Highly speculative; general disruption of protein sorting is likely detrimental. | Weak
-SOV2g001140.1 | Low | Highly speculative; general disruption of Golgi function is likely detrimental. | Weak
-SOV2g014810.1 | High | Could reduce ABA sensitivity, stress responses, or promote GA pathways by regulating target genes. | Moderate
-SOV3g003500.1 | Low | Detrimental; disrupts fundamental DNA replication and repair, essential for growth. | Strong
-SOV3g048330.1 | Low | Detrimental; disrupts protein synthesis quality control, leading to proteome instability. | Moderate
-SOV5g032210.1 | High | Could reduce accumulation or transport of ABA or other germination inhibitors into the embryo. | Moderate
-SOV6g042250.1 | Medium | Could impact cell wall loosening, lipid signaling, or breakdown of inhibitory compounds. | Moderate
-
----
-
-**Summary of Patterns:**
-1.  Several high-priority targets are transcription factors (MYB, NAC) or transporters (CNGC, NPF), indicating bacterial exRNAs may modulate key regulatory and transport nodes influencing hormone balance (ABA/GA) or stress responses.
-2.  Genes involved in fundamental, ubiquitous cellular processes (DNA replication, general RNA processing, Golgi/vacuolar sorting) are low priority, as their downregulation is mechanistically unlikely to improve germination and would likely be detrimental.
-3.  The most promising candidates point towards a mechanism where bacterial exRNAs fine-tune specific signaling or transport pathways to alleviate dormancy or stress, rather than broadly disrupting essential cellular machinery.
+**Gene ID | Priority | Key reason downregulation helps germination | Evidence strength**
+---|---|---|---
+SOV1g020340.1: MYB transcription factor [signaling] | Medium | Potentially represses germination by regulating hormone (e.g., ABA) pathways or stress responses. | Moderate
+SOV4g005210.1: Pentatricopeptide repeat-containing (predicted) [rna_processing] | Low | Highly speculative; unlikely beneficial unless it processes specific inhibitory transcripts. | Weak/Unknown
+SOV1g018480.1: Cyclic nucleotide-gated channel (CNGC) [transport_ion_homeostasis] | Medium | Modulating Ca2+ signaling to favor germination (e.g., reducing ABA-promoted Ca2+ influx). | Moderate
+SOV1g044260.1: Vacuolar protein sorting-associated protein [transport_ion_homeostasis] | Low | Highly speculative; unlikely beneficial unless it alters trafficking of a specific germination inhibitor. | Weak/Unknown
+SOV2g001140.1: Conserved oligomeric Golgi complex subunit 8 [transport_ion_homeostasis] | Low | Highly speculative; unlikely beneficial unless it affects specific inhibitory protein trafficking/glycosylation. | Weak/Unknown
+SOV2g014810.1: NAC domain-containing protein [signaling] | High | Potentially represses germination by regulating hormone (e.g., ABA) pathways or stress responses. | Strong
+SOV3g003500.1: DNA-directed primase/polymerase [dna_repair_replication] | Low | Highly speculative; likely detrimental to fundamental cellular processes like cell division.

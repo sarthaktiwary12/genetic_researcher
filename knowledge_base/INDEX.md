@@ -1,6 +1,6 @@
 # ExRNA Biology Research Engine - Master Index
 > TL;DR: Knowledge base for investigating how bacterial extracellular small RNAs improve spinach germination. 109 predicted gene targets organized by pathway and priority.
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
 ## Research Question
 Which spinach transcripts, if downregulated by bacterial exRNAs (antisense), explain improved germination and seedling vigor?

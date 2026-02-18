@@ -1,6 +1,6 @@
 # Batch 6 Gene Analysis Summary
 > TL;DR: Batch analysis of 10 gene targets.
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
 ## Genes in Batch
 - SOV4g055450.1: Sec1 family domain-containing protein MIP3 (putative)
@@ -16,10 +16,11 @@
 
 ## Analysis
 
-Here's an assessment of the spinach gene targets:
+Here's a quick assessment of your spinach gene targets:
 
-| Gene ID           | Priority | Key reason downregulation helps germination                                                              | Evidence strength |
-| :---------------- | :------- | :------------------------------------------------------------------------------------------------------- | :---------------- |
-| SOV4g055450.1     | Medium   | Potentially involved in transport/secretion of dormancy-promoting factors or negative regulators.         | Moderate          |
-| SOV4g055600.1     | High     | Could reduce ABA synthesis/activity or increase GA/BR levels by influencing hormone metabolism.            | Moderate          |
-| SOV5g006110.1     | High     | Could stabilize positive regulators of germination or destabilize negative regulators of
+| Gene ID          | Priority | Key reason downregulation helps germination                                    | Evidence strength |
+| :--------------- | :------- | :---------------------------------------------------------------------------- | :---------------- |
+| SOV4g055450.1    | Low      | Highly speculative; *if* it negatively impacts water/ion balance.             | Unknown           |
+| SOV4g055600.1    | Medium   | Potentially reduces ABA biosynthesis or other inhibitory hormone pathways.    | Weak              |
+| SOV5g006110.1    | High     | Could stabilize positive regulators of germination by preventing their degradation. | Moderate          |
+| SOV5

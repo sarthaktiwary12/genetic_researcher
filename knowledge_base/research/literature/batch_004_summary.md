@@ -1,6 +1,6 @@
 # Batch 4 Gene Analysis Summary
 > TL;DR: Batch analysis of 10 gene targets.
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
 ## Genes in Batch
 - SOV4g040550.1: RNase H domain-containing protein
@@ -16,13 +16,10 @@
 
 ## Analysis
 
-Here's a quick assessment of the spinach gene targets for their relevance to germination improvement when downregulated by bacterial exRNAs:
+Here's an assessment of the spinach gene targets for their relevance to germination improvement when downregulated by bacterial exRNAs:
 
-**ONE-LINE ASSESSMENTS:**
-
-*   **SOV4g040550.1** | Low | Downregulation of essential DNA repair/replication enzyme is generally detrimental; highly speculative if beneficial. | Weak
-*   **SOV4g049080.1** | Medium | Potentially by altering trafficking of specific inhibitory receptors/transporters or improving ion balance. | Weak
-*   **SOV5g001320.1** | Low | Downregulation of an essential metabolic enzyme (pyrimidine synthesis) would likely impair growth. | Weak
-*   **SOV5g000510.1** | Medium | Potentially by disrupting processing of specific transcripts that inhibit germination, or by modulating a stress response. | Weak
-*   **SOV5g008400.1** | High | By improving cellular ion balance, pH, or reducing accumulation of inhibitory ions/signaling. | Moderate
-*   **SOV5g005530.1** | High | By reducing an energy-costly immune response, freeing up resources for germination and growth. |
+| Gene ID          | Priority | Key reason downregulation helps germination                                                                                             | Evidence strength |
+| :--------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------- | :---------------- |
+| SOV4g040550.1    | Low      | Highly speculative; general downregulation of DNA repair/replication is detrimental to growth.                                          | Weak/Unknown      |
+| SOV4g049080.1    | Low      | Highly speculative; general disruption of membrane trafficking is usually detrimental; specific cargo unknown.                          | Weak/Unknown      |
+| SOV5g001320.1

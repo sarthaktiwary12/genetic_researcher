@@ -1,6 +1,6 @@
 # Gene Targets Index
 > TL;DR: 109 spinach gene targets predicted to be downregulated by bacterial exRNAs. 21 high priority, 49 medium, 39 low.
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
 ## Priority Distribution
 | Priority | Count | Directory |

@@ -1,34 +1,39 @@
 # Metabolic Priming
 > TL;DR: Cross-cutting theme analysis for metabolic priming in exRNA-mediated germination improvement.
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
-### **THEME 6: Metabolic Priming and Signaling**
+### **THEME 6: Metabolic Priming & Re-routing**
 
-The targets include key enzymes that sit at the intersection of metabolic status and developmental signaling.
+This theme involves reconfiguring central metabolism from a dormant, long-term storage mode to an active, biosynthetic mode optimized for rapid growth.
 
 *   **Key Targets:**
-    *   **Sugar Sensing:** `Trehalose-phosphate synthase (TPS)`. The product, Trehalose-6-Phosphate (T6P), is a crucial signal of sugar availability that links metabolic status directly to growth programs.
-    *   **Biosynthesis Precursors:** `Aspartokinase` (amino acid synthesis), `CTP synthase` (nucleotide synthesis).
+    *   **Sugar Signaling:** SOV2g009230.1 (Trehalose-phosphate synthase - TPS)
+    *   **Amino Acid Biosynthesis:** SOV1g048270.1 (Aspartokinase)
+    *   **Nucleotide Biosynthesis:** SOV5g001320.1 (CTP synthase)
+    *   **Energy/Redox Metabolism:** SOV6g029280.1 (6-phosphogluconate dehydrogenase), SOV6g042110.1 (Glyoxylate/hydroxypyruvate reductase)
 
-*   **Mechanism:**
-    Downregulating TPS would alter T6P levels, recalibrating the seed's perception of its own energy reserves. This could lower the threshold of sugar availability required to trigger germination. Modulating the entry points for amino acid and nucleotide synthesis could redirect metabolic flux towards the most critically needed building blocks for initial cell division and protein production.
+*   **Mechanism:** Trehalose-6-phosphate (T6P), produced by TPS, is a critical signal of sugar availability that links metabolic status to growth. Downregulating TPS could alter this signaling, potentially stimulating the breakdown of stored reserves by mimicking a low-energy state. Rerouting amino acid and nucleotide synthesis by targeting key enzymes like aspartokinase and CTP synthase ensures that the building blocks are available for new protein and DNA synthesis.
 
-*   **Predicted Impact on Germination:**
-    Positive. By altering key metabolic signals and fluxes, the seed is "primed" to efficiently utilize its stored energy and commit to growth.
+*   **Predicted Impact on Germination:** **Positive.** This ensures that once the decision to germinate is made (by Themes 2 & 4), the metabolic engine is ready and properly configured to fuel the process.
 
 ---
 
-### **Theme Interactions & Minimal Set**
+### **Theme Interactions & Synergy**
 
-The themes are highly synergistic:
+The true power of this strategy lies in the synergistic interplay between the themes:
 
-*   **Epigenetics (2) enables Hormones (4) and Defense (1):** Epigenetic remodeling is the master switch that allows for the transcriptional suppression of ABA/defense genes and activation of growth genes.
-*   **Defense (1) reduction fuels Metabolism (6):** The resources saved from the defense downshift provide the substrate for the metabolic activity needed for germination.
-*   **ROS (3) and Hormones (4) are tightly linked:** The ABA/GA balance is modulated by the cellular redox state, creating a reinforcing loop.
-*   **Transport (5) executes the plan:** Changes in hormones and metabolism mean nothing without the transporters to move water, ions, and sugars to drive the physical growth.
+*   **Reinforcement:**
+    *   **Epigenetic Remodeling (2) enables Hormone Modulation (4):** Unlocking chromatin makes hormone-responsive genes accessible for transcription.
+    *   **Defense Downshift (1) fuels Metabolic Priming (6):** The resources saved from defense are channeled directly into the biosynthetic pathways being activated.
+    *   **Hormone Modulation (4) directs ROS Optimization (3):** The shift away from ABA signaling reduces ABA-induced ROS production, contributing to the establishment of the pro-germination "oxidative window."
+    *   **Metabolic Priming (6) requires Transport (5):** Newly synthesized metabolites and mobilized nutrients must be efficiently transported to the growing embryo.
 
-The minimal set of themes required to explain the phenotype would likely be **Defense Downshift (1)**, **Epigenetic Remodeling (2)**, and **Hormone Node Modulation (4)**. These three represent the core decisions: reallocate resources, unlock the genome, and shift the master hormonal balance. The other themes (ROS, Transport, Metabolism) act as crucial facilitators and amplifiers of this core decision.
+*   **Conflicts:** There are no apparent conflicts. The entire set of downregulated targets points in a single, coherent direction: **de-repressing growth.**
 
-### **OVERALL NARRATIVE**
+*   **Minimal Set for Phenotype:** The minimal core set required to explain the germination phenotype would be **Theme 2 (Epigenetics)** and **Theme 4 (Hormones)**. These two represent the "decision-making" layer, releasing the brakes and hitting the accelerator. **Theme 1 (Defense Downshift)** provides the "fuel" for this decision by reallocating resources. The other themes (ROS, Transport, Metabolism) are the essential downstream "execution" machinery.
 
-Bacterial extracellular RNAs orchestrate a sophisticated and multi-pronged molecular strategy to accelerate spinach seed germination. They act as master regulators, simultaneously issuing commands to release the epigenetic brakes that maintain dormancy and re-tuning the seed's master hormonal control panel away from the inhibitory "wait" signal of ABA. This reprogramming is made possible by a strategic downshift of the costly defense and stress-response machinery, liberating a pool of energy and resources. This freed-up capital is then channeled into growth, a process physically enabled by the fine-tuning of ROS signals and ion transport to drive water uptake and cell expansion, effectively launching the seed into a rapid and vigorous germination trajectory.
+---
+
+### **Overall Narrative**
+
+Bacterial extracellular RNAs appear to execute a sophisticated, multi-layered reprogramming of the spinach seed to force the transition from dormancy to growth. This strategy begins by **remodeling the epigenetic landscape**, unlocking the genetic blueprint for germination that is normally silenced. Simultaneously, the exRNAs target key nodes in **hormone signaling pathways**, decisively shifting the crucial ABA/GA balance towards a pro-growth state. To fuel this transition, they initiate a **ceasefire on the costly defense systems**, liberating energy and metabolic precursors. This newly available capital is then channeled into active growth, a process physically enabled by the fine-tuning of **ROS signaling** to weaken the seed coat and the modulation of **membrane transporters** to drive water uptake and mobilize nutrients. The result is a highly coordinated and robust switch from a quiescent, defended state to one of rapid, successful germination.

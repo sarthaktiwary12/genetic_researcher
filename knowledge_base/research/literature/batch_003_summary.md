@@ -1,6 +1,6 @@
 # Batch 3 Gene Analysis Summary
 > TL;DR: Batch analysis of 10 gene targets.
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
 ## Genes in Batch
 - SOV1g011940.1: DUF1336 domain-containing protein
@@ -16,23 +16,21 @@
 
 ## Analysis
 
-Here's a quick assessment of the spinach gene targets:
+Here's an assessment of the spinach gene targets for their relevance to germination improvement when downregulated by bacterial exRNAs:
 
-| Gene ID          | Priority | Key reason downregulation helps germination                                                              | Evidence strength |
-| :--------------- | :------- | :------------------------------------------------------------------------------------------------------- | :---------------- |
-| SOV1g011940.1    | Low      | Unknown function, no clear link to germination.                                                          | Unknown           |
-| SOV1g021670.1    | Medium   | *Might* reduce energy expenditure on defense, reallocating resources to germination, or modulate stress. | Weak              |
-| SOV1g048270.1    | Low      | Downregulation would likely *impair* essential amino acid synthesis, hindering germination.             | Strong            |
-| SOV2g038560.1    | Low      | Downregulation would likely *reduce* stress tolerance, hindering germination.                            | Strong            |
-| SOV3g007450.1    | Low      | Very broad function, specific role in germination unknown.                                               | Unknown           |
-| SOV3g031450.1    | Medium   | Modulation of protein turnover is critical; downregulation *could* impact stability of key regulators.   | Weak              |
-| SOV4g000010.1    | Low      | Downregulation would severely *impair* protein synthesis, a fundamental process for germination.         | Strong            |
-| SOV4g008190.1    | Medium   | Lipid metabolism is critical; specific GDSL lipases can impact hormone regulation or dormancy.           | Moderate          |
-| SOV4g015450.1    | High     | Epigenetic regulation (histone methylation) controls dormancy/germination; downregulation could activate promoters. | Strong            |
-| SOV4g032870.1    | High     | AHPs are central to cytokinin signaling, and cytokinins are known inhibitors of seed germination.        | Strong            |
+| Gene ID          | Priority | Key reason downregulation helps germination                                    | Evidence strength |
+| :--------------- | :------- | :----------------------------------------------------------------------------- | :---------------- |
+| SOV1g011940.1    | Low      | Unknown function; *if* it inhibits germination.                                | Unknown           |
+| SOV1g021670.1    | Medium   | Reduced defense response could reallocate resources or remove growth inhibition. | Moderate          |
+| SOV1g048270.1    | Low      | Downregulation of essential amino acid synthesis is highly unlikely to improve. | Weak              |
+| SOV2g038560.1    | Low      | Downregulation would likely impair stress tolerance, hindering germination.    | Weak              |
+| SOV3g007450.1    | Low      | Unknown specific role; too broad to assess plausibility.                       | Unknown           |
+| SOV3g031450.1    | Medium   | Could be involved in stabilizing germination-inhibiting proteins or degrading promoting ones. | Moderate          |
+| SOV4g000010.1    | Low      | Essential for protein synthesis; downregulation would severely hinder germination. | Weak              |
+| SOV4g008190.1    | Medium   | Could be involved in dormancy-promoting lipid metabolism or hormone signaling. | Moderate          |
+| SOV4g015450.1    | High     | Reduced repressive histone methylation (e.g., H3K9me2) could activate germination-promoting genes. | Strong            |
+| SOV4g032870.1    | High     | Direct involvement in hormone signaling (e.g., cytokinin, ethylene, ABA crosstalk) where its activity inhibits germination. | Strong            |
 
-**Most Interesting Patterns (3-line summary):**
+---
 
-1.  Two targets (SUVR5 and AHP-like) stand out as high-priority candidates due to their direct involvement in well-established germination regulatory pathways (epigenetics and hormone signaling, respectively).
-2.  Several essential metabolic or housekeeping genes (Aspartokinase, Detoxification, Lysine-tRNA ligase) are unlikely to be beneficial targets for downregulation, suggesting potential off-target effects or that these are not the primary mechanisms.
-3.  The remaining targets have plausible but less direct or highly context-dependent links to germination, requiring more specific functional characterization to assess their relevance.
+**Summary of

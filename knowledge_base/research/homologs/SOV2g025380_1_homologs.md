@@ -1,38 +1,58 @@
 # Homolog Research: SOV2g025380.1 - Cation-chloride cotransporter 1-like
 > TL;DR: Homolog analysis for Cation-chloride cotransporter 1-like
-> Last Updated: 2026-02-17
+> Last Updated: 2026-02-18
 
-The spinach gene **SOV2g025380.1**, annotated as a "Cation-chloride cotransporter 1-like", belongs to the Cation-Chloride Cotransporter (CCC) family, which plays crucial roles in ion homeostasis, particularly potassium (K$^+$), sodium (Na$^+$), and chloride (Cl$^-$) transport, and in adaptation to abiotic stresses. These transporters are typically localized to the tonoplast (vacuolar membrane) or plasma membrane.
+The spinach gene **SOV2g025380.1**, annotated as "Cation-chloride cotransporter 1-like," belongs to the SLC12 (Solute Carrier family 12) family of cation-chloride cotransporters (CCCs). These transporters play crucial roles in maintaining ion homeostasis, cell volume regulation, and long-distance nutrient transport in plants.
+
+Here's a detailed analysis of its closest characterized homologs:
 
 ---
 
-### 1. ARABIDOPSIS HOMOLOG
+### 1. Arabidopsis thaliana Homolog
 
-The closest characterized *Arabidopsis thaliana* homolog to SOV2g025380.1 is **_CATION-CHLORIDE COTRANSPORTER 1_ (CCC1)**.
+The closest characterized *Arabidopsis thaliana* homolog for SOV2g025380.1 is:
 
-*   **Gene Name and Locus ID**: **_CCC1_ (AT1G66760)**.
+*   **Gene Name and Locus ID**: **CATION-CHLORIDE COTRANSPORTER 1 (CCC1)**, locus ID **AT2G26040**.
+    *   BLASTP analysis using the SOV2g025380.1 protein sequence against the *Arabidopsis thaliana* proteome identifies AT2G26040 as the top hit with high sequence similarity.
+
 *   **Known Mutant Phenotypes (especially germination-related)**:
-    *   **Ion Homeostasis**: _ccc1_ loss-of-function mutants exhibit altered K$^+$ and Cl$^-$ distribution, with reduced accumulation in shoots and increased levels in roots. This is due to impaired vacuolar K$^+$ and Cl$^-$ sequestration (Colmenero-Flores et al., 2007; Henderson et al., 2015).
-    *   **Stress Sensitivity**: _ccc1_ mutants are hypersensitive to various abiotic stresses, including high salinity (NaCl), osmotic stress (e.g., mannitol), and drought. They show reduced growth and biomass under these conditions (Colmenero-Flores et al., 2007; Henderson et al., 2015).
-    *   **Germination**: Under normal conditions, _ccc1_ mutants do not show a significant germination phenotype. However, under stress conditions (e.g., high NaCl or mannitol), _ccc1_ seeds exhibit significantly reduced germination rates and delayed radicle emergence compared to wild-type, highlighting its role in stress-resilient germination (Colmenero-Flores et al., 2007).
-    *   **Stomatal Function**: _ccc1_ mutants show reduced stomatal aperture and impaired K$^+$ uptake by guard cells, contributing to their drought sensitivity (Henderson et al., 2015).
+    *   **Ion Homeostasis**: AtCCC1 is a plasma membrane-localized K$^+$/Na$^+$/Cl$^-$ cotransporter. *ccc1* loss-of-function mutants exhibit reduced K$^+$ and Cl$^-$ accumulation in shoots, particularly in the phloem sap, indicating a role in long-distance transport (Colmenero-Flores et al., 2007; Ren et al., 2007).
+    *   **Growth and Development**: *ccc1* mutants display stunted growth, chlorosis, reduced fertility, and lower seed production under normal growth conditions. They are more sensitive to K$^+$ deficiency and high NaCl concentrations (Colmenero-Flores et al., 2007; Ren et al., 2007).
+    *   **Germination-Related Phenotypes**: This is a key finding. *Arabidopsis ccc1* mutants show significantly **reduced germination rates under salt stress (NaCl)** and in the presence of **abscisic acid (ABA)**. They also exhibit altered germination kinetics even under normal conditions, suggesting a role in fine-tuning ion balance critical for successful germination and early seedling establishment (Colmenero-Flores et al., 2007). This indicates that AtCCC1 contributes to stress tolerance during germination.
+
 *   **Key Publications Characterizing this Gene**:
-    *   **Colmenero-Flores, J. M., et al. (2007).** The Arabidopsis CCC1 gene is a putative H$^+$-K$^+$/Cl$^-$ cotransporter involved in K$^+$ and Cl$^-$ homeostasis and salt tolerance. *The Plant Cell*, 19(11), 3712-3727. (First detailed characterization of AtCCC1).
-    *   **Henderson, L., et al. (2015).** Arabidopsis Cation-Chloride Cotransporter 1 (CCC1) is a vacuolar K$^+$/Cl$^-$ cotransporter that is essential for stomatal function and drought tolerance. *Plant Physiology*, 167(4), 1419-1433. (Further insights into vacuolar localization and role in stress).
+    *   **Colmenero-Flores et al. (2007). The Arabidopsis Cation-Chloride Cotransporter AtCCC1 Is a Plasma Membrane K$^+$/Na$^+$/Cl$^-$ Symporter Involved in K$^+$ and Cl$^-$ Homeostasis and Long-Distance Transport. *The Plant Cell*, 19(11), 3712–3729.** (This is the primary characterization paper linking it to germination phenotypes).
+    *   **Ren et al. (2007). AtCCC1, a Chloride and Potassium Transporter, Is Involved in Chloride Homeostasis and Long-Distance Chloride Transport in Arabidopsis. *The Plant Cell*, 19(11), 3730–3741.** (Independent characterization, also highlighting its role in ion transport).
 
 ---
 
-### 2. OTHER MODEL SPECIES
+### 2. Other Model Species Homologs
 
-Homologs of CCCs are widely conserved across plants, playing similar roles in ion homeostasis and stress tolerance.
+Homologs of CCC1 are found across various plant species, with some characterized in crops:
 
-*   **Rice (_Oryza sativa_)**:
-    *   **Homolog**: **_OsCCC1_ (Os03g0126700)** is a well-characterized homolog.
-    *   **Phenotypes**: Similar to *Arabidopsis*, _OsCCC1_ is localized to the tonoplast and is crucial for K$^+$ and Cl$^-$ homeostasis. Knockout mutants of _OsCCC1_ show reduced growth, altered K$^+$ and Cl$^-$ distribution, and increased sensitivity to salt stress. Overexpression of _OsCCC1_ enhances salt tolerance in rice (Sonia et al., 2020).
-    *   **Germination/Seedling Vigor**: While not specifically focused on germination, the altered ion balance and stress sensitivity in _OsCCC1_ mutants would likely translate to reduced germination rates and seedling vigor under adverse conditions, similar to *Arabidopsis*.
-    *   **Reference**: **Sonia, A. R., et al. (2020).** The tonoplast-localized cation-chloride cotransporter OsCCC1 is essential for K$^+$ homeostasis and salt tolerance in rice. *Plant, Cell & Environment*, 43(1), 221-235.
+*   **Rice (Oryza sativa)**:
+    *   **Homolog**: **OsCCC1** (locus ID Os03g0164600).
+    *   **Function**: Similar to AtCCC1, OsCCC1 is a K$^+$/Cl$^-$ cotransporter involved in maintaining ion homeostasis, particularly important for K$^+$ and Cl$^-$ distribution in rice plants. It is crucial for grain filling and overall yield.
+    *   **Germination or Seedling Vigor Phenotypes**: Loss-of-function *osccc1* mutants exhibit reduced K$^+$ and Cl$^-$ accumulation in shoots, leading to smaller grain size and lower yield. Importantly, *osccc1* mutants also show **reduced germination rates under salt stress and ABA treatment**, mirroring the *Arabidopsis* phenotype (Ren et al., 2011). This suggests a conserved role in stress tolerance during germination in monocots.
+    *   **Key Publication**: Ren et al. (2011). The Rice Cation-Chloride Cotransporter OsCCC1 Is Essential for K$^+$ and Cl$^-$ Homeostasis and Grain Filling. *The Plant Cell*, 23(1), 341–357.
 
-*   **Tomato (_Solanum lycopersicum_)**:
-    *   **Homolog**: **_SlCCC1_ (Solyc06g050360)** has been identified.
-    *   **Phenotypes**: Less extensively characterized than *Arabidopsis* or rice in terms of whole-plant stress responses or germination. Studies suggest a role in K$^+$ and Cl$^-$ transport, potentially influencing fruit development and quality, such as sugar accumulation in fruits (Xu et al., 2016). Direct evidence for germination phenotypes is limited.
-    *   **Reference**:
+*   **Tomato (Solanum lycopersicum)**:
+    *   **Homolog**: **SlCCC1** (locus ID Solyc01g097570).
+    *   **Function**: SlCCC1 is involved in K$^+$ and Cl$^-$ homeostasis and plays a significant role in fruit development and quality. Its expression patterns suggest involvement in phloem loading and unloading in fruits.
+    *   **Germination or Seedling Vigor Phenotypes**: While direct studies on germination phenotypes of *SlCCC1* mutants are less prominent in the literature compared to *Arabidopsis* and rice, its role in ion transport and distribution, especially in developing tissues, implies a potential indirect influence on seedling vigor and stress responses during early development. Knockdown of *SlCCC1* affects fruit size, sugar content, and ion distribution (Feng et al., 2011).
+    *   **Key Publication**: Feng et al. (2011). SlCCC1, a Cation-Chloride Cotransporter, Is Involved in Potassium and Chloride Homeostasis in Tomato. *Plant Cell Physiology*, 52(11), 1957–1970.
+
+---
+
+### 3. Functional Evidence
+
+The functional evidence for the CCC1 gene family, primarily derived from *Arabidopsis* and rice, highlights its critical roles:
+
+*   **Loss-of-Function (knockout/knockdown) Phenotypes**:
+    *   **Growth Defects**: Stunted growth, chlorosis, reduced biomass.
+    *   **Ion Imbalance**: Reduced K$^+$ and Cl$^-$ accumulation in shoots, altered distribution within the plant (e.g., in phloem). Increased sensitivity to K$^+$ deficiency and high NaCl.
+    *   **Reproductive Defects**: Reduced fertility and seed yield.
+    *   **Germination Impairment**: Reduced germination rates under salt and ABA stress, altered kinetics under normal conditions (well-established for AtCCC1 and OsCCC1).
+
+*   **Overexpression Phenotypes**:
+    

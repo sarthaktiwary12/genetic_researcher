@@ -1,0 +1,13 @@
+{
+  "species": "Brassica oleracea var. italica",
+  "common_name": "broccoli",
+  "family": "Brassicaceae",
+  "genome_assembly": null,
+  "treatment": "M-9 bacterial EPS solution",
+  "treatment_duration_hours": "4-8",
+  "phenotype": "Germination rate increase, vigor increase",
+  "knowledge_base_path": "knowledge_base/",
+  "total_targets": 0,
+  "analysis_status": "pending",
+  "notes": "Awaiting exRNA target identification. Brassicaceae model with well-characterized genome from Arabidopsis relatives."
+}

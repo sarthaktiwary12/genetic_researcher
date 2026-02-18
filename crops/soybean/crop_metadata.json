@@ -1,0 +1,13 @@
+{
+  "species": "Glycine max",
+  "common_name": "soybean",
+  "family": "Fabaceae",
+  "genome_assembly": "Glycine_max_v4.0",
+  "treatment": "M-9 bacterial EPS solution",
+  "treatment_duration_hours": "4-8",
+  "phenotype": "Germination rate increase, vigor increase",
+  "knowledge_base_path": "knowledge_base/",
+  "total_targets": 0,
+  "analysis_status": "pending",
+  "notes": "Legume with nitrogen-fixing symbiosis; rhizosphere interactions may influence exRNA response. Paleopolyploid genome. Awaiting exRNA target identification."
+}

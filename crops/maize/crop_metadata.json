@@ -1,0 +1,13 @@
+{
+  "species": "Zea mays",
+  "common_name": "maize",
+  "family": "Poaceae",
+  "genome_assembly": "Zm-B73-REFERENCE-NAM-5.0",
+  "treatment": "M-9 bacterial EPS solution",
+  "treatment_duration_hours": "4-8",
+  "phenotype": "Germination rate increase, vigor increase",
+  "knowledge_base_path": "knowledge_base/",
+  "total_targets": 0,
+  "analysis_status": "pending",
+  "notes": "Existing PDF report (ZmTRF_MoA_v1.pdf) contains preliminary tRF mechanism-of-action analysis. Awaiting full exRNA target identification pipeline."
+}

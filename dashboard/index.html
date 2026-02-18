@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExRNA Research Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>ExRNA Autonomous Research Platform</h1>
+            <span class="subtitle">Extracellular RNA &middot; Agriculture Biology Engine</span>
+        </div>
+        <div class="header-status" x-data="healthCheck()" x-init="check()">
+            <span class="status-dot" :class="status"></span>
+            <span x-text="statusText"></span>
+        </div>
+    </header>
+
+    <nav x-data="{ tab: 'campaigns' }">
+        <button :class="{ active: tab === 'campaigns' }" @click="tab = 'campaigns'">Campaigns</button>
+        <button :class="{ active: tab === 'knowledge' }" @click="tab = 'knowledge'">Knowledge Explorer</button>
+        <button :class="{ active: tab === 'search' }" @click="tab = 'search'">Semantic Search</button>
+        <button :class="{ active: tab === 'budget' }" @click="tab = 'budget'">Budget Tracker</button>
+        <button :class="{ active: tab === 'literature' }" @click="tab = 'literature'">Literature Alerts</button>
+    </nav>
+
+    <main>
+        <!-- Campaigns Section -->
+        <section x-data="campaignManager()" x-show="$store.nav.tab === 'campaigns'" x-init="load()">
+            <div class="section-header">
+                <h2>Research Campaigns</h2>
+                <button class="btn-primary" @click="showCreate = !showCreate">+ New Campaign</button>
+            </div>
+
+            <!-- Create Campaign Form -->
+            <div class="card" x-show="showCreate" x-transition>
+                <h3>Launch Campaign</h3>
+                <form @submit.prevent="create()">
+                    <div class="form-row">
+                        <label>Name</label>
+                        <input type="text" x-model="form.name" required>
+                    </div>
+                    <div class="form-row">
+                        <label>Type</label>
+                        <select x-model="form.campaign_type">
+                            <option value="full_crop_analysis">Full Crop Analysis</option>
+                            <option value="pubmed_daily_scan">PubMed Daily Scan</option>
+                            <option value="cross_crop_synthesis">Cross-Crop Synthesis</option>
+                            <option value="targeted_query">Targeted Query</option>
+                            <option value="literature_deep_dive">Literature Deep Dive</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label>Crop</label>
+                        <select x-model="form.crop">
+                            <option value="spinach">Spinach</option>
+                            <option value="maize">Maize</option>
+                            <option value="wheat">Wheat</option>
+                            <option value="broccoli">Broccoli</option>
+                            <option value="quinoa">Quinoa</option>
+                            <option value="soybean">Soybean</option>
+                            <option value="rice">Rice (new)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Launch</button>
+                </form>
+            </div>
+
+            <!-- Campaign List -->
+            <div class="card-grid">
+                <template x-for="c in campaigns" :key="c.id">
+                    <div class="card campaign-card" :class="'status-' + c.status">
+                        <div class="card-header">
+                            <h3 x-text="c.name"></h3>
+                            <span class="badge" :class="c.status" x-text="c.status"></span>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Type:</strong> <span x-text="c.campaign_type"></span></p>
+                            <p x-show="c.crop"><strong>Crop:</strong> <span x-text="c.crop"></span></p>
+                            <p><strong>Cost:</strong> $<span x-text="c.total_cost.toFixed(4)"></span></p>
+                            <div class="progress-bar" x-show="c.status === 'running'">
+                                <div class="progress-fill" :style="'width:' + (c.progress * 100) + '%'"></div>
+                                <span x-text="Math.round(c.progress * 100) + '%'"></span>
+                            </div>
+                            <p x-show="c.current_stage" class="stage-label">
+                                Stage: <span x-text="c.current_stage"></span>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <small x-text="'Created: ' + new Date(c.created_at).toLocaleString()"></small>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <p x-show="campaigns.length === 0" class="empty-state">No campaigns yet. Launch one above.</p>
+        </section>
+
+        <!-- Knowledge Explorer -->
+        <section x-data="knowledgeExplorer()" x-show="$store.nav.tab === 'knowledge'" x-init="loadGenes()">
+            <h2>Knowledge Graph Explorer</h2>
+            <div class="filter-bar">
+                <select x-model="filter.pathway" @change="loadGenes()">
+                    <option value="">All Pathways</option>
+                    <option value="hormone_signaling">Hormone Signaling</option>
+                    <option value="defense_immunity">Defense & Immunity</option>
+                    <option value="epigenetic_regulation">Epigenetic Regulation</option>
+                    <option value="ros_redox">ROS / Redox</option>
+                    <option value="transport_ion_homeostasis">Transport / Ion</option>
+                    <option value="metabolic_priming">Metabolic Priming</option>
+                </select>
+                <select x-model="filter.priority" @change="loadGenes()">
+                    <option value="">All Priorities</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Gene ID</th>
+                        <th>Annotation</th>
+                        <th>Pathway</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template x-for="g in genes" :key="g.gene_id">
+                        <tr>
+                            <td x-text="g.gene_id"></td>
+                            <td x-text="g.annotation || '—'"></td>
+                            <td x-text="g.pathway || '—'"></td>
+                            <td><span class="badge" :class="g.priority" x-text="g.priority"></span></td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+            <p x-show="genes.length === 0" class="empty-state">No genes found. Run a migration or check Neo4j connection.</p>
+        </section>
+
+        <!-- Semantic Search -->
+        <section x-data="semanticSearch()" x-show="$store.nav.tab === 'search'">
+            <h2>Semantic Search</h2>
+            <form @submit.prevent="search()" class="search-form">
+                <input type="text" x-model="query" placeholder="e.g., ABA signaling dormancy release" class="search-input">
+                <select x-model="collection">
+                    <option value="gene_narratives">Gene Narratives</option>
+                    <option value="research_findings">Research Findings</option>
+                    <option value="literature">Literature</option>
+                </select>
+                <button type="submit" class="btn-primary">Search</button>
+            </form>
+            <div class="results">
+                <template x-for="r in results" :key="r.id">
+                    <div class="card result-card">
+                        <h4 x-text="r.id"></h4>
+                        <p class="result-text" x-text="r.text.substring(0, 500) + '...'"></p>
+                        <div class="meta-tags">
+                            <template x-for="(v, k) in r.metadata" :key="k">
+                                <span class="tag" x-show="typeof v === 'string'" x-text="k + ': ' + v"></span>
+                            </template>
+                        </div>
+                        <small>Distance: <span x-text="r.distance?.toFixed(4)"></span></small>
+                    </div>
+                </template>
+            </div>
+            <p x-show="searched && results.length === 0" class="empty-state">No results found.</p>
+        </section>
+
+        <!-- Budget Tracker -->
+        <section x-data="budgetTracker()" x-show="$store.nav.tab === 'budget'" x-init="load()">
+            <h2>Budget Tracker</h2>
+            <div class="budget-overview card">
+                <div class="budget-stats">
+                    <div class="stat">
+                        <span class="stat-value" x-text="'$' + budget.total_spend.toFixed(2)"></span>
+                        <span class="stat-label">Total Spend</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" x-text="'$' + budget.budget_limit.toFixed(0)"></span>
+                        <span class="stat-label">Monthly Limit</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" x-text="(budget.fraction * 100).toFixed(1) + '%'"></span>
+                        <span class="stat-label">Used</span>
+                    </div>
+                </div>
+                <div class="progress-bar budget-bar">
+                    <div class="progress-fill" :class="{ warning: budget.fraction > 0.8, critical: budget.fraction > 0.95 }"
+                         :style="'width:' + Math.min(budget.fraction * 100, 100) + '%'"></div>
+                </div>
+                <div class="budget-breakdown">
+                    <p>Gemini: $<span x-text="budget.gemini_spend.toFixed(2)"></span></p>
+                    <p>Claude: $<span x-text="budget.claude_spend.toFixed(2)"></span></p>
+                </div>
+            </div>
+            <canvas id="costChart" width="400" height="200"></canvas>
+        </section>
+
+        <!-- Literature Alerts -->
+        <section x-data="literatureAlerts()" x-show="$store.nav.tab === 'literature'" x-init="load()">
+            <h2>Literature Alerts</h2>
+            <div class="filter-bar">
+                <label><input type="checkbox" x-model="showReviewed"> Show Reviewed</label>
+            </div>
+            <div class="alerts-list">
+                <template x-for="a in alerts" :key="a.pmid">
+                    <div class="card alert-card">
+                        <h4 x-text="a.title"></h4>
+                        <div class="alert-meta">
+                            <span class="badge relevance" x-text="'Relevance: ' + a.relevance_score.toFixed(2)"></span>
+                            <span>PMID: <span x-text="a.pmid"></span></span>
+                        </div>
+                        <p x-show="a.relevance_reason" x-text="a.relevance_reason" class="reason-text"></p>
+                        <div x-show="a.claims_extracted?.length" class="claims">
+                            <strong>Extracted Claims:</strong>
+                            <ul>
+                                <template x-for="claim in (a.claims_extracted || [])" :key="claim.claim">
+                                    <li x-text="'[' + claim.evidence + '] ' + claim.claim"></li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <p x-show="alerts.length === 0" class="empty-state">No literature alerts yet. Run a PubMed scan campaign.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>ExRNA Autonomous Research Platform &middot; CONFIDENTIAL</p>
+    </footer>
+</body>
+</html>

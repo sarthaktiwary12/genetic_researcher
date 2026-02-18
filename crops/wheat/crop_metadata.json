@@ -1,0 +1,13 @@
+{
+  "species": "Triticum aestivum",
+  "common_name": "wheat",
+  "family": "Poaceae",
+  "genome_assembly": "IWGSC RefSeq v2.1",
+  "treatment": "M-9 bacterial EPS solution",
+  "treatment_duration_hours": "4-8",
+  "phenotype": "Germination rate increase, vigor increase",
+  "knowledge_base_path": "knowledge_base/",
+  "total_targets": 0,
+  "analysis_status": "pending",
+  "notes": "Hexaploid genome (AABBDD) may complicate target identification due to homeolog redundancy. Awaiting exRNA target identification."
+}

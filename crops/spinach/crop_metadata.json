@@ -1,0 +1,13 @@
+{
+  "species": "Spinacia oleracea",
+  "common_name": "spinach",
+  "family": "Amaranthaceae",
+  "genome_assembly": "SOV_r1.1",
+  "treatment": "M-9 bacterial EPS solution",
+  "treatment_duration_hours": "4-8",
+  "phenotype": "Germination rate increase, vigor increase",
+  "knowledge_base_path": "knowledge_base/",
+  "total_targets": 109,
+  "analysis_status": "completed",
+  "notes": "Primary research organism. 109 predicted spinach transcripts targeted by bacterial extracellular small RNAs. Full target analysis, pathway mapping, and synthesis completed."
+}

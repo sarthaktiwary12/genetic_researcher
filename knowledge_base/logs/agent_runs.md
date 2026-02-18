@@ -35,3 +35,5 @@
 | 2026-02-18 13:05:37 | synthesis_quinoa | {"ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag_biology_engine/know... | 816s | Success |
 | 2026-02-18 13:18:40 | synthesis_soybean | {"ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag_biology_engine/know... | 782s | Success |
 | 2026-02-18 13:31:35 | synthesis_maize | {"ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag_biology_engine/know... | 775s | Success |
+| 2026-02-18 21:04:49 | synthesis_spinach | {"crop": "spinach", "ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag_... | 780s | Success |
+| 2026-02-18 21:18:35 | synthesis_broccoli | {"crop": "broccoli", "ranked_targets": {"file": "/home/sarthak/Desktop/Ex_Rna_ag... | 826s | Success |

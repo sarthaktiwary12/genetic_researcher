@@ -113,7 +113,7 @@ async def run_stage(
             logging.warning("No Claude client available for synthesis. Skipping.")
             return {"error": "Claude client not configured", "stage": "synthesis"}
         from agents.tasks.synthesis_task import run
-        return await run(claude_client)
+        return await run(claude_client, crop=crop)
 
     elif stage == "cross_crop":
         if not claude_client:

@@ -68,11 +68,12 @@ def generate_crop_report(crop: str) -> Path:
     meta = load_crop_metadata(crop)
     summary = load_targets_summary(crop)
 
-    # Load synthesis files
-    ranked = load_text(KB / "synthesis" / "ranked_targets.md", 8000)
-    causal = load_text(KB / "synthesis" / "causal_models.md", 6000)
-    confounders = load_text(KB / "synthesis" / "confounders.md", 4000)
-    validation = load_text(KB / "synthesis" / "validation_plan.md", 4000)
+    # Load synthesis files (per-crop first, fallback to shared KB)
+    crop_synth = CROPS_DIR / crop / "synthesis"
+    ranked = load_text(crop_synth / "ranked_targets.md", 8000) or load_text(KB / "synthesis" / "ranked_targets.md", 8000)
+    causal = load_text(crop_synth / "causal_models.md", 6000) or load_text(KB / "synthesis" / "causal_models.md", 6000)
+    confounders = load_text(crop_synth / "confounders.md", 4000) or load_text(KB / "synthesis" / "confounders.md", 4000)
+    validation = load_text(crop_synth / "validation_plan.md", 4000) or load_text(KB / "synthesis" / "validation_plan.md", 4000)
 
     # Load pathway index
     pathways_index = load_text(KB / "pathways" / "INDEX.md", 3000)
